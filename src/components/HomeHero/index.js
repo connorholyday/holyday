@@ -12,7 +12,7 @@ const HomeHero = () => (
       zIndex: [null, null, 1],
     }}
   >
-    <div display="inline-block">
+    <div sx={{ display: "inline-block" }}>
       <Styled.h1
         sx={{
           fontFamily: "body",
