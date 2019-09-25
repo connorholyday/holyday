@@ -1,0 +1,15 @@
+<svg width="92px" height="32px" viewBox="0 0 92 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polygon fill="#FF6373" points="8.34782609 0 16.6956522 16 0 16"></polygon>
+    <polygon fill="#41C5A9" points="16.6956522 16 25.0434783 32 8.34782609 32"></polygon>
+    <polygon fill="#13CEEF" points="8.34782609 0 25.0434783 0 16.6956522 16"></polygon>
+    <polygon fill="#B375F5" points="0 16 16.6956522 16 8.34782609 32"></polygon>
+    <polygon fill="#FFEF77" points="41.7391304 0 50.0869565 16 33.3913043 16"></polygon>
+    <polygon fill="#B375F5" points="41.7391304 0 58.4347826 0 50.0869565 16"></polygon>
+    <polygon fill="#FF6373" transform="translate(41.739130, 24.000000) rotate(180.000000) translate(-41.739130, -24.000000) " points="41.7391304 16 50.0869565 32 33.3913043 32"></polygon>
+    <polygon fill="#FFEF77" transform="translate(58.434783, 24.000000) rotate(180.000000) translate(-58.434783, -24.000000) " points="58.4347826 16 66.7826087 32 50.0869565 32"></polygon>
+    <polygon fill="#13CEEF" transform="translate(33.391304, 24.000000) rotate(180.000000) translate(-33.391304, -24.000000) " points="25.0434783 16 41.7391304 16 33.3913043 32"></polygon>
+    <polygon fill="#FF6373" points="75.1304348 0 83.4782609 16 66.7826087 16"></polygon>
+    <polygon fill="#41C5A9" points="75.1304348 0 91.826087 0 83.4782609 16"></polygon>
+    <polygon fill="#13CEEF" transform="translate(75.130435, 24.000000) rotate(180.000000) translate(-75.130435, -24.000000) " points="75.1304348 16 83.4782609 32 66.7826087 32"></polygon>
+    <polygon fill="#B375F5" transform="translate(66.782609, 24.000000) rotate(180.000000) translate(-66.782609, -24.000000) " points="58.4347826 16 75.1304348 16 66.7826087 32"></polygon>
+</svg>

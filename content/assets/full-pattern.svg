@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200px" height="600px" viewBox="0 0 1200 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Pattern1</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-+-Group-copy" sketch:type="MSLayerGroup">
+            <g id="Group" sketch:type="MSShapeGroup">
+                <polygon id="Red-copy" fill="#FF6373" points="250 0 275 50 225 50 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="375 50 400 100 350 100 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="150 100 175 150 125 150 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="0 100 25 150 0 150 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" points="150 0 175 50 125 50 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" points="100 100 125 150 75 150 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="350 100 375 150 325 150 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="300 0 325 50 275 50 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" points="225 50 250 100 200 100 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" points="325 50 350 100 300 100 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" points="0 0 25 50 0 50 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" points="250 100 275 150 225 150 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" points="200 0 225 50 175 50 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" points="275 50 300 100 250 100 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" points="50 0 75 50 25 50 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="350 0 375 50 325 50 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="175 50 200 100 150 100 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="300 100 325 150 275 150 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" points="75 50 100 100 50 100 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="50 100 75 150 25 150 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="100 0 125 50 75 50 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" points="200 100 225 150 175 150 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" points="125 50 150 100 100 100 "></polygon>
+                <path d="M50,0 L100,0 L75,50 L50,0 Z" id="Red-copy" fill="#FF6373"></path>
+                <path d="M150,0 L200,0 L175,50 L150,0 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M125,50 L175,50 L150,100 L125,50 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M175,50 L225,50 L200,100 L175,50 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M300,100 L350,100 L325,150 L300,100 Z" id="Red-copy-4" fill="#FF6373"></path>
+                <path d="M0,50 L50,50 L25,100 L0,50 Z" id="Red-copy-2" fill="#FF6373" transform="translate(25.000000, 75.000000) rotate(-180.000000) translate(-25.000000, -75.000000) "></path>
+                <path d="M25,50 L75,50 L50,100 L25,50 Z" id="Purple-copy" fill="#B375F5"></path>
+                <path d="M200,0 L250,0 L225,50 L200,0 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M350,0 L400,0 L375,50 L350,0 Z" id="Purple-copy-3" fill="#B375F5"></path>
+                <path d="M0,100 L50,100 L25,150 L0,100 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M75,50 L125,50 L100,100 L75,50 Z" id="Green-copy" fill="#32CAA9"></path>
+                <path d="M150,100 L200,100 L175,150 L150,100 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M100,100 L150,100 L125,150 L100,100 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M250,0 L300,0 L275,50 L250,0 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M325,50 L375,50 L350,100 L325,50 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M100,0 L150,0 L125,50 L100,0 Z" id="Blue-copy" fill="#13CEEF"></path>
+                <path d="M0,50 L25,50 L0,100 L0,50 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M50,100 L100,100 L75,150 L50,100 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M200,100 L250,100 L225,150 L200,100 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M225,50 L275,50 L250,100 L225,50 Z" id="Blue-copy-4" fill="#13CEEF"></path>
+                <path d="M0,0 L50,0 L25,50 L0,0 Z" id="Orange-copy" fill="#FFEF77"></path>
+                <path d="M300,0 L350,0 L325,50 L300,0 Z" id="Orange-copy-2" fill="#FFEF77"></path>
+                <path d="M250,100 L300,100 L275,150 L250,100 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <path d="M350,100 L400,100 L375,150 L350,100 Z" id="Orange-copy-4" fill="#FFEF77"></path>
+                <path d="M275,50 L325,50 L300,100 L275,50 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <polygon id="Red-copy" fill="#FF6373" points="1050 0 1075 50 1025 50 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="1175 50 1200 100 1150 100 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="1200 100 1200 150 1175 150 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="950 100 975 150 925 150 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="800 100 825 150 775 150 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" points="950 0 975 50 925 50 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" points="900 100 925 150 875 150 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="1150 100 1175 150 1125 150 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="1100 0 1125 50 1075 50 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" points="1025 50 1050 100 1000 100 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" points="1125 50 1150 100 1100 100 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" points="800 0 825 50 775 50 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" points="1050 100 1075 150 1025 150 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" points="1000 0 1025 50 975 50 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" points="1075 50 1100 100 1050 100 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" points="850 0 875 50 825 50 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="1150 0 1175 50 1125 50 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="975 50 1000 100 950 100 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="1100 100 1125 150 1075 150 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" points="875 50 900 100 850 100 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="850 100 875 150 825 150 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="900 0 925 50 875 50 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" points="1000 100 1025 150 975 150 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" points="925 50 950 100 900 100 "></polygon>
+                <path d="M850,0 L900,0 L875,50 L850,0 Z" id="Red-copy" fill="#FF6373"></path>
+                <path d="M950,0 L1000,0 L975,50 L950,0 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M925,50 L975,50 L950,100 L925,50 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M975,50 L1025,50 L1000,100 L975,50 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M1100,100 L1150,100 L1125,150 L1100,100 Z" id="Red-copy-4" fill="#FF6373"></path>
+                <path d="M800,50 L850,50 L825,100 L800,50 Z" id="Red-copy-2" fill="#FF6373" transform="translate(825.000000, 75.000000) rotate(-180.000000) translate(-825.000000, -75.000000) "></path>
+                <path d="M825,50 L875,50 L850,100 L825,50 Z" id="Purple-copy" fill="#B375F5"></path>
+                <path d="M1000,0 L1050,0 L1025,50 L1000,0 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M1150,0 L1200,0 L1175,50 L1150,0 Z" id="Purple-copy-3" fill="#B375F5"></path>
+                <path d="M1175,550 L1200,550 L1200,600 L1175,550 Z" id="Purple-copy-4" fill="#B375F5"></path>
+                <path d="M1175,150 L1200,150 L1200,200 L1175,150 Z" id="Purple-copy-4" fill="#B375F5"></path>
+                <path d="M800,100 L850,100 L825,150 L800,100 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M875,50 L925,50 L900,100 L875,50 Z" id="Green-copy" fill="#32CAA9"></path>
+                <path d="M950,100 L1000,100 L975,150 L950,100 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M900,100 L950,100 L925,150 L900,100 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M1050,0 L1100,0 L1075,50 L1050,0 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M1125,50 L1175,50 L1150,100 L1125,50 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M900,0 L950,0 L925,50 L900,0 Z" id="Blue-copy" fill="#13CEEF"></path>
+                <path d="M775,50 L825,50 L800,100 L775,50 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M850,100 L900,100 L875,150 L850,100 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M1000,100 L1050,100 L1025,150 L1000,100 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M1025,50 L1075,50 L1050,100 L1025,50 Z" id="Blue-copy-4" fill="#13CEEF"></path>
+                <path d="M1175,50 L1200,50 L1200,100 L1175,50 Z" id="Blue-copy-5" fill="#13CEEF"></path>
+                <path d="M800,0 L850,0 L825,50 L800,0 Z" id="Orange-copy" fill="#FFEF77"></path>
+                <path d="M1100,0 L1150,0 L1125,50 L1100,0 Z" id="Orange-copy-2" fill="#FFEF77"></path>
+                <path d="M1050,100 L1100,100 L1075,150 L1050,100 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <path d="M1150,100 L1200,100 L1175,150 L1150,100 Z" id="Orange-copy-4" fill="#FFEF77"></path>
+                <path d="M1075,50 L1125,50 L1100,100 L1075,50 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <polygon id="Red-copy" fill="#FF6373" points="650 0 675 50 625 50 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="775 50 800 100 750 100 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="550 100 575 150 525 150 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="400 100 425 150 375 150 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" points="550 0 575 50 525 50 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" points="500 100 525 150 475 150 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="750 100 775 150 725 150 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="700 0 725 50 675 50 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" points="625 50 650 100 600 100 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" points="725 50 750 100 700 100 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" points="400 0 425 50 375 50 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" points="650 100 675 150 625 150 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" points="600 0 625 50 575 50 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" points="675 50 700 100 650 100 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" points="450 0 475 50 425 50 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="750 0 775 50 725 50 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="575 50 600 100 550 100 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="700 100 725 150 675 150 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" points="475 50 500 100 450 100 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="450 100 475 150 425 150 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="500 0 525 50 475 50 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" points="600 100 625 150 575 150 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" points="525 50 550 100 500 100 "></polygon>
+                <path d="M450,0 L500,0 L475,50 L450,0 Z" id="Red-copy" fill="#FF6373"></path>
+                <path d="M550,0 L600,0 L575,50 L550,0 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M525,50 L575,50 L550,100 L525,50 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M575,50 L625,50 L600,100 L575,50 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M700,100 L750,100 L725,150 L700,100 Z" id="Red-copy-4" fill="#FF6373"></path>
+                <path d="M400,50 L450,50 L425,100 L400,50 Z" id="Red-copy-2" fill="#FF6373" transform="translate(425.000000, 75.000000) rotate(-180.000000) translate(-425.000000, -75.000000) "></path>
+                <path d="M425,50 L475,50 L450,100 L425,50 Z" id="Purple-copy" fill="#B375F5"></path>
+                <path d="M600,0 L650,0 L625,50 L600,0 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M750,0 L800,0 L775,50 L750,0 Z" id="Purple-copy-3" fill="#B375F5"></path>
+                <path d="M400,100 L450,100 L425,150 L400,100 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M475,50 L525,50 L500,100 L475,50 Z" id="Green-copy" fill="#32CAA9"></path>
+                <path d="M550,100 L600,100 L575,150 L550,100 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M500,100 L550,100 L525,150 L500,100 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M650,0 L700,0 L675,50 L650,0 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M725,50 L775,50 L750,100 L725,50 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M500,0 L550,0 L525,50 L500,0 Z" id="Blue-copy" fill="#13CEEF"></path>
+                <path d="M375,50 L425,50 L400,100 L375,50 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M450,100 L500,100 L475,150 L450,100 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M600,100 L650,100 L625,150 L600,100 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M625,50 L675,50 L650,100 L625,50 Z" id="Blue-copy-4" fill="#13CEEF"></path>
+                <path d="M400,0 L450,0 L425,50 L400,0 Z" id="Orange-copy" fill="#FFEF77"></path>
+                <path d="M700,0 L750,0 L725,50 L700,0 Z" id="Orange-copy-2" fill="#FFEF77"></path>
+                <path d="M650,100 L700,100 L675,150 L650,100 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <path d="M750,100 L800,100 L775,150 L750,100 Z" id="Orange-copy-4" fill="#FFEF77"></path>
+                <path d="M675,50 L725,50 L700,100 L675,50 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <polygon id="Red-copy" fill="#FF6373" transform="translate(100.000000, 275.000000) rotate(-180.000000) translate(-100.000000, -275.000000) " points="100 250 125 300 75 300 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(1175.000000, 225.000000) rotate(-180.000000) translate(-1175.000000, -225.000000) " points="1175 200 1200 250 1150 250 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(200.000000, 175.000000) rotate(-180.000000) translate(-200.000000, -175.000000) " points="200 150 225 200 175 200 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" transform="translate(350.000000, 175.000000) rotate(-180.000000) translate(-350.000000, -175.000000) " points="350 150 375 200 325 200 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" transform="translate(200.000000, 275.000000) rotate(-180.000000) translate(-200.000000, -275.000000) " points="200 250 225 300 175 300 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" transform="translate(250.000000, 175.000000) rotate(-180.000000) translate(-250.000000, -175.000000) " points="250 150 275 200 225 200 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(12.500000, 175.000000) rotate(-180.000000) translate(-12.500000, -175.000000) " points="25 150 25 200 0 200 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(50.000000, 275.000000) rotate(-180.000000) translate(-50.000000, -275.000000) " points="50 250 75 300 25 300 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" transform="translate(125.000000, 225.000000) rotate(-180.000000) translate(-125.000000, -225.000000) " points="125 200 150 250 100 250 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" transform="translate(25.000000, 225.000000) rotate(-180.000000) translate(-25.000000, -225.000000) " points="25 200 50 250 0 250 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" transform="translate(350.000000, 275.000000) rotate(-180.000000) translate(-350.000000, -275.000000) " points="350 250 375 300 325 300 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" transform="translate(100.000000, 175.000000) rotate(-180.000000) translate(-100.000000, -175.000000) " points="100 150 125 200 75 200 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" transform="translate(150.000000, 275.000000) rotate(-180.000000) translate(-150.000000, -275.000000) " points="150 250 175 300 125 300 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" transform="translate(75.000000, 225.000000) rotate(-180.000000) translate(-75.000000, -225.000000) " points="75 200 100 250 50 250 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" transform="translate(300.000000, 275.000000) rotate(-180.000000) translate(-300.000000, -275.000000) " points="300 250 325 300 275 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(12.500000, 275.000000) rotate(-180.000000) translate(-12.500000, -275.000000) " points="25 250 25 300 0 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(175.000000, 225.000000) rotate(-180.000000) translate(-175.000000, -225.000000) " points="175 200 200 250 150 250 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" transform="translate(50.000000, 175.000000) rotate(-180.000000) translate(-50.000000, -175.000000) " points="50 150 75 200 25 200 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" transform="translate(275.000000, 225.000000) rotate(-180.000000) translate(-275.000000, -225.000000) " points="275 200 300 250 250 250 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(300.000000, 175.000000) rotate(-180.000000) translate(-300.000000, -175.000000) " points="300 150 325 200 275 200 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(250.000000, 275.000000) rotate(-180.000000) translate(-250.000000, -275.000000) " points="250 250 275 300 225 300 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" transform="translate(150.000000, 175.000000) rotate(-180.000000) translate(-150.000000, -175.000000) " points="150 150 175 200 125 200 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" transform="translate(225.000000, 225.000000) rotate(-180.000000) translate(-225.000000, -225.000000) " points="225 200 250 250 200 250 "></polygon>
+                <path d="M250,250 L300,250 L275,300 L250,250 Z" id="Red-copy" fill="#FF6373" transform="translate(275.000000, 275.000000) rotate(-180.000000) translate(-275.000000, -275.000000) "></path>
+                <path d="M150,250 L200,250 L175,300 L150,250 Z" id="Red-copy-2" fill="#FF6373" transform="translate(175.000000, 275.000000) rotate(-180.000000) translate(-175.000000, -275.000000) "></path>
+                <path d="M175,200 L225,200 L200,250 L175,200 Z" id="Red-copy-3" fill="#FF6373" transform="translate(200.000000, 225.000000) rotate(-180.000000) translate(-200.000000, -225.000000) "></path>
+                <path d="M125,200 L175,200 L150,250 L125,200 Z" id="Red-copy-3" fill="#FF6373" transform="translate(150.000000, 225.000000) rotate(-180.000000) translate(-150.000000, -225.000000) "></path>
+                <path d="M0,150 L50,150 L25,200 L0,150 Z" id="Red-copy-4" fill="#FF6373" transform="translate(25.000000, 175.000000) rotate(-180.000000) translate(-25.000000, -175.000000) "></path>
+                <path d="M300,200 L350,200 L325,250 L300,200 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M275,200 L325,200 L300,250 L275,200 Z" id="Purple-copy" fill="#B375F5" transform="translate(300.000000, 225.000000) rotate(-180.000000) translate(-300.000000, -225.000000) "></path>
+                <path d="M100,250 L150,250 L125,300 L100,250 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(125.000000, 275.000000) rotate(-180.000000) translate(-125.000000, -275.000000) "></path>
+                <path d="M1150,250 L1200,250 L1175,300 L1150,250 Z" id="Purple-copy-3" fill="#B375F5" transform="translate(1175.000000, 275.000000) rotate(-180.000000) translate(-1175.000000, -275.000000) "></path>
+                <path d="M300,150 L350,150 L325,200 L300,150 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(325.000000, 175.000000) rotate(-180.000000) translate(-325.000000, -175.000000) "></path>
+                <path d="M225,200 L275,200 L250,250 L225,200 Z" id="Green-copy" fill="#32CAA9" transform="translate(250.000000, 225.000000) rotate(-180.000000) translate(-250.000000, -225.000000) "></path>
+                <path d="M150,150 L200,150 L175,200 L150,150 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(175.000000, 175.000000) rotate(-180.000000) translate(-175.000000, -175.000000) "></path>
+                <path d="M200,150 L250,150 L225,200 L200,150 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(225.000000, 175.000000) rotate(-180.000000) translate(-225.000000, -175.000000) "></path>
+                <path d="M50,250 L100,250 L75,300 L50,250 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(75.000000, 275.000000) rotate(-180.000000) translate(-75.000000, -275.000000) "></path>
+                <path d="M0,200 L25,200 L25,250 L0,200 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(12.500000, 225.000000) rotate(-180.000000) translate(-12.500000, -225.000000) "></path>
+                <path d="M200,250 L250,250 L225,300 L200,250 Z" id="Blue-copy" fill="#13CEEF" transform="translate(225.000000, 275.000000) rotate(-180.000000) translate(-225.000000, -275.000000) "></path>
+                <path d="M325,200 L375,200 L350,250 L325,200 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(350.000000, 225.000000) rotate(-180.000000) translate(-350.000000, -225.000000) "></path>
+                <path d="M250,150 L300,150 L275,200 L250,150 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(275.000000, 175.000000) rotate(-180.000000) translate(-275.000000, -175.000000) "></path>
+                <path d="M100,150 L150,150 L125,200 L100,150 Z" id="Blue-copy-3" fill="#13CEEF" transform="translate(125.000000, 175.000000) rotate(-180.000000) translate(-125.000000, -175.000000) "></path>
+                <path d="M75,200 L125,200 L100,250 L75,200 Z" id="Blue-copy-4" fill="#13CEEF" transform="translate(100.000000, 225.000000) rotate(-180.000000) translate(-100.000000, -225.000000) "></path>
+                <path d="M300,250 L350,250 L325,300 L300,250 Z" id="Orange-copy" fill="#FFEF77" transform="translate(325.000000, 275.000000) rotate(-180.000000) translate(-325.000000, -275.000000) "></path>
+                <path d="M0,250 L50,250 L25,300 L0,250 Z" id="Orange-copy-2" fill="#FFEF77" transform="translate(25.000000, 275.000000) rotate(-180.000000) translate(-25.000000, -275.000000) "></path>
+                <path d="M50,150 L100,150 L75,200 L50,150 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(75.000000, 175.000000) rotate(-180.000000) translate(-75.000000, -175.000000) "></path>
+                <path d="M1150,150 L1200,150 L1175,200 L1150,150 Z" id="Orange-copy-4" fill="#FFEF77" transform="translate(1175.000000, 175.000000) rotate(-180.000000) translate(-1175.000000, -175.000000) "></path>
+                <path d="M25,200 L75,200 L50,250 L25,200 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(50.000000, 225.000000) rotate(-180.000000) translate(-50.000000, -225.000000) "></path>
+                <polygon id="Red-copy" fill="#FF6373" transform="translate(900.000000, 275.000000) rotate(-180.000000) translate(-900.000000, -275.000000) " points="900 250 925 300 875 300 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(775.000000, 225.000000) rotate(-180.000000) translate(-775.000000, -225.000000) " points="775 200 800 250 750 250 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(1000.000000, 175.000000) rotate(-180.000000) translate(-1000.000000, -175.000000) " points="1000 150 1025 200 975 200 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" transform="translate(1150.000000, 175.000000) rotate(-180.000000) translate(-1150.000000, -175.000000) " points="1150 150 1175 200 1125 200 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" transform="translate(1000.000000, 275.000000) rotate(-180.000000) translate(-1000.000000, -275.000000) " points="1000 250 1025 300 975 300 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" transform="translate(1050.000000, 175.000000) rotate(-180.000000) translate(-1050.000000, -175.000000) " points="1050 150 1075 200 1025 200 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(800.000000, 175.000000) rotate(-180.000000) translate(-800.000000, -175.000000) " points="800 150 825 200 775 200 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(850.000000, 275.000000) rotate(-180.000000) translate(-850.000000, -275.000000) " points="850 250 875 300 825 300 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" transform="translate(925.000000, 225.000000) rotate(-180.000000) translate(-925.000000, -225.000000) " points="925 200 950 250 900 250 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" transform="translate(825.000000, 225.000000) rotate(-180.000000) translate(-825.000000, -225.000000) " points="825 200 850 250 800 250 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" transform="translate(1150.000000, 275.000000) rotate(-180.000000) translate(-1150.000000, -275.000000) " points="1150 250 1175 300 1125 300 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" transform="translate(900.000000, 175.000000) rotate(-180.000000) translate(-900.000000, -175.000000) " points="900 150 925 200 875 200 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" transform="translate(950.000000, 275.000000) rotate(-180.000000) translate(-950.000000, -275.000000) " points="950 250 975 300 925 300 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" transform="translate(875.000000, 225.000000) rotate(-180.000000) translate(-875.000000, -225.000000) " points="875 200 900 250 850 250 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" transform="translate(1100.000000, 275.000000) rotate(-180.000000) translate(-1100.000000, -275.000000) " points="1100 250 1125 300 1075 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(1187.500000, 275.000000) rotate(-180.000000) translate(-1187.500000, -275.000000) " points="1175 250 1200 300 1175 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(800.000000, 275.000000) rotate(-180.000000) translate(-800.000000, -275.000000) " points="800 250 825 300 775 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(975.000000, 225.000000) rotate(-180.000000) translate(-975.000000, -225.000000) " points="975 200 1000 250 950 250 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" transform="translate(850.000000, 175.000000) rotate(-180.000000) translate(-850.000000, -175.000000) " points="850 150 875 200 825 200 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" transform="translate(1075.000000, 225.000000) rotate(-180.000000) translate(-1075.000000, -225.000000) " points="1075 200 1100 250 1050 250 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(1100.000000, 175.000000) rotate(-180.000000) translate(-1100.000000, -175.000000) " points="1100 150 1125 200 1075 200 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(1050.000000, 275.000000) rotate(-180.000000) translate(-1050.000000, -275.000000) " points="1050 250 1075 300 1025 300 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" transform="translate(950.000000, 175.000000) rotate(-180.000000) translate(-950.000000, -175.000000) " points="950 150 975 200 925 200 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" transform="translate(1025.000000, 225.000000) rotate(-180.000000) translate(-1025.000000, -225.000000) " points="1025 200 1050 250 1000 250 "></polygon>
+                <path d="M1050,250 L1100,250 L1075,300 L1050,250 Z" id="Red-copy" fill="#FF6373" transform="translate(1075.000000, 275.000000) rotate(-180.000000) translate(-1075.000000, -275.000000) "></path>
+                <path d="M950,250 L1000,250 L975,300 L950,250 Z" id="Red-copy-2" fill="#FF6373" transform="translate(975.000000, 275.000000) rotate(-180.000000) translate(-975.000000, -275.000000) "></path>
+                <path d="M975,200 L1025,200 L1000,250 L975,200 Z" id="Red-copy-3" fill="#FF6373" transform="translate(1000.000000, 225.000000) rotate(-180.000000) translate(-1000.000000, -225.000000) "></path>
+                <path d="M925,200 L975,200 L950,250 L925,200 Z" id="Red-copy-3" fill="#FF6373" transform="translate(950.000000, 225.000000) rotate(-180.000000) translate(-950.000000, -225.000000) "></path>
+                <path d="M800,150 L850,150 L825,200 L800,150 Z" id="Red-copy-4" fill="#FF6373" transform="translate(825.000000, 175.000000) rotate(-180.000000) translate(-825.000000, -175.000000) "></path>
+                <path d="M1100,200 L1150,200 L1125,250 L1100,200 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M1075,200 L1125,200 L1100,250 L1075,200 Z" id="Purple-copy" fill="#B375F5" transform="translate(1100.000000, 225.000000) rotate(-180.000000) translate(-1100.000000, -225.000000) "></path>
+                <path d="M900,250 L950,250 L925,300 L900,250 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(925.000000, 275.000000) rotate(-180.000000) translate(-925.000000, -275.000000) "></path>
+                <path d="M750,250 L800,250 L775,300 L750,250 Z" id="Purple-copy-3" fill="#B375F5" transform="translate(775.000000, 275.000000) rotate(-180.000000) translate(-775.000000, -275.000000) "></path>
+                <path d="M1100,150 L1150,150 L1125,200 L1100,150 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(1125.000000, 175.000000) rotate(-180.000000) translate(-1125.000000, -175.000000) "></path>
+                <path d="M1025,200 L1075,200 L1050,250 L1025,200 Z" id="Green-copy" fill="#32CAA9" transform="translate(1050.000000, 225.000000) rotate(-180.000000) translate(-1050.000000, -225.000000) "></path>
+                <path d="M1175,200 L1200,200 L1175,250 L1175,200 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(1187.500000, 225.000000) rotate(-180.000000) translate(-1187.500000, -225.000000) "></path>
+                <path d="M950,150 L1000,150 L975,200 L950,150 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(975.000000, 175.000000) rotate(-180.000000) translate(-975.000000, -175.000000) "></path>
+                <path d="M1000,150 L1050,150 L1025,200 L1000,150 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(1025.000000, 175.000000) rotate(-180.000000) translate(-1025.000000, -175.000000) "></path>
+                <path d="M850,250 L900,250 L875,300 L850,250 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(875.000000, 275.000000) rotate(-180.000000) translate(-875.000000, -275.000000) "></path>
+                <path d="M775,200 L825,200 L800,250 L775,200 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(800.000000, 225.000000) rotate(-180.000000) translate(-800.000000, -225.000000) "></path>
+                <path d="M1000,250 L1050,250 L1025,300 L1000,250 Z" id="Blue-copy" fill="#13CEEF" transform="translate(1025.000000, 275.000000) rotate(-180.000000) translate(-1025.000000, -275.000000) "></path>
+                <path d="M1125,200 L1175,200 L1150,250 L1125,200 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(1150.000000, 225.000000) rotate(-180.000000) translate(-1150.000000, -225.000000) "></path>
+                <path d="M1050,150 L1100,150 L1075,200 L1050,150 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(1075.000000, 175.000000) rotate(-180.000000) translate(-1075.000000, -175.000000) "></path>
+                <path d="M900,150 L950,150 L925,200 L900,150 Z" id="Blue-copy-3" fill="#13CEEF" transform="translate(925.000000, 175.000000) rotate(-180.000000) translate(-925.000000, -175.000000) "></path>
+                <path d="M875,200 L925,200 L900,250 L875,200 Z" id="Blue-copy-4" fill="#13CEEF" transform="translate(900.000000, 225.000000) rotate(-180.000000) translate(-900.000000, -225.000000) "></path>
+                <path d="M1100,250 L1150,250 L1125,300 L1100,250 Z" id="Orange-copy" fill="#FFEF77" transform="translate(1125.000000, 275.000000) rotate(-180.000000) translate(-1125.000000, -275.000000) "></path>
+                <path d="M800,250 L850,250 L825,300 L800,250 Z" id="Orange-copy-2" fill="#FFEF77" transform="translate(825.000000, 275.000000) rotate(-180.000000) translate(-825.000000, -275.000000) "></path>
+                <path d="M850,150 L900,150 L875,200 L850,150 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(875.000000, 175.000000) rotate(-180.000000) translate(-875.000000, -175.000000) "></path>
+                <path d="M750,150 L800,150 L775,200 L750,150 Z" id="Orange-copy-4" fill="#FFEF77" transform="translate(775.000000, 175.000000) rotate(-180.000000) translate(-775.000000, -175.000000) "></path>
+                <path d="M825,200 L875,200 L850,250 L825,200 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(850.000000, 225.000000) rotate(-180.000000) translate(-850.000000, -225.000000) "></path>
+                <polygon id="Red-copy" fill="#FF6373" transform="translate(500.000000, 275.000000) rotate(-180.000000) translate(-500.000000, -275.000000) " points="500 250 525 300 475 300 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(375.000000, 225.000000) rotate(-180.000000) translate(-375.000000, -225.000000) " points="375 200 400 250 350 250 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(600.000000, 175.000000) rotate(-180.000000) translate(-600.000000, -175.000000) " points="600 150 625 200 575 200 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" transform="translate(750.000000, 175.000000) rotate(-180.000000) translate(-750.000000, -175.000000) " points="750 150 775 200 725 200 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" transform="translate(600.000000, 275.000000) rotate(-180.000000) translate(-600.000000, -275.000000) " points="600 250 625 300 575 300 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" transform="translate(650.000000, 175.000000) rotate(-180.000000) translate(-650.000000, -175.000000) " points="650 150 675 200 625 200 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(400.000000, 175.000000) rotate(-180.000000) translate(-400.000000, -175.000000) " points="400 150 425 200 375 200 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(450.000000, 275.000000) rotate(-180.000000) translate(-450.000000, -275.000000) " points="450 250 475 300 425 300 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" transform="translate(525.000000, 225.000000) rotate(-180.000000) translate(-525.000000, -225.000000) " points="525 200 550 250 500 250 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" transform="translate(425.000000, 225.000000) rotate(-180.000000) translate(-425.000000, -225.000000) " points="425 200 450 250 400 250 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" transform="translate(750.000000, 275.000000) rotate(-180.000000) translate(-750.000000, -275.000000) " points="750 250 775 300 725 300 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" transform="translate(500.000000, 175.000000) rotate(-180.000000) translate(-500.000000, -175.000000) " points="500 150 525 200 475 200 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" transform="translate(550.000000, 275.000000) rotate(-180.000000) translate(-550.000000, -275.000000) " points="550 250 575 300 525 300 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" transform="translate(475.000000, 225.000000) rotate(-180.000000) translate(-475.000000, -225.000000) " points="475 200 500 250 450 250 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" transform="translate(700.000000, 275.000000) rotate(-180.000000) translate(-700.000000, -275.000000) " points="700 250 725 300 675 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(400.000000, 275.000000) rotate(-180.000000) translate(-400.000000, -275.000000) " points="400 250 425 300 375 300 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(575.000000, 225.000000) rotate(-180.000000) translate(-575.000000, -225.000000) " points="575 200 600 250 550 250 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" transform="translate(450.000000, 175.000000) rotate(-180.000000) translate(-450.000000, -175.000000) " points="450 150 475 200 425 200 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" transform="translate(675.000000, 225.000000) rotate(-180.000000) translate(-675.000000, -225.000000) " points="675 200 700 250 650 250 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(700.000000, 175.000000) rotate(-180.000000) translate(-700.000000, -175.000000) " points="700 150 725 200 675 200 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(650.000000, 275.000000) rotate(-180.000000) translate(-650.000000, -275.000000) " points="650 250 675 300 625 300 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" transform="translate(550.000000, 175.000000) rotate(-180.000000) translate(-550.000000, -175.000000) " points="550 150 575 200 525 200 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" transform="translate(625.000000, 225.000000) rotate(-180.000000) translate(-625.000000, -225.000000) " points="625 200 650 250 600 250 "></polygon>
+                <path d="M650,250 L700,250 L675,300 L650,250 Z" id="Red-copy" fill="#FF6373" transform="translate(675.000000, 275.000000) rotate(-180.000000) translate(-675.000000, -275.000000) "></path>
+                <path d="M550,250 L600,250 L575,300 L550,250 Z" id="Red-copy-2" fill="#FF6373" transform="translate(575.000000, 275.000000) rotate(-180.000000) translate(-575.000000, -275.000000) "></path>
+                <path d="M575,200 L625,200 L600,250 L575,200 Z" id="Red-copy-3" fill="#FF6373" transform="translate(600.000000, 225.000000) rotate(-180.000000) translate(-600.000000, -225.000000) "></path>
+                <path d="M525,200 L575,200 L550,250 L525,200 Z" id="Red-copy-3" fill="#FF6373" transform="translate(550.000000, 225.000000) rotate(-180.000000) translate(-550.000000, -225.000000) "></path>
+                <path d="M400,150 L450,150 L425,200 L400,150 Z" id="Red-copy-4" fill="#FF6373" transform="translate(425.000000, 175.000000) rotate(-180.000000) translate(-425.000000, -175.000000) "></path>
+                <path d="M700,200 L750,200 L725,250 L700,200 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M675,200 L725,200 L700,250 L675,200 Z" id="Purple-copy" fill="#B375F5" transform="translate(700.000000, 225.000000) rotate(-180.000000) translate(-700.000000, -225.000000) "></path>
+                <path d="M500,250 L550,250 L525,300 L500,250 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(525.000000, 275.000000) rotate(-180.000000) translate(-525.000000, -275.000000) "></path>
+                <path d="M350,250 L400,250 L375,300 L350,250 Z" id="Purple-copy-3" fill="#B375F5" transform="translate(375.000000, 275.000000) rotate(-180.000000) translate(-375.000000, -275.000000) "></path>
+                <path d="M700,150 L750,150 L725,200 L700,150 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(725.000000, 175.000000) rotate(-180.000000) translate(-725.000000, -175.000000) "></path>
+                <path d="M625,200 L675,200 L650,250 L625,200 Z" id="Green-copy" fill="#32CAA9" transform="translate(650.000000, 225.000000) rotate(-180.000000) translate(-650.000000, -225.000000) "></path>
+                <path d="M550,150 L600,150 L575,200 L550,150 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(575.000000, 175.000000) rotate(-180.000000) translate(-575.000000, -175.000000) "></path>
+                <path d="M600,150 L650,150 L625,200 L600,150 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(625.000000, 175.000000) rotate(-180.000000) translate(-625.000000, -175.000000) "></path>
+                <path d="M450,250 L500,250 L475,300 L450,250 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(475.000000, 275.000000) rotate(-180.000000) translate(-475.000000, -275.000000) "></path>
+                <path d="M375,200 L425,200 L400,250 L375,200 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(400.000000, 225.000000) rotate(-180.000000) translate(-400.000000, -225.000000) "></path>
+                <path d="M600,250 L650,250 L625,300 L600,250 Z" id="Blue-copy" fill="#13CEEF" transform="translate(625.000000, 275.000000) rotate(-180.000000) translate(-625.000000, -275.000000) "></path>
+                <path d="M725,200 L775,200 L750,250 L725,200 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(750.000000, 225.000000) rotate(-180.000000) translate(-750.000000, -225.000000) "></path>
+                <path d="M650,150 L700,150 L675,200 L650,150 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(675.000000, 175.000000) rotate(-180.000000) translate(-675.000000, -175.000000) "></path>
+                <path d="M500,150 L550,150 L525,200 L500,150 Z" id="Blue-copy-3" fill="#13CEEF" transform="translate(525.000000, 175.000000) rotate(-180.000000) translate(-525.000000, -175.000000) "></path>
+                <path d="M475,200 L525,200 L500,250 L475,200 Z" id="Blue-copy-4" fill="#13CEEF" transform="translate(500.000000, 225.000000) rotate(-180.000000) translate(-500.000000, -225.000000) "></path>
+                <path d="M700,250 L750,250 L725,300 L700,250 Z" id="Orange-copy" fill="#FFEF77" transform="translate(725.000000, 275.000000) rotate(-180.000000) translate(-725.000000, -275.000000) "></path>
+                <path d="M400,250 L450,250 L425,300 L400,250 Z" id="Orange-copy-2" fill="#FFEF77" transform="translate(425.000000, 275.000000) rotate(-180.000000) translate(-425.000000, -275.000000) "></path>
+                <path d="M450,150 L500,150 L475,200 L450,150 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(475.000000, 175.000000) rotate(-180.000000) translate(-475.000000, -175.000000) "></path>
+                <path d="M350,150 L400,150 L375,200 L350,150 Z" id="Orange-copy-4" fill="#FFEF77" transform="translate(375.000000, 175.000000) rotate(-180.000000) translate(-375.000000, -175.000000) "></path>
+                <path d="M425,200 L475,200 L450,250 L425,200 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(450.000000, 225.000000) rotate(-180.000000) translate(-450.000000, -225.000000) "></path>
+            </g>
+            <g id="Group-copy" sketch:type="MSShapeGroup">
+                <polygon id="Red-copy" fill="#FF6373" points="200 300 225 350 175 350 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="325 350 350 400 300 400 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="100 400 125 450 75 450 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="1150 400 1175 450 1125 450 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" points="100 300 125 350 75 350 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" points="50 400 75 450 25 450 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="300 400 325 450 275 450 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="250 300 275 350 225 350 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" points="175 350 200 400 150 400 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" points="275 350 300 400 250 400 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" points="1150 300 1175 350 1125 350 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" points="200 400 225 450 175 450 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" points="150 300 175 350 125 350 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" points="225 350 250 400 200 400 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" points="0 300 25 350 0 350 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="300 300 325 350 275 350 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="125 350 150 400 100 400 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="250 400 275 450 225 450 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" points="25 350 50 400 0 400 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="0 400 25 450 0 450 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="50 300 75 350 25 350 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" points="150 400 175 450 125 450 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" points="75 350 100 400 50 400 "></polygon>
+                <path d="M0,300 L50,300 L25,350 L0,300 Z" id="Red-copy" fill="#FF6373"></path>
+                <path d="M100,300 L150,300 L125,350 L100,300 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M75,350 L125,350 L100,400 L75,350 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M125,350 L175,350 L150,400 L125,350 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M250,400 L300,400 L275,450 L250,400 Z" id="Red-copy-4" fill="#FF6373"></path>
+                <path d="M1150,350 L1200,350 L1175,400 L1150,350 Z" id="Red-copy-2" fill="#FF6373" transform="translate(1175.000000, 375.000000) rotate(-180.000000) translate(-1175.000000, -375.000000) "></path>
+                <path d="M1.0658141e-14,350 L25,350 L0,400 L1.0658141e-14,350 Z" id="Purple-copy" fill="#B375F5"></path>
+                <path d="M150,300 L200,300 L175,350 L150,300 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M300,300 L350,300 L325,350 L300,300 Z" id="Purple-copy-3" fill="#B375F5"></path>
+                <path d="M1150,400 L1200,400 L1175,450 L1150,400 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M25,350 L75,350 L50,400 L25,350 Z" id="Green-copy" fill="#32CAA9"></path>
+                <path d="M100,400 L150,400 L125,450 L100,400 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M50,400 L100,400 L75,450 L50,400 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M200,300 L250,300 L225,350 L200,300 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M275,350 L325,350 L300,400 L275,350 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M50,300 L100,300 L75,350 L50,300 Z" id="Blue-copy" fill="#13CEEF"></path>
+                <path d="M1125,350 L1175,350 L1150,400 L1125,350 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M1175,450 L1200,450 L1200,500 L1175,450 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M0,400 L50,400 L25,450 L0,400 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M150,400 L200,400 L175,450 L150,400 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M175,350 L225,350 L200,400 L175,350 Z" id="Blue-copy-4" fill="#13CEEF"></path>
+                <path d="M1150,300 L1200,300 L1175,350 L1150,300 Z" id="Orange-copy" fill="#FFEF77"></path>
+                <path d="M250,300 L300,300 L275,350 L250,300 Z" id="Orange-copy-2" fill="#FFEF77"></path>
+                <path d="M200,400 L250,400 L225,450 L200,400 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <path d="M300,400 L350,400 L325,450 L300,400 Z" id="Orange-copy-4" fill="#FFEF77"></path>
+                <path d="M225,350 L275,350 L250,400 L225,350 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <polygon id="Red-copy" fill="#FF6373" points="1000 300 1025 350 975 350 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="1125 350 1150 400 1100 400 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="900 400 925 450 875 450 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="750 400 775 450 725 450 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" points="900 300 925 350 875 350 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" points="850 400 875 450 825 450 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="1100 400 1125 450 1075 450 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="1050 300 1075 350 1025 350 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" points="975 350 1000 400 950 400 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" points="1075 350 1100 400 1050 400 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" points="750 300 775 350 725 350 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" points="1000 400 1025 450 975 450 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" points="950 300 975 350 925 350 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" points="1025 350 1050 400 1000 400 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" points="800 300 825 350 775 350 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="1100 300 1125 350 1075 350 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="1200 300 1200 350 1175 350 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="925 350 950 400 900 400 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="1050 400 1075 450 1025 450 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" points="825 350 850 400 800 400 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="800 400 825 450 775 450 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="850 300 875 350 825 350 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" points="950 400 975 450 925 450 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" points="875 350 900 400 850 400 "></polygon>
+                <path d="M800,300 L850,300 L825,350 L800,300 Z" id="Red-copy" fill="#FF6373"></path>
+                <path d="M900,300 L950,300 L925,350 L900,300 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M875,350 L925,350 L900,400 L875,350 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M925,350 L975,350 L950,400 L925,350 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M1050,400 L1100,400 L1075,450 L1050,400 Z" id="Red-copy-4" fill="#FF6373"></path>
+                <path d="M750,350 L800,350 L775,400 L750,350 Z" id="Red-copy-2" fill="#FF6373" transform="translate(775.000000, 375.000000) rotate(-180.000000) translate(-775.000000, -375.000000) "></path>
+                <path d="M775,350 L825,350 L800,400 L775,350 Z" id="Purple-copy" fill="#B375F5"></path>
+                <path d="M950,300 L1000,300 L975,350 L950,300 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M1100,300 L1150,300 L1125,350 L1100,300 Z" id="Purple-copy-3" fill="#B375F5"></path>
+                <path d="M1175,350 L1200,350 L1200,400 L1175,350 Z" id="Purple-copy-4" fill="#B375F5"></path>
+                <path d="M750,400 L800,400 L775,450 L750,400 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M825,350 L875,350 L850,400 L825,350 Z" id="Green-copy" fill="#32CAA9"></path>
+                <path d="M900,400 L950,400 L925,450 L900,400 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M850,400 L900,400 L875,450 L850,400 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M1000,300 L1050,300 L1025,350 L1000,300 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M1075,350 L1125,350 L1100,400 L1075,350 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M850,300 L900,300 L875,350 L850,300 Z" id="Blue-copy" fill="#13CEEF"></path>
+                <path d="M725,350 L775,350 L750,400 L725,350 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M800,400 L850,400 L825,450 L800,400 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M950,400 L1000,400 L975,450 L950,400 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M975,350 L1025,350 L1000,400 L975,350 Z" id="Blue-copy-4" fill="#13CEEF"></path>
+                <path d="M750,300 L800,300 L775,350 L750,300 Z" id="Orange-copy" fill="#FFEF77"></path>
+                <path d="M1050,300 L1100,300 L1075,350 L1050,300 Z" id="Orange-copy-2" fill="#FFEF77"></path>
+                <path d="M1000,400 L1050,400 L1025,450 L1000,400 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <path d="M1100,400 L1150,400 L1125,450 L1100,400 Z" id="Orange-copy-4" fill="#FFEF77"></path>
+                <path d="M1025,350 L1075,350 L1050,400 L1025,350 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <polygon id="Red-copy" fill="#FF6373" points="600 300 625 350 575 350 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="725 350 750 400 700 400 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" points="500 400 525 450 475 450 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" points="350 400 375 450 325 450 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" points="500 300 525 350 475 350 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" points="450 400 475 450 425 450 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="700 400 725 450 675 450 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" points="650 300 675 350 625 350 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" points="575 350 600 400 550 400 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" points="675 350 700 400 650 400 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" points="350 300 375 350 325 350 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" points="600 400 625 450 575 450 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" points="550 300 575 350 525 350 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" points="625 350 650 400 600 400 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" points="400 300 425 350 375 350 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="700 300 725 350 675 350 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" points="525 350 550 400 500 400 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" points="650 400 675 450 625 450 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" points="425 350 450 400 400 400 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="400 400 425 450 375 450 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" points="450 300 475 350 425 350 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" points="550 400 575 450 525 450 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" points="475 350 500 400 450 400 "></polygon>
+                <path d="M400,300 L450,300 L425,350 L400,300 Z" id="Red-copy" fill="#FF6373"></path>
+                <path d="M500,300 L550,300 L525,350 L500,300 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M475,350 L525,350 L500,400 L475,350 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M525,350 L575,350 L550,400 L525,350 Z" id="Red-copy-3" fill="#FF6373"></path>
+                <path d="M650,400 L700,400 L675,450 L650,400 Z" id="Red-copy-4" fill="#FF6373"></path>
+                <path d="M350,350 L400,350 L375,400 L350,350 Z" id="Red-copy-2" fill="#FF6373" transform="translate(375.000000, 375.000000) rotate(-180.000000) translate(-375.000000, -375.000000) "></path>
+                <path d="M375,350 L425,350 L400,400 L375,350 Z" id="Purple-copy" fill="#B375F5"></path>
+                <path d="M550,300 L600,300 L575,350 L550,300 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M700,300 L750,300 L725,350 L700,300 Z" id="Purple-copy-3" fill="#B375F5"></path>
+                <path d="M350,400 L400,400 L375,450 L350,400 Z" id="Purple-copy-2" fill="#B375F5"></path>
+                <path d="M425,350 L475,350 L450,400 L425,350 Z" id="Green-copy" fill="#32CAA9"></path>
+                <path d="M500,400 L550,400 L525,450 L500,400 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M450,400 L500,400 L475,450 L450,400 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M600,300 L650,300 L625,350 L600,300 Z" id="Green-copy-2" fill="#32CAA9"></path>
+                <path d="M675,350 L725,350 L700,400 L675,350 Z" id="Green-copy-3" fill="#32CAA9"></path>
+                <path d="M450,300 L500,300 L475,350 L450,300 Z" id="Blue-copy" fill="#13CEEF"></path>
+                <path d="M325,350 L375,350 L350,400 L325,350 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M400,400 L450,400 L425,450 L400,400 Z" id="Blue-copy-2" fill="#13CEEF"></path>
+                <path d="M550,400 L600,400 L575,450 L550,400 Z" id="Blue-copy-3" fill="#13CEEF"></path>
+                <path d="M575,350 L625,350 L600,400 L575,350 Z" id="Blue-copy-4" fill="#13CEEF"></path>
+                <path d="M350,300 L400,300 L375,350 L350,300 Z" id="Orange-copy" fill="#FFEF77"></path>
+                <path d="M650,300 L700,300 L675,350 L650,300 Z" id="Orange-copy-2" fill="#FFEF77"></path>
+                <path d="M600,400 L650,400 L625,450 L600,400 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <path d="M700,400 L750,400 L725,450 L700,400 Z" id="Orange-copy-4" fill="#FFEF77"></path>
+                <path d="M625,350 L675,350 L650,400 L625,350 Z" id="Orange-copy-3" fill="#FFEF77"></path>
+                <polygon id="Red-copy" fill="#FF6373" transform="translate(50.000000, 575.000000) rotate(-180.000000) translate(-50.000000, -575.000000) " points="50 550 75 600 25 600 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(1125.000000, 525.000000) rotate(-180.000000) translate(-1125.000000, -525.000000) " points="1125 500 1150 550 1100 550 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(150.000000, 475.000000) rotate(-180.000000) translate(-150.000000, -475.000000) " points="150 450 175 500 125 500 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" transform="translate(300.000000, 475.000000) rotate(-180.000000) translate(-300.000000, -475.000000) " points="300 450 325 500 275 500 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" transform="translate(150.000000, 575.000000) rotate(-180.000000) translate(-150.000000, -575.000000) " points="150 550 175 600 125 600 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" transform="translate(200.000000, 475.000000) rotate(-180.000000) translate(-200.000000, -475.000000) " points="200 450 225 500 175 500 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(1150.000000, 475.000000) rotate(-180.000000) translate(-1150.000000, -475.000000) " points="1150 450 1175 500 1125 500 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(12.500000, 575.000000) rotate(-180.000000) translate(-12.500000, -575.000000) " points="25 550 25 600 0 600 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" transform="translate(75.000000, 525.000000) rotate(-180.000000) translate(-75.000000, -525.000000) " points="75 500 100 550 50 550 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" transform="translate(1175.000000, 525.000000) rotate(-180.000000) translate(-1175.000000, -525.000000) " points="1175 500 1200 550 1150 550 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" transform="translate(300.000000, 575.000000) rotate(-180.000000) translate(-300.000000, -575.000000) " points="300 550 325 600 275 600 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" transform="translate(50.000000, 475.000000) rotate(-180.000000) translate(-50.000000, -475.000000) " points="50 450 75 500 25 500 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" transform="translate(100.000000, 575.000000) rotate(-180.000000) translate(-100.000000, -575.000000) " points="100 550 125 600 75 600 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" transform="translate(25.000000, 525.000000) rotate(-180.000000) translate(-25.000000, -525.000000) " points="25 500 50 550 0 550 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" transform="translate(250.000000, 575.000000) rotate(-180.000000) translate(-250.000000, -575.000000) " points="250 550 275 600 225 600 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(1150.000000, 575.000000) rotate(-180.000000) translate(-1150.000000, -575.000000) " points="1150 550 1175 600 1125 600 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(125.000000, 525.000000) rotate(-180.000000) translate(-125.000000, -525.000000) " points="125 500 150 550 100 550 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" transform="translate(12.500000, 475.000000) rotate(-180.000000) translate(-12.500000, -475.000000) " points="25 450 25 500 0 500 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" transform="translate(225.000000, 525.000000) rotate(-180.000000) translate(-225.000000, -525.000000) " points="225 500 250 550 200 550 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(250.000000, 475.000000) rotate(-180.000000) translate(-250.000000, -475.000000) " points="250 450 275 500 225 500 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(200.000000, 575.000000) rotate(-180.000000) translate(-200.000000, -575.000000) " points="200 550 225 600 175 600 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" transform="translate(100.000000, 475.000000) rotate(-180.000000) translate(-100.000000, -475.000000) " points="100 450 125 500 75 500 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" transform="translate(175.000000, 525.000000) rotate(-180.000000) translate(-175.000000, -525.000000) " points="175 500 200 550 150 550 "></polygon>
+                <path d="M200,550 L250,550 L225,600 L200,550 Z" id="Red-copy" fill="#FF6373" transform="translate(225.000000, 575.000000) rotate(-180.000000) translate(-225.000000, -575.000000) "></path>
+                <path d="M100,550 L150,550 L125,600 L100,550 Z" id="Red-copy-2" fill="#FF6373" transform="translate(125.000000, 575.000000) rotate(-180.000000) translate(-125.000000, -575.000000) "></path>
+                <path d="M125,500 L175,500 L150,550 L125,500 Z" id="Red-copy-3" fill="#FF6373" transform="translate(150.000000, 525.000000) rotate(-180.000000) translate(-150.000000, -525.000000) "></path>
+                <path d="M75,500 L125,500 L100,550 L75,500 Z" id="Red-copy-3" fill="#FF6373" transform="translate(100.000000, 525.000000) rotate(-180.000000) translate(-100.000000, -525.000000) "></path>
+                <path d="M1150,450 L1200,450 L1175,500 L1150,450 Z" id="Red-copy-4" fill="#FF6373" transform="translate(1175.000000, 475.000000) rotate(-180.000000) translate(-1175.000000, -475.000000) "></path>
+                <path d="M250,500 L300,500 L275,550 L250,500 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M225,500 L275,500 L250,550 L225,500 Z" id="Purple-copy" fill="#B375F5" transform="translate(250.000000, 525.000000) rotate(-180.000000) translate(-250.000000, -525.000000) "></path>
+                <path d="M50,550 L100,550 L75,600 L50,550 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(75.000000, 575.000000) rotate(-180.000000) translate(-75.000000, -575.000000) "></path>
+                <path d="M1100,550 L1150,550 L1125,600 L1100,550 Z" id="Purple-copy-3" fill="#B375F5" transform="translate(1125.000000, 575.000000) rotate(-180.000000) translate(-1125.000000, -575.000000) "></path>
+                <path d="M250,450 L300,450 L275,500 L250,450 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(275.000000, 475.000000) rotate(-180.000000) translate(-275.000000, -475.000000) "></path>
+                <path d="M175,500 L225,500 L200,550 L175,500 Z" id="Green-copy" fill="#32CAA9" transform="translate(200.000000, 525.000000) rotate(-180.000000) translate(-200.000000, -525.000000) "></path>
+                <path d="M100,450 L150,450 L125,500 L100,450 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(125.000000, 475.000000) rotate(-180.000000) translate(-125.000000, -475.000000) "></path>
+                <path d="M150,450 L200,450 L175,500 L150,450 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(175.000000, 475.000000) rotate(-180.000000) translate(-175.000000, -475.000000) "></path>
+                <path d="M0,550 L50,550 L25,600 L0,550 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(25.000000, 575.000000) rotate(-180.000000) translate(-25.000000, -575.000000) "></path>
+                <path d="M1125,500 L1175,500 L1150,550 L1125,500 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(1150.000000, 525.000000) rotate(-180.000000) translate(-1150.000000, -525.000000) "></path>
+                <path d="M150,550 L200,550 L175,600 L150,550 Z" id="Blue-copy" fill="#13CEEF" transform="translate(175.000000, 575.000000) rotate(-180.000000) translate(-175.000000, -575.000000) "></path>
+                <path d="M275,500 L325,500 L300,550 L275,500 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(300.000000, 525.000000) rotate(-180.000000) translate(-300.000000, -525.000000) "></path>
+                <path d="M200,450 L250,450 L225,500 L200,450 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(225.000000, 475.000000) rotate(-180.000000) translate(-225.000000, -475.000000) "></path>
+                <path d="M50,450 L100,450 L75,500 L50,450 Z" id="Blue-copy-3" fill="#13CEEF" transform="translate(75.000000, 475.000000) rotate(-180.000000) translate(-75.000000, -475.000000) "></path>
+                <path d="M25,500 L75,500 L50,550 L25,500 Z" id="Blue-copy-4" fill="#13CEEF" transform="translate(50.000000, 525.000000) rotate(-180.000000) translate(-50.000000, -525.000000) "></path>
+                <path d="M250,550 L300,550 L275,600 L250,550 Z" id="Orange-copy" fill="#FFEF77" transform="translate(275.000000, 575.000000) rotate(-180.000000) translate(-275.000000, -575.000000) "></path>
+                <path d="M1150,550 L1200,550 L1175,600 L1150,550 Z" id="Orange-copy-2" fill="#FFEF77" transform="translate(1175.000000, 575.000000) rotate(-180.000000) translate(-1175.000000, -575.000000) "></path>
+                <path d="M0,450 L50,450 L25,500 L0,450 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(25.000000, 475.000000) rotate(-180.000000) translate(-25.000000, -475.000000) "></path>
+                <path d="M1100,450 L1150,450 L1125,500 L1100,450 Z" id="Orange-copy-4" fill="#FFEF77" transform="translate(1125.000000, 475.000000) rotate(-180.000000) translate(-1125.000000, -475.000000) "></path>
+                <path d="M1175,400 L1200,400 L1175,450 L1175,400 Z" id="Orange-copy-5" fill="#FFEF77" transform="translate(1187.500000, 425.000000) rotate(-180.000000) translate(-1187.500000, -425.000000) "></path>
+                <path d="M1175,500 L1200,500 L1175,550 L1175,500 Z" id="Orange-copy-6" fill="#FFEF77" transform="translate(1187.500000, 525.000000) rotate(-180.000000) translate(-1187.500000, -525.000000) "></path>
+                <path d="M0,500 L25,500 L25,550 L0,500 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(12.500000, 525.000000) rotate(-180.000000) translate(-12.500000, -525.000000) "></path>
+                <polygon id="Red-copy" fill="#FF6373" transform="translate(850.000000, 575.000000) rotate(-180.000000) translate(-850.000000, -575.000000) " points="850 550 875 600 825 600 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(725.000000, 525.000000) rotate(-180.000000) translate(-725.000000, -525.000000) " points="725 500 750 550 700 550 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(950.000000, 475.000000) rotate(-180.000000) translate(-950.000000, -475.000000) " points="950 450 975 500 925 500 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" transform="translate(1100.000000, 475.000000) rotate(-180.000000) translate(-1100.000000, -475.000000) " points="1100 450 1125 500 1075 500 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" transform="translate(950.000000, 575.000000) rotate(-180.000000) translate(-950.000000, -575.000000) " points="950 550 975 600 925 600 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" transform="translate(1000.000000, 475.000000) rotate(-180.000000) translate(-1000.000000, -475.000000) " points="1000 450 1025 500 975 500 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(750.000000, 475.000000) rotate(-180.000000) translate(-750.000000, -475.000000) " points="750 450 775 500 725 500 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(800.000000, 575.000000) rotate(-180.000000) translate(-800.000000, -575.000000) " points="800 550 825 600 775 600 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" transform="translate(875.000000, 525.000000) rotate(-180.000000) translate(-875.000000, -525.000000) " points="875 500 900 550 850 550 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" transform="translate(775.000000, 525.000000) rotate(-180.000000) translate(-775.000000, -525.000000) " points="775 500 800 550 750 550 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" transform="translate(1100.000000, 575.000000) rotate(-180.000000) translate(-1100.000000, -575.000000) " points="1100 550 1125 600 1075 600 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" transform="translate(850.000000, 475.000000) rotate(-180.000000) translate(-850.000000, -475.000000) " points="850 450 875 500 825 500 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" transform="translate(900.000000, 575.000000) rotate(-180.000000) translate(-900.000000, -575.000000) " points="900 550 925 600 875 600 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" transform="translate(825.000000, 525.000000) rotate(-180.000000) translate(-825.000000, -525.000000) " points="825 500 850 550 800 550 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" transform="translate(1050.000000, 575.000000) rotate(-180.000000) translate(-1050.000000, -575.000000) " points="1050 550 1075 600 1025 600 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(750.000000, 575.000000) rotate(-180.000000) translate(-750.000000, -575.000000) " points="750 550 775 600 725 600 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(925.000000, 525.000000) rotate(-180.000000) translate(-925.000000, -525.000000) " points="925 500 950 550 900 550 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" transform="translate(800.000000, 475.000000) rotate(-180.000000) translate(-800.000000, -475.000000) " points="800 450 825 500 775 500 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" transform="translate(1025.000000, 525.000000) rotate(-180.000000) translate(-1025.000000, -525.000000) " points="1025 500 1050 550 1000 550 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(1050.000000, 475.000000) rotate(-180.000000) translate(-1050.000000, -475.000000) " points="1050 450 1075 500 1025 500 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(1000.000000, 575.000000) rotate(-180.000000) translate(-1000.000000, -575.000000) " points="1000 550 1025 600 975 600 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" transform="translate(900.000000, 475.000000) rotate(-180.000000) translate(-900.000000, -475.000000) " points="900 450 925 500 875 500 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" transform="translate(975.000000, 525.000000) rotate(-180.000000) translate(-975.000000, -525.000000) " points="975 500 1000 550 950 550 "></polygon>
+                <path d="M1000,550 L1050,550 L1025,600 L1000,550 Z" id="Red-copy" fill="#FF6373" transform="translate(1025.000000, 575.000000) rotate(-180.000000) translate(-1025.000000, -575.000000) "></path>
+                <path d="M900,550 L950,550 L925,600 L900,550 Z" id="Red-copy-2" fill="#FF6373" transform="translate(925.000000, 575.000000) rotate(-180.000000) translate(-925.000000, -575.000000) "></path>
+                <path d="M925,500 L975,500 L950,550 L925,500 Z" id="Red-copy-3" fill="#FF6373" transform="translate(950.000000, 525.000000) rotate(-180.000000) translate(-950.000000, -525.000000) "></path>
+                <path d="M875,500 L925,500 L900,550 L875,500 Z" id="Red-copy-3" fill="#FF6373" transform="translate(900.000000, 525.000000) rotate(-180.000000) translate(-900.000000, -525.000000) "></path>
+                <path d="M750,450 L800,450 L775,500 L750,450 Z" id="Red-copy-4" fill="#FF6373" transform="translate(775.000000, 475.000000) rotate(-180.000000) translate(-775.000000, -475.000000) "></path>
+                <path d="M1050,500 L1100,500 L1075,550 L1050,500 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M1025,500 L1075,500 L1050,550 L1025,500 Z" id="Purple-copy" fill="#B375F5" transform="translate(1050.000000, 525.000000) rotate(-180.000000) translate(-1050.000000, -525.000000) "></path>
+                <path d="M850,550 L900,550 L875,600 L850,550 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(875.000000, 575.000000) rotate(-180.000000) translate(-875.000000, -575.000000) "></path>
+                <path d="M700,550 L750,550 L725,600 L700,550 Z" id="Purple-copy-3" fill="#B375F5" transform="translate(725.000000, 575.000000) rotate(-180.000000) translate(-725.000000, -575.000000) "></path>
+                <path d="M1050,450 L1100,450 L1075,500 L1050,450 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(1075.000000, 475.000000) rotate(-180.000000) translate(-1075.000000, -475.000000) "></path>
+                <path d="M975,500 L1025,500 L1000,550 L975,500 Z" id="Green-copy" fill="#32CAA9" transform="translate(1000.000000, 525.000000) rotate(-180.000000) translate(-1000.000000, -525.000000) "></path>
+                <path d="M900,450 L950,450 L925,500 L900,450 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(925.000000, 475.000000) rotate(-180.000000) translate(-925.000000, -475.000000) "></path>
+                <path d="M950,450 L1000,450 L975,500 L950,450 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(975.000000, 475.000000) rotate(-180.000000) translate(-975.000000, -475.000000) "></path>
+                <path d="M800,550 L850,550 L825,600 L800,550 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(825.000000, 575.000000) rotate(-180.000000) translate(-825.000000, -575.000000) "></path>
+                <path d="M725,500 L775,500 L750,550 L725,500 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(750.000000, 525.000000) rotate(-180.000000) translate(-750.000000, -525.000000) "></path>
+                <path d="M950,550 L1000,550 L975,600 L950,550 Z" id="Blue-copy" fill="#13CEEF" transform="translate(975.000000, 575.000000) rotate(-180.000000) translate(-975.000000, -575.000000) "></path>
+                <path d="M1075,500 L1125,500 L1100,550 L1075,500 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(1100.000000, 525.000000) rotate(-180.000000) translate(-1100.000000, -525.000000) "></path>
+                <path d="M1000,450 L1050,450 L1025,500 L1000,450 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(1025.000000, 475.000000) rotate(-180.000000) translate(-1025.000000, -475.000000) "></path>
+                <path d="M850,450 L900,450 L875,500 L850,450 Z" id="Blue-copy-3" fill="#13CEEF" transform="translate(875.000000, 475.000000) rotate(-180.000000) translate(-875.000000, -475.000000) "></path>
+                <path d="M825,500 L875,500 L850,550 L825,500 Z" id="Blue-copy-4" fill="#13CEEF" transform="translate(850.000000, 525.000000) rotate(-180.000000) translate(-850.000000, -525.000000) "></path>
+                <path d="M1050,550 L1100,550 L1075,600 L1050,550 Z" id="Orange-copy" fill="#FFEF77" transform="translate(1075.000000, 575.000000) rotate(-180.000000) translate(-1075.000000, -575.000000) "></path>
+                <path d="M750,550 L800,550 L775,600 L750,550 Z" id="Orange-copy-2" fill="#FFEF77" transform="translate(775.000000, 575.000000) rotate(-180.000000) translate(-775.000000, -575.000000) "></path>
+                <path d="M800,450 L850,450 L825,500 L800,450 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(825.000000, 475.000000) rotate(-180.000000) translate(-825.000000, -475.000000) "></path>
+                <path d="M700,450 L750,450 L725,500 L700,450 Z" id="Orange-copy-4" fill="#FFEF77" transform="translate(725.000000, 475.000000) rotate(-180.000000) translate(-725.000000, -475.000000) "></path>
+                <path d="M775,500 L825,500 L800,550 L775,500 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(800.000000, 525.000000) rotate(-180.000000) translate(-800.000000, -525.000000) "></path>
+                <polygon id="Red-copy" fill="#FF6373" transform="translate(450.000000, 575.000000) rotate(-180.000000) translate(-450.000000, -575.000000) " points="450 550 475 600 425 600 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(325.000000, 525.000000) rotate(-180.000000) translate(-325.000000, -525.000000) " points="325 500 350 550 300 550 "></polygon>
+                <polygon id="Red-copy-2" fill="#FF6373" transform="translate(550.000000, 475.000000) rotate(-180.000000) translate(-550.000000, -475.000000) " points="550 450 575 500 525 500 "></polygon>
+                <polygon id="Red-copy-3" fill="#FF6373" transform="translate(700.000000, 475.000000) rotate(-180.000000) translate(-700.000000, -475.000000) " points="700 450 725 500 675 500 "></polygon>
+                <polygon id="Purple-copy" fill="#B375F5" transform="translate(550.000000, 575.000000) rotate(-180.000000) translate(-550.000000, -575.000000) " points="550 550 575 600 525 600 "></polygon>
+                <polygon id="Purple-copy-2" fill="#B375F5" transform="translate(600.000000, 475.000000) rotate(-180.000000) translate(-600.000000, -475.000000) " points="600 450 625 500 575 500 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(350.000000, 475.000000) rotate(-180.000000) translate(-350.000000, -475.000000) " points="350 450 375 500 325 500 "></polygon>
+                <polygon id="Purple-copy-3" fill="#B375F5" transform="translate(400.000000, 575.000000) rotate(-180.000000) translate(-400.000000, -575.000000) " points="400 550 425 600 375 600 "></polygon>
+                <polygon id="Purple-copy-4" fill="#B375F5" transform="translate(475.000000, 525.000000) rotate(-180.000000) translate(-475.000000, -525.000000) " points="475 500 500 550 450 550 "></polygon>
+                <polygon id="Purple-copy-5" fill="#B375F5" transform="translate(375.000000, 525.000000) rotate(-180.000000) translate(-375.000000, -525.000000) " points="375 500 400 550 350 550 "></polygon>
+                <polygon id="Green-copy" fill="#41C5A9" transform="translate(700.000000, 575.000000) rotate(-180.000000) translate(-700.000000, -575.000000) " points="700 550 725 600 675 600 "></polygon>
+                <polygon id="Green-copy-2" fill="#41C5A9" transform="translate(450.000000, 475.000000) rotate(-180.000000) translate(-450.000000, -475.000000) " points="450 450 475 500 425 500 "></polygon>
+                <polygon id="Green-copy-3" fill="#41C5A9" transform="translate(500.000000, 575.000000) rotate(-180.000000) translate(-500.000000, -575.000000) " points="500 550 525 600 475 600 "></polygon>
+                <polygon id="Green-copy-4" fill="#41C5A9" transform="translate(425.000000, 525.000000) rotate(-180.000000) translate(-425.000000, -525.000000) " points="425 500 450 550 400 550 "></polygon>
+                <polygon id="Blue-copy" fill="#13CEEF" transform="translate(650.000000, 575.000000) rotate(-180.000000) translate(-650.000000, -575.000000) " points="650 550 675 600 625 600 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(350.000000, 575.000000) rotate(-180.000000) translate(-350.000000, -575.000000) " points="350 550 375 600 325 600 "></polygon>
+                <polygon id="Blue-copy-2" fill="#13CEEF" transform="translate(525.000000, 525.000000) rotate(-180.000000) translate(-525.000000, -525.000000) " points="525 500 550 550 500 550 "></polygon>
+                <polygon id="Blue-copy-3" fill="#13CEEF" transform="translate(400.000000, 475.000000) rotate(-180.000000) translate(-400.000000, -475.000000) " points="400 450 425 500 375 500 "></polygon>
+                <polygon id="Orange-copy" fill="#FFEF77" transform="translate(625.000000, 525.000000) rotate(-180.000000) translate(-625.000000, -525.000000) " points="625 500 650 550 600 550 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(650.000000, 475.000000) rotate(-180.000000) translate(-650.000000, -475.000000) " points="650 450 675 500 625 500 "></polygon>
+                <polygon id="Orange-copy-2" fill="#FFEF77" transform="translate(600.000000, 575.000000) rotate(-180.000000) translate(-600.000000, -575.000000) " points="600 550 625 600 575 600 "></polygon>
+                <polygon id="Orange-copy-3" fill="#FFEF77" transform="translate(500.000000, 475.000000) rotate(-180.000000) translate(-500.000000, -475.000000) " points="500 450 525 500 475 500 "></polygon>
+                <polygon id="Orange-copy-4" fill="#FFEF77" transform="translate(575.000000, 525.000000) rotate(-180.000000) translate(-575.000000, -525.000000) " points="575 500 600 550 550 550 "></polygon>
+                <path d="M600,550 L650,550 L625,600 L600,550 Z" id="Red-copy" fill="#FF6373" transform="translate(625.000000, 575.000000) rotate(-180.000000) translate(-625.000000, -575.000000) "></path>
+                <path d="M500,550 L550,550 L525,600 L500,550 Z" id="Red-copy-2" fill="#FF6373" transform="translate(525.000000, 575.000000) rotate(-180.000000) translate(-525.000000, -575.000000) "></path>
+                <path d="M525,500 L575,500 L550,550 L525,500 Z" id="Red-copy-3" fill="#FF6373" transform="translate(550.000000, 525.000000) rotate(-180.000000) translate(-550.000000, -525.000000) "></path>
+                <path d="M475,500 L525,500 L500,550 L475,500 Z" id="Red-copy-3" fill="#FF6373" transform="translate(500.000000, 525.000000) rotate(-180.000000) translate(-500.000000, -525.000000) "></path>
+                <path d="M350,450 L400,450 L375,500 L350,450 Z" id="Red-copy-4" fill="#FF6373" transform="translate(375.000000, 475.000000) rotate(-180.000000) translate(-375.000000, -475.000000) "></path>
+                <path d="M650,500 L700,500 L675,550 L650,500 Z" id="Red-copy-2" fill="#FF6373"></path>
+                <path d="M625,500 L675,500 L650,550 L625,500 Z" id="Purple-copy" fill="#B375F5" transform="translate(650.000000, 525.000000) rotate(-180.000000) translate(-650.000000, -525.000000) "></path>
+                <path d="M450,550 L500,550 L475,600 L450,550 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(475.000000, 575.000000) rotate(-180.000000) translate(-475.000000, -575.000000) "></path>
+                <path d="M300,550 L350,550 L325,600 L300,550 Z" id="Purple-copy-3" fill="#B375F5" transform="translate(325.000000, 575.000000) rotate(-180.000000) translate(-325.000000, -575.000000) "></path>
+                <path d="M650,450 L700,450 L675,500 L650,450 Z" id="Purple-copy-2" fill="#B375F5" transform="translate(675.000000, 475.000000) rotate(-180.000000) translate(-675.000000, -475.000000) "></path>
+                <path d="M575,500 L625,500 L600,550 L575,500 Z" id="Green-copy" fill="#32CAA9" transform="translate(600.000000, 525.000000) rotate(-180.000000) translate(-600.000000, -525.000000) "></path>
+                <path d="M500,450 L550,450 L525,500 L500,450 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(525.000000, 475.000000) rotate(-180.000000) translate(-525.000000, -475.000000) "></path>
+                <path d="M550,450 L600,450 L575,500 L550,450 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(575.000000, 475.000000) rotate(-180.000000) translate(-575.000000, -475.000000) "></path>
+                <path d="M400,550 L450,550 L425,600 L400,550 Z" id="Green-copy-2" fill="#32CAA9" transform="translate(425.000000, 575.000000) rotate(-180.000000) translate(-425.000000, -575.000000) "></path>
+                <path d="M1175,-1.42108547e-14 L1200,-1.42108547e-14 L1175,50 L1175,-1.42108547e-14 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(1187.500000, 25.000000) rotate(-180.000000) translate(-1187.500000, -25.000000) "></path>
+                <path d="M325,500 L375,500 L350,550 L325,500 Z" id="Green-copy-3" fill="#32CAA9" transform="translate(350.000000, 525.000000) rotate(-180.000000) translate(-350.000000, -525.000000) "></path>
+                <path d="M550,550 L600,550 L575,600 L550,550 Z" id="Blue-copy" fill="#13CEEF" transform="translate(575.000000, 575.000000) rotate(-180.000000) translate(-575.000000, -575.000000) "></path>
+                <path d="M675,500 L725,500 L700,550 L675,500 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(700.000000, 525.000000) rotate(-180.000000) translate(-700.000000, -525.000000) "></path>
+                <path d="M600,450 L650,450 L625,500 L600,450 Z" id="Blue-copy-2" fill="#13CEEF" transform="translate(625.000000, 475.000000) rotate(-180.000000) translate(-625.000000, -475.000000) "></path>
+                <path d="M450,450 L500,450 L475,500 L450,450 Z" id="Blue-copy-3" fill="#13CEEF" transform="translate(475.000000, 475.000000) rotate(-180.000000) translate(-475.000000, -475.000000) "></path>
+                <path d="M425,500 L475,500 L450,550 L425,500 Z" id="Blue-copy-4" fill="#13CEEF" transform="translate(450.000000, 525.000000) rotate(-180.000000) translate(-450.000000, -525.000000) "></path>
+                <path d="M650,550 L700,550 L675,600 L650,550 Z" id="Orange-copy" fill="#FFEF77" transform="translate(675.000000, 575.000000) rotate(-180.000000) translate(-675.000000, -575.000000) "></path>
+                <path d="M350,550 L400,550 L375,600 L350,550 Z" id="Orange-copy-2" fill="#FFEF77" transform="translate(375.000000, 575.000000) rotate(-180.000000) translate(-375.000000, -575.000000) "></path>
+                <path d="M400,450 L450,450 L425,500 L400,450 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(425.000000, 475.000000) rotate(-180.000000) translate(-425.000000, -475.000000) "></path>
+                <path d="M300,450 L350,450 L325,500 L300,450 Z" id="Orange-copy-4" fill="#FFEF77" transform="translate(325.000000, 475.000000) rotate(-180.000000) translate(-325.000000, -475.000000) "></path>
+                <path d="M375,500 L425,500 L400,550 L375,500 Z" id="Orange-copy-3" fill="#FFEF77" transform="translate(400.000000, 525.000000) rotate(-180.000000) translate(-400.000000, -525.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

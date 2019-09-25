@@ -1,0 +1,70 @@
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="a" d="M20 0l20 40H0z"/>
+    <mask id="m" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+    <path id="b" d="M20 40l20 40H0z"/>
+    <mask id="n" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#b"/>
+    </mask>
+    <path id="c" d="M40 40l20 40H20z"/>
+    <mask id="o" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#c"/>
+    </mask>
+    <path id="d" d="M40 0l20 40H20z"/>
+    <mask id="p" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#d"/>
+    </mask>
+    <path id="e" d="M40 0l20 40H20z"/>
+    <mask id="q" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#e"/>
+    </mask>
+    <path id="f" d="M40 40l20 40H20z"/>
+    <mask id="r" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#f"/>
+    </mask>
+    <path id="g" d="M20 40l20 40H0z"/>
+    <mask id="s" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#g"/>
+    </mask>
+    <path id="h" d="M60 0l20 40H40z"/>
+    <mask id="t" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#h"/>
+    </mask>
+    <path id="i" d="M40 0l20 40H20z"/>
+    <mask id="u" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#i"/>
+    </mask>
+    <path id="j" d="M40 40l20 40H20z"/>
+    <mask id="v" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#j"/>
+    </mask>
+    <path id="k" d="M20 40l20 40H0z"/>
+    <mask id="w" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#k"/>
+    </mask>
+    <path id="l" d="M60 0l20 40H40z"/>
+    <mask id="x" x="0" y="0" width="40" height="40" fill="#fff">
+      <use xlink:href="#l"/>
+    </mask>
+  </defs>
+  <g stroke-width="2" stroke="#FFF" fill="none" fill-rule="evenodd">
+    <use mask="url(#m)" fill="#41C5A9" xlink:href="#a"/>
+    <use mask="url(#n)" fill="#FF6373" transform="matrix(1 0 0 -1 0 120)" xlink:href="#b"/>
+    <use mask="url(#o)" fill="#13CEEF" xlink:href="#c"/>
+    <use mask="url(#p)" fill="#B375F5" transform="matrix(1 0 0 -1 0 40)" xlink:href="#d"/>
+    <g transform="translate(80)">
+      <use mask="url(#q)" fill="#13CEEF" xlink:href="#e"/>
+      <use mask="url(#r)" fill="#FF6373" transform="matrix(1 0 0 -1 0 120)" xlink:href="#f"/>
+      <use mask="url(#s)" fill="#41C5A9" xlink:href="#g"/>
+      <use mask="url(#t)" fill="#B375F5" transform="matrix(1 0 0 -1 0 40)" xlink:href="#h"/>
+    </g>
+    <g transform="translate(140)">
+      <use mask="url(#u)" fill="#FF6373" xlink:href="#i"/>
+      <use mask="url(#v)" fill="#13CEEF" transform="matrix(1 0 0 -1 0 120)" xlink:href="#j"/>
+      <use mask="url(#w)" fill="#B375F5" xlink:href="#k"/>
+      <use mask="url(#x)" fill="#41C5A9" transform="matrix(1 0 0 -1 0 40)" xlink:href="#l"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#41C5A9" d="M20 0l20 40H0"/>
+    <path fill="#FF6373" d="M20 80l20-40H0"/>
+    <path fill="#13CEEF" d="M40 40l20 40H20"/>
+    <path fill="#B375F5" d="M40 40L60 0H20"/>
+    <g>
+      <path fill="#13CEEF" d="M120 0l20 40h-40"/>
+      <path fill="#FF6373" d="M120 80l20-40h-40"/>
+      <path fill="#41C5A9" d="M100 40l20 40H80"/>
+      <path fill="#B375F5" d="M140 40l20-40h-40"/>
+    </g>
+    <g>
+      <path fill="#FF6373" d="M180 0l20 40h-40"/>
+      <path fill="#13CEEF" d="M180 80l20-40h-40"/>
+      <path fill="#B375F5" d="M160 40l20 40h-40"/>
+      <path fill="#41C5A9" d="M200 40l20-40h-40"/>
+    </g>
+  </g>
+</svg>
