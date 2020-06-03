@@ -1,0 +1,106 @@
+---
+title: An intro to WebGL and react-three-fiber
+date: '2020-06-03'
+---
+
+This is a series of articles that follow my journey with WebGL and [react-three-fiber.](https://github.com/react-spring/react-three-fiber) They serve as both a reference for myself and a resource for anyone who is finding similar struggles in the world of WebGL.
+
+## Why WebGL
+
+For anyone that's not sure what WebGL really is, it's a way of writing interactive code on the web (using a [canvas](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)) that's somewhat similar to game development.
+
+You have access to 3D models, materials, and shaders.
+
+A simple way of explaining these parts would be:
+
+1. You have a 3D model which is a shape
+2. You apply a material to that model in order to give it some colour
+3. You can also choose to add some shaders. These are the brains of the operation, they dictate the rules and let you do all of the cool stuff.
+
+The bit that I'm interested in is learning how to use all of this to enhance the experiences I build. If you go to any web awards it's almost guaranteed that most of the winning submissions have some form of WebGL woven through; and these are the best examples that show the limit of what you can do is up to your imagination.
+
+## Why react-three-fiber
+
+I'm using react-three-fiber because most of my work at the moment revolves around react (across any platform), however it's not much different than doing it in [three.js](https://three.js.org/) so the skills are transferable. I've decided to go down this route rather than starting from the bottom with raw WebGL/OpenGL because I prefer fast, easy results that keep me excited and having fun early on. Once I've gotten the hang of things I am then free to dive into the vanilla code at my leisure. A solid foundation of experience will make the vanilla code more approachable.
+
+## Getting set up
+
+Start off getting a base development environment set up that matches how you like to code. For ease, I'm going to be using [codesandbox](https://codesandbox.io) to handle the environment. This means I'm up and ready with one click and I can publicly link to my work as I go.
+
+The dependencies that you'll need are:
+
+1. [react-three-fiber](https://github.com/react-spring/react-three-fiber)
+2. [three.js](https://github.com/mrdoob/three.js/)
+
+## react-three-fiber
+
+This library handles a lot of the boilerplate of setting up a three.js project and bringing it into React means you can make use of both state and component goodness.
+
+To start with, here's the finished codesandbox so you can see what we're making and have a tinker.
+
+<iframe
+  src="https://codesandbox.io/embed/01-setup-zzj3l?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="01-setup"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+The basic explanation of how to write react-three-fiber code instead of three.js, is that everything is in [camelCase](https://en.wikipedia.org/wiki/Camel_case). If we use something like [pointLight](https://three.js.org/docs/index.html#api/en/lights/PointLight) as an example then things will look a little like this:
+
+```js
+// three.js
+var light = new THREE.PointLight(0xff0000, 1, 100)
+light.position.set(50, 50, 50)
+```
+
+Becomes
+
+```jsx
+// react-three-fiber
+<pointLight position={[50, 50, 50]} />
+```
+
+With this in mind, here is some basic three.js code that sets up a box. The steps are fairly logical in the sense that: we setup a box geometry (a box shape), we setup a material that has some colour, then we combine them both in a both in a mesh. This tells the mesh what shape to take (the geometry) and what to look like (the material).
+
+```js
+// three.js
+var geometry = new THREE.BoxBufferGeometry(1, 1, 1)
+var material = new THREE.MeshStandardMaterial({ color: 0xffff00 })
+var mesh = new THREE.Mesh(geometry, material)
+```
+
+In react-three-fiber it would look like this:
+
+```jsx
+// react-three-fiber
+<mesh>
+  <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+  <meshStandardMaterial attach="material" color="orange" />
+</mesh>
+```
+
+That's the basics for setting up a simple 3D box and colouring it orange. If we wanted to make this re-usable we could return this from a function and have it be part of a normal React component. For the time being we'll keep it as it is. Now in order to actually render it to the screen we need to have it render in a canvas and we need to add some basic lights.
+
+Feel free to edit the code below to see how it changes the output.
+
+```jsx react-live
+<Canvas>
+  <ambientLight />
+  <pointLight position={[10, 0, 0]} />
+  <mesh rotation={[1, 0.5, 1]} scale={[3, 3, 3]}>
+    <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+    <meshStandardMaterial attach="material" color="orange" />
+  </mesh>
+</Canvas>
+```
+
+If we walk through this step by step:
+
+- `<Canvas />` sets up the HTML `<canvas />` and handles the three.js boilerplate with a default camera rig.
+- `<ambientLight />` provides generic lighting to the scene, like flicking a lightswitch.
+- `<pointLight position={[10, 0, 0]} />` adds some directional lighting so we can see that our box is 3D. The `position` attribute takes an array of 3 numbers - these are the x, y, and z values respectively.
+
+You might also notice that I've added some attributes to our `<mesh />`, this is just to make it a bit bigger and give it a bit of rotation so you can really see how the point light highlights that it's a 3D model.
+
+This is all you need!
