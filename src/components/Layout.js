@@ -65,7 +65,12 @@ function Layout({ location, children }) {
               </a>
             </header>
             {children}
-            <footer style={{ display: 'flex' }}>
+            <footer
+              style={{
+                display: 'flex',
+                marginTop: rhythm(2.5),
+              }}
+            >
               <a href={`https://twitter.com/${social.twitter}`}>twitter</a> ﹒{' '}
               <a href={`https://github.com/${social.github}`}>github</a>{' '}
               <a
