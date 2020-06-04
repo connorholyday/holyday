@@ -80,11 +80,9 @@ In react-three-fiber it would look like this:
 </mesh>
 ```
 
-That's the basics for setting up a simple 3D box and colouring it orange. If we wanted to make this re-usable we could return this from a function and have it be part of a normal React component. For the time being we'll keep it as it is. Now in order to actually render it to the screen we need to have it render in a canvas and we need to add some basic lights.
+That's the basics for setting up a simple 3D box and colouring it orange. If we wanted to make this re-usable we could return this from a function and have it be part of a normal React component. For the time being we'll keep it as it is. Now in order to actually render it to the screen we need to have a canvas and some basic lights.
 
-Feel free to edit the code below to see how it changes the output.
-
-```jsx react-live
+```jsx
 <Canvas>
   <ambientLight />
   <pointLight position={[10, 0, 0]} />
