@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Circular;
+  font-weight: 800;
+  font-style: bolder;
+  src: url('CircularStd-Black.woff2') format('woff2'),
+    url('CircularStd-Black.woff') format('woff');
+  font-display: swap;
+}

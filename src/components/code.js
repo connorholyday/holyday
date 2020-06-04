@@ -30,6 +30,7 @@ export const Code = ({ codeString, language, ...props }) => {
               ...style,
               padding: '0.5rem 1rem',
               borderRadius: 2,
+              overflow: 'auto',
             }}
           >
             {tokens.map((line, i) => (

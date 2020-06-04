@@ -30,10 +30,8 @@ function Layout({ location, children }) {
               <h1
                 style={{
                   ...scale(0.5),
-                  fontFamily: `Montserrat, sans-serif`,
                   marginTop: 0,
                   marginBottom: rhythm(-1),
-                  fontWeight: '600',
                 }}
               >
                 <Link

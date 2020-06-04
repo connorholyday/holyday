@@ -17,17 +17,7 @@ function Bio() {
             }}
           >
             <p>
-              Developer at{' '}
-              <a
-                href="https://aranja.com"
-                style={{
-                  boxShadow: `none`,
-                  textDecoration: `none`,
-                  fontWeight: '900',
-                }}
-              >
-                aranja
-              </a>
+              Developer at <a href="https://aranja.com">aranja</a>
               <br />
               Attempting to spark joy on the internet
             </p>
