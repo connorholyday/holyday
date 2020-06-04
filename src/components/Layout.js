@@ -48,6 +48,7 @@ function Layout({ location, children }) {
               <a
                 href={`https://twitter.com/${social.twitter}`}
                 style={{
+                  color: '#1da1f2',
                   boxShadow: `none`,
                   textDecoration: `none`,
                 }}
