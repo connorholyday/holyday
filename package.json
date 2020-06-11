@@ -37,7 +37,6 @@
     "react-three-fiber": "^4.2.8",
     "react-typography": "^0.16.13",
     "three": "^0.117.1",
-    "typeface-merriweather": "0.0.72",
     "typeface-open-sans": "^0.0.75",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.16.19"

@@ -5,11 +5,10 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.5,
   headerFontFamily: ['Circular', 'Open Sans', 'sans-serif'],
-  bodyFontFamily: ['Merriweather', 'Georgia', 'serif'],
+  bodyFontFamily: ['Circular', 'Open Sans', 'sans-serif'],
   bodyColor: '#333333',
-  headerWeight: 900,
   headerWeight: 800,
-  bodyWeight: 400,
+  bodyWeight: 300,
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     blockquote: {
@@ -62,6 +61,7 @@ const typography = new Typography({
       color: '#286CCD',
       textDecoration: 'none',
       fontFamily: `Circular, "Open Sans", sans-serif`,
+      fontWeight: 'bold',
     },
     'a:hover,a:active': {
       boxShadow: 'none',
