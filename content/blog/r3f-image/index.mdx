@@ -1,0 +1,328 @@
+---
+title: Images in WebGL and react-three-fiber
+date: '2020-06-11'
+---
+
+The image effects you can do with WebGL is what gets me excited about this sort of stuff. The trouble is that there's a bit of a learning curve and it's certainly not easy. The good thing is that once you've got it figured out and set up, you can re-use your base and improve/adjust things as you learn.
+
+I'm going to walk through two ways you can use images in your work. The first being a simple method that will provide a foundation for understanding how to move images from the DOM into WebGL-land; and the second will build off the first method and introduce the concept of shaders - the magic ingredient!
+
+<iframe
+  src="https://codesandbox.io/embed/r3f-image-mesh-2-myqvz?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fwebgl%2Fcanvas.js&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="r3f-image-mesh-2"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+## The Situation
+
+The first thing that you need to be aware of is that everything inside the canvas isn't part of the regular flow of the DOM. This means that you'll need to be sizing and positioning things yourself but this isn't a bad thing. In fact it fits in perfectly with the idea of progressive-enhancement.
+
+What we'll do is render our images in the DOM as we would normally. Then we'll grab them all and pass them into our canvas. Doing things this way means we know:
+
+- The image has loaded
+- The image dimensions
+- The image position in the DOM
+
+It also means that the images remain fully-accessible on the page and that we lose nothing of value if for some reason the WebGL doesn't load or someone has their JavaScript turned off.
+
+## Collecting the Images
+
+Let's use some react context and a custom component to scoop up all of these images.
+
+### Context
+
+For context (heh) I follow the pattern explained by [Kent C. Dodds](https://kentcdodds.com/blog/how-to-use-react-context-effectively).
+
+```jsx
+// src/webgl/context.js
+import React, { useState, createContext, useContext } from 'react'
+
+const WebGLStateContext = createContext()
+const WebGLDispatchContext = createContext()
+
+export const WebGLProvider = ({ children }) => {
+  const [state, dispatch] = useState([])
+
+  return (
+    <WebGLStateContext.Provider value={state}>
+      <WebGLDispatchContext.Provider value={dispatch}>
+        {children}
+      </WebGLDispatchContext.Provider>
+    </WebGLStateContext.Provider>
+  )
+}
+
+export function useWebGLState() {
+  const context = useContext(WebGLStateContext)
+  if (context === undefined) {
+    throw new Error('useWebGLState must be used within a WebGLProvider')
+  }
+  return context
+}
+
+export function useWebGLDispatch() {
+  const context = useContext(WebGLDispatchContext)
+  if (context === undefined) {
+    throw new Error('useWebGLDispatch must be used within an WebGLProvider')
+  }
+  return context
+}
+```
+
+What we've done here is setup a react context that will hold all of the images that we'll then use in our WebGL code.
+
+Then to hook it up we'll need to add `<WebGLProvider />` somewhere, if you're not sure where is best then I'd recommend the app root.
+
+Next step is putting together a little component to grab any images we want to use. To keeps things simple I'm going to add this to our context file we've just setup.
+
+```jsx
+// src/webgl/context.js
+import React, { useRef, useState } from 'react'
+
+export const WebGLImage = props => {
+  const ref = useRef()
+  const dispatch = useWebGLDispatch()
+  const [loaded, setLoaded] = useState(false)
+
+  const handleLoad = () => {
+    setLoaded(true)
+    dispatch(images => [...images, { data: ref.current }])
+  }
+
+  return (
+    <img
+      alt=""
+      {...props}
+      ref={ref}
+      onLoad={handleLoad}
+      style={{
+        opacity: loaded ? 0 : 1,
+      }}
+    />
+  )
+}
+```
+
+## Setting up the Canvas
+
+```jsx
+// src/webgl/canvas.js
+import React, { Suspense, useMemo } from 'react'
+import { Canvas, useLoader, useThree } from 'react-three-fiber'
+import { TextureLoader, LinearFilter, ClampToEdgeWrapping } from 'three'
+import { useWebGLState } from './context'
+
+// Next step
+function Image() { ... }
+
+function WebGLCanvas() {
+  const state = useWebGLState()
+  return (
+    <Canvas
+      orthographic
+      style={{
+        height: '100vh',
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        zIndex: 1,
+        pointerEvents: 'none',
+        transform: 'translateZ(0)',
+      }}
+    >
+      <Suspense fallback={null}>
+        {state.map((image, i) => (
+          <Image key={image.data.src} image={image} />
+        ))}
+      </Suspense>
+    </Canvas>
+  )
+}
+
+export default WebGLCanvas
+```
+
+Lets go over what's happening here:
+
+1. We switch over to an [orthographic camera](https://threejs.org/docs/#api/en/cameras/OrthographicCamera)
+2. We style the canvas to fill the viewport and set it to a fixed position
+3. Switching off pointer events means it doesn't get in the way of mouse events (like the context menu)
+4. Setting a transform tells the browser to move [rendering the canvas element to the GPU](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/)
+5. `<Suspense />` is being used to deal with image loading
+6. We loop over all of the images we've added to our context and render them in a new `<Image />` component
+
+## Rendering the Images
+
+There's a lot to unpack in this next section so I've added comments to the code example, so let's dig in.
+
+```jsx
+const Image = ({ image }) => {
+  // The first step is to load the image into a texture that we can use in WebGL
+  const texture = useLoader(TextureLoader, image.data.src)
+  // Then we want to get the viewport from ThreeJS so we can do some calculations later
+  const { viewport } = useThree()
+
+  // We need to apply some corrections to the texture we've just made
+  useMemo(() => {
+    texture.generateMipmaps = false
+    texture.wrapS = texture.wrapT = ClampToEdgeWrapping
+    texture.minFilter = LinearFilter
+    texture.needsUpdate = true
+  }, [
+    texture.generateMipmaps,
+    texture.wrapS,
+    texture.wrapT,
+    texture.minFilter,
+    texture.needsUpdate,
+  ])
+
+  // Here we grab the size and position of the image from the DOM
+  const { width, height, top, left } = image.data.getBoundingClientRect()
+
+  return (
+    <mesh
+      // We convert the width and height to relative viewport units
+      scale={[
+        (width / window.innerWidth) * viewport.width,
+        (height / window.innerHeight) * viewport.height,
+        1,
+      ]}
+      // We convert the x and y positions to relative viewport units
+      position={[
+        ((width / window.innerWidth) * viewport.width) / 2 -
+          viewport.width / 2 +
+          (left / window.innerWidth) * viewport.width,
+        0 -
+          ((height / window.innerHeight) * viewport.height) / 2 +
+          viewport.height / 2 -
+          (top / window.innerHeight) * viewport.height,
+        0,
+      ]}
+    >
+      {/* We're use a simple plane geometry */}
+      {/* think of it like a piece of paper as a 3d shape */}
+      <planeBufferGeometry attach="geometry" />
+      {/* Finally we map the texture to a material */}
+      {/* or in other terms, put the image on the shape */}
+      <meshBasicMaterial attach="material" map={texture} />
+    </mesh>
+  )
+}
+```
+
+I chose this image because it reflects how I feel about doing this sort of math.
+
+For anyone who knows of a better way please do let me know. Otherwise for anyone who is interested in the thought process behind the maths:
+
+### To get the scale
+
+1. Divide the width of the image by the width of the window to get a percentage
+2. Multiply that by the width of the canvas viewport to get the relative width within the canvas
+
+### To get the x value
+
+1. Perform the same calculation as above to get the relative width within the canvas
+2. Divide that by 2 to move the image half of its width to the right, this aligns the left side of the image with the center of the canvas
+3. Subtract half of the canvas width to move the image to the left edge of the canvas
+4. Perform a calculation to convert the original left value into a relative canvas value
+5. Add that new relative value to move the image across to its final position
+
+### To get the y value
+
+_You have to do the opposite of the last section to get a matching relative top position_
+
+1. Subtract the following calculation from 0 because we're moving in an opposite direction
+2. Perform the same calculation above to get the relative height within the canvas
+3. Divide that by 2 to move the image down by half its height, this aligns the top side of the image with the center of the canvas
+4. Add half of the canvas width to move the image to the top edge of the canvas
+5. Perform a calculation to convert the original top value into a relative canvas value
+6. Subtract that new relative value to move the image down
+
+## Introducing Shaders
+
+A `<meshBasicMaterial />` is a perfectly fine thing to use, but unless you've got some grand ideas then for the purpose of rendering images you might be better off without WebGL. The key to the fun effects you're looking for belong in shader-land, for this we'll be using a `<shaderMaterial />` instead.
+
+The first thing we're going to do is create a new file:
+
+```jsx
+// src/webgl/image.js
+import * as THREE from 'three'
+import { extend } from 'react-three-fiber'
+
+export default class Image extends THREE.ShaderMaterial {
+  constructor() {
+    super({
+      uniforms: {
+        texture: { type: 't', value: undefined },
+      },
+      vertexShader: `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+        }`,
+      fragmentShader: `
+        varying vec2 vUv;
+        uniform sampler2D texture;
+        void main() {
+          vec2 uv = vUv;
+          vec4 texture = texture2D(texture, uv);
+          gl_FragColor = texture;
+        }`,
+    })
+  }
+  // These let us set the texture uniform with a react prop
+  get texture() {
+    return this.uniforms.texture.value
+  }
+  set texture(v) {
+    this.uniforms.texture.value = v
+  }
+}
+
+// register an element in r3f as <image />
+extend({ Image })
+```
+
+There are 3 main points to understand in this new file:
+
+1. `uniforms` - these are variables that we share with the shader code
+2. `vertexShader` - this shader handles the positioning of the pixels being rendered
+3. `fragmentShader` - this shader handles the colour of the pixels being rendered
+
+Following these points we're passing a texture (an image) into our shaders. The shaders then get the positioning and colours of each pixel (the `uv` value) and then draw it to the screen.
+
+For more information on shaders I'd highly recommend [The Book of Shaders](https://thebookofshaders.com/). Otherwise you can go find shaders other people have written and copy/jury-rig them into place.
+
+The next step is to then import this new file into our `canvas.js`
+
+```jsx
+// src/webgl/canvas.js
+import React, { Suspense, useMemo } from 'react'
+import { Canvas, useLoader, useThree } from 'react-three-fiber'
+import { TextureLoader, LinearFilter, ClampToEdgeWrapping } from 'three'
+import { useWebGLState } from './context'
+import './image'
+```
+
+Then we switch out the `<meshBasicMaterial />` with our new `<image />` component!
+
+```jsx
+<image attach="material" texture={texture} />
+```
+
+Here's an embed of the finished code:
+
+<iframe
+  src="https://codesandbox.io/embed/r3f-image-mesh-3-b7nix?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fwebgl%2Fimage.js&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="r3f-image-mesh-3"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+And there we have it. Now we're free to start adding some cool effects!
