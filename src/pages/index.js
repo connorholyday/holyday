@@ -1,68 +1,34 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
+import Home from '../components/Home'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const posts = data.allMdx.edges
+const HomePage = ({ location, data }) => {
+  const { title, social } = data.site.siteMetadata
 
-    return (
-      <Layout location={this.props.location}>
-        <SEO
-          title="Connor's Blog"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h2
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h2>
-              <small
-                style={{
-                  display: 'block',
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                {node.frontmatter.date}
-              </small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={location}>
+      <SEO
+        title={title}
+        keywords={[`blog`, `webgl`, `threejs`, `javascript`, `react`]}
+      />
+      <Home title={title} social={social} />
+    </Layout>
+  )
 }
 
-export default BlogIndex
+export default HomePage
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
+    site {
+      siteMetadata {
+        title
+        social {
+          twitter
+          github
         }
       }
     }
