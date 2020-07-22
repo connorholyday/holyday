@@ -15,6 +15,7 @@ function Layout({ location, children }) {
               display: 'grid',
               gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
               gridGap: rhythm(1),
+              overflowX: 'hidden',
             }}
           >
             <header

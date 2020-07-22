@@ -1,6 +1,5 @@
 import React from 'react';
 import { rhythm } from '../../utils/typography'
-import Bio from '../Bio'
 import Arc from '../Arc'
 import styles from './Home.module.css';
 
@@ -39,6 +38,62 @@ const Home = ({ title, social = {} }) => {
           style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}
         ></div>
       </div>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>Facebook Connectivity</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>Blue Lagoon</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>Nova</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>ILEditor 2</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Desktop App</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>Dry January</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>YAY</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>Hopp</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App + Website</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
+      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}>Hrósarinn</h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website</p>
+            <div style={{ background: '#eee', width: '100%', paddingBottom: '100%' }}></div>
+          </div>
+      </article>
     </>
   )
 }
