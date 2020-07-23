@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import { TransitionState } from 'gatsby-plugin-transition-link'
 
 import Home from '../components/Home'
 import Layout from '../components/Layout'
@@ -14,7 +15,11 @@ const HomePage = ({ location, data }) => {
         title={title}
         keywords={[`blog`, `webgl`, `threejs`, `javascript`, `react`]}
       />
-      <Home title={title} social={social} />
+      <TransitionState>
+        {({ transitionStatus }) => (
+          <Home social={social} transition={transitionStatus} />
+        )}
+      </TransitionState>
     </Layout>
   )
 }
