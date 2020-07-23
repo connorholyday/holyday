@@ -30,7 +30,7 @@ function FromTheLab() {
     velocity = clamp(velocity, 1, 8)
     set({
       xy: down ? delta : [0, 0],
-      config: { mass: velocity, tension: 100 * velocity, friction: 50 },
+      config: { mass: velocity, tension: 750 * velocity, friction: 40 },
     })
   })
   return (
