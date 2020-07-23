@@ -5,6 +5,17 @@
     position: relative;
     grid-column: 2 / 12;
 }
+.arc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: grab;
+    user-select: none;
+}
+.arc:active {
+    cursor: grabbing;
+}
 
 .caseStudy {
     grid-column-end: span 10;

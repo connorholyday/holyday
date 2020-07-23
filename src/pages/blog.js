@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import { TransitionState } from 'gatsby-plugin-transition-link'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
+import Blog from '../components/Blog'
 
-class BlogIndex extends React.Component {
+class BlogPage extends React.Component {
   render() {
     const { data } = this.props
     const posts = data.allMdx.edges
@@ -16,39 +17,17 @@ class BlogIndex extends React.Component {
           title="Connor's Blog"
           keywords={[`blog`, `webgl`, `threejs`, `javascript`, `react`]}
         />
-        <div style={{ gridColumn: '2/6' }}>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                <h2
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h2>
-                <small
-                  style={{
-                    display: 'block',
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  {node.frontmatter.date}
-                </small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </div>
-            )
-          })}
-        </div>
+        <TransitionState>
+          {({ transitionStatus }) => (
+            <Blog posts={posts} transition={transitionStatus} />
+          )}
+        </TransitionState>
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default BlogPage
 
 export const pageQuery = graphql`
   query {
