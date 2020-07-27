@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { useTrail, animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
-import { TRANSITION_DELAY_IN_MS } from '../Layout'
+import { TRANSITION_DELAY_IN_MS } from '../Link'
 
 const Blog = ({ transition, posts }) => {
   const [toggle, set] = React.useState(true)

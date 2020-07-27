@@ -1,21 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import TransitionLink from 'gatsby-plugin-transition-link'
-
 import { rhythm, scale } from '../utils/typography'
-
-const TRANSITION_DELAY = 0.4
-export const TRANSITION_DELAY_IN_MS = TRANSITION_DELAY * 1000
-
-const exitTransition = {
-  length: TRANSITION_DELAY + 0.3,
-  trigger: () => console.log('We are exiting'),
-}
-
-const entryTransition = {
-  delay: TRANSITION_DELAY + 0.3,
-  trigger: () => console.log('We are entering'),
-}
+import { TransitionLink as NavLink } from './Link';
 
 function Layout({ location, children }) {
   return (
@@ -49,18 +36,16 @@ function Layout({ location, children }) {
                   marginBottom: rhythm(-1),
                 }}
               >
-                <TransitionLink
+                <NavLink
                   style={{
                     boxShadow: `none`,
                     textDecoration: `none`,
                     color: `inherit`,
                   }}
                   to={`/`}
-                  exit={exitTransition}
-                  entry={entryTransition}
                 >
                   {title}
-                </TransitionLink>
+                </NavLink>
               </h1>
               <nav>
                 <ul
@@ -76,16 +61,9 @@ function Layout({ location, children }) {
                       margin: `0 ${rhythm(0.5)}`,
                     }}
                   >
-                    <Link
-                      style={{
-                        boxShadow: `none`,
-                        textDecoration: `none`,
-                        color: `inherit`,
-                      }}
-                      to={`/work`}
-                    >
+                    <NavLink to={`/work`}>
                       Work
-                    </Link>
+                    </NavLink>
                   </li>
                   <li
                     style={{
@@ -93,18 +71,9 @@ function Layout({ location, children }) {
                       margin: `0 ${rhythm(0.5)}`,
                     }}
                   >
-                    <TransitionLink
-                      style={{
-                        boxShadow: `none`,
-                        textDecoration: `none`,
-                        color: `inherit`,
-                      }}
-                      to={`/blog`}
-                      exit={exitTransition}
-                      entry={entryTransition}
-                    >
+                    <NavLink to={`/blog`}>
                       Blog
-                    </TransitionLink>
+                    </NavLink>
                   </li>
                   <li
                     style={{
@@ -112,16 +81,9 @@ function Layout({ location, children }) {
                       margin: `0 0 0 ${rhythm(0.5)}`,
                     }}
                   >
-                    <Link
-                      style={{
-                        boxShadow: `none`,
-                        textDecoration: `none`,
-                        color: `inherit`,
-                      }}
-                      to={`/lab`}
-                    >
+                    <NavLink to={`/lab`}>
                       Lab
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </nav>

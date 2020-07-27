@@ -1,0 +1,27 @@
+.link {
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.link::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: -.1em;
+    right: -.1em;
+    transform: translate3d(0, -50%, 0) scaleX(0);
+    height: 0.5em;
+    background: lightskyblue;
+    z-index: -1;
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+    transform-origin: center left;
+}
+
+.link:hover::before,
+.link:active::before,
+.link:focus::before {
+    transform: translate3d(0, -50%, 0) scaleX(1);
+}
