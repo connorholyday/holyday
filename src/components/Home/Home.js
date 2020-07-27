@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { useSpring, animated } from 'react-spring'
 import { useGesture } from 'react-with-gesture'
 
 import { rhythm } from '../../utils/typography'
 import Arc from '../Arc'
 import styles from './Home.module.css'
-import { TRANSITION_DELAY_IN_MS } from '../Layout'
+import { TRANSITION_DELAY_IN_MS } from '../Link'
 
 // window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
@@ -48,9 +49,8 @@ function FromTheLab() {
   )
 }
 
-const Trail = ({ children, delay = 0, length, index, toggle, ...props }) => {
+const Trail = ({ children, delay = 0, length, index, toggle }) => {
   const { y } = useSpring({
-    // delay: delay + (TRANSITION_DELAY_IN_MS / length) * index,
     delay: (TRANSITION_DELAY_IN_MS / (length + delay)) * (index + delay),
     y: toggle ? 0 : -100,
     from: { y: 100 },
@@ -99,7 +99,6 @@ const Home = ({ transition, social = {} }) => {
     }
   }, [transition])
   const { yr, opacity } = useSpring({
-    // delay: delay + (TRANSITION_DELAY_IN_MS / length) * index,
     delay: TRANSITION_DELAY_IN_MS + 0.3,
     yr: toggle ? [0, 0] : [-5, -2],
     opacity: toggle ? 1 : 0,
@@ -157,110 +156,126 @@ const Home = ({ transition, social = {} }) => {
           }}
         ></div>
       </animated.div>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>Facebook Connectivity</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>Website</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>Blue Lagoon</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>Website</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>Nova</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>App</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>ILEditor 2</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>Desktop App</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>Dry January</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>App</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>YAY</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>App</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>Hopp</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>App + Website</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
-      <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
-        <h2 className={styles.caseStudy__title}>Hrósarinn</h2>
-        <div className={styles.caseStudy__media}>
-          <p className={styles.caseStudy__tag}>Website</p>
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '100%',
-            }}
-          ></div>
-        </div>
-      </article>
+      <Link className={styles.caseStudy} to="https://connectivity.fb.com/">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Facebook Connectivity</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://www.bluelagoon.com/">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Blue Lagoon</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://www.nova.is/dansgolfid/appid">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Nova</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://ileditor.dev/">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>ILEditor 2</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website + Desktop App</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Dry January</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://www.yay.is/">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>YAY</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://hopp.bike/">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Hopp</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>App + Website</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
+      <Link className={styles.caseStudy} to="https://www.hrosarinn.is/">
+        <article style={{ marginTop: rhythm(4) }}>
+          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Hrósarinn</span></h2>
+          <div className={styles.caseStudy__media}>
+            <p className={styles.caseStudy__tag}>Website</p>
+            <div
+              style={{
+                background: '#eee',
+                width: '100%',
+                paddingBottom: '100%',
+              }}
+            ></div>
+          </div>
+        </article>
+      </Link>
     </>
   )
 }

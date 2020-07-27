@@ -18,7 +18,9 @@
 }
 
 .caseStudy {
+    color: inherit;
     grid-column-end: span 10;
+    box-shadow: none;
 }
 .caseStudy:nth-of-type(4n+1) {
     grid-column-start: 2;
@@ -35,6 +37,28 @@
 .caseStudy__title {
     line-height: 1.5;
     margin: 0;
+}
+.caseStudy__titleBackground {
+    position: relative;
+}
+.caseStudy__titleBackground::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: -.1em;
+    right: -.1em;
+    transform: translate3d(0, -50%, 0) scaleX(0);
+    height: 0.5em;
+    background: lightskyblue;
+    z-index: -1;
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+    transform-origin: center left;
+}
+.caseStudy:hover .caseStudy__titleBackground::before,
+.caseStudy:active .caseStudy__titleBackground::before,
+.caseStudy:focus .caseStudy__titleBackground::before {
+    transform: translate3d(0, -50%, 0) scaleX(1);
 }
 .caseStudy__media {
     position: relative;
