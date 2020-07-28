@@ -7,6 +7,7 @@ import { rhythm } from '../../utils/typography'
 import Arc from '../Arc'
 import styles from './Home.module.css'
 import { TRANSITION_DELAY_IN_MS, ExternalLink } from '../Link'
+import Sketch from '../../lab/noise-waves/sketch'
 
 // window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
@@ -207,11 +208,14 @@ const Home = ({ transition, social = {} }) => {
         <FromTheLab />
         <div
           style={{
+            position: 'relative',
             background: '#eee',
             width: '100%',
             paddingBottom: '100%',
           }}
-        ></div>
+        >
+            <Sketch />
+        </div>
       </animated.div>
       <Article
         link="https://connectivity.fb.com/"
