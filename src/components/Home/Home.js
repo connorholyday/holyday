@@ -6,7 +6,7 @@ import { useGesture } from 'react-with-gesture'
 import { rhythm } from '../../utils/typography'
 import Arc from '../Arc'
 import styles from './Home.module.css'
-import { TRANSITION_DELAY_IN_MS } from '../Link'
+import { TRANSITION_DELAY_IN_MS, ExternalLink } from '../Link'
 
 // window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
@@ -90,6 +90,63 @@ export function Animate({ children, toggle, delay }) {
   )
 }
 
+function Raise({ children, length, index, toggle }) {
+    const { y } = useSpring({
+      delay: (100 / length) * (index * 2),
+      y: toggle ? -30 : 0,
+      from: { y: 0 },
+    })
+    return (
+      <animated.span
+        key={index}
+        style={{
+          display: 'inline-block',
+          whiteSpace: 'pre',
+          transform: y.interpolate(y => `translate3d(0,${y}%,0)`),
+        }}
+        aria-hidden="true"
+      >
+        {children}
+      </animated.span>
+    )
+  }
+
+function Article({ link, title, tag, image }) {
+  const [toggle, set] = React.useState(false)
+  const chars = title.split('');
+  return (
+    <article className={styles.caseStudy} style={{ marginTop: rhythm(4) }}>
+      <ExternalLink
+        onMouseEnter={() => set(true)}
+        onMouseLeave={() => set(false)}
+        className={styles.caseStudy__link}
+        to={link}
+      >
+        <h2 className={styles.caseStudy__title} aria-label={title}>
+            {chars.map((c, i) => (
+            <Raise
+                key={i}
+                length={chars.length}
+                index={i}
+                toggle={toggle}
+            >{c}</Raise>
+            ))}
+        </h2>
+        <div className={styles.caseStudy__media}>
+          <p className={styles.caseStudy__tag}>{tag}</p>
+          <div
+            style={{
+              background: '#eee',
+              width: '100%',
+              paddingBottom: '100%',
+            }}
+          ></div>
+        </div>
+      </ExternalLink>
+    </article>
+  )
+}
+
 const Home = ({ transition, social = {} }) => {
   const { twitter = '', github = '' } = social
   const [toggle, set] = React.useState(true)
@@ -113,7 +170,7 @@ const Home = ({ transition, social = {} }) => {
           </h1>
           <p style={{ margin: 0 }}>
             <Animate toggle={toggle} delay={10}>
-              A creative developer
+              Creative Developer
             </Animate>
           </p>
           <p>
@@ -156,126 +213,46 @@ const Home = ({ transition, social = {} }) => {
           }}
         ></div>
       </animated.div>
-      <Link className={styles.caseStudy} to="https://connectivity.fb.com/">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Facebook Connectivity</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>Website</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://www.bluelagoon.com/">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Blue Lagoon</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>Website</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://www.nova.is/dansgolfid/appid">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Nova</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>App</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://ileditor.dev/">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>ILEditor 2</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>Website + Desktop App</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Dry January</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>App</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://www.yay.is/">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>YAY</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>App</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://hopp.bike/">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Hopp</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>App + Website</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
-      <Link className={styles.caseStudy} to="https://www.hrosarinn.is/">
-        <article style={{ marginTop: rhythm(4) }}>
-          <h2 className={styles.caseStudy__title}><span className={styles.caseStudy__titleBackground}>Hrósarinn</span></h2>
-          <div className={styles.caseStudy__media}>
-            <p className={styles.caseStudy__tag}>Website</p>
-            <div
-              style={{
-                background: '#eee',
-                width: '100%',
-                paddingBottom: '100%',
-              }}
-            ></div>
-          </div>
-        </article>
-      </Link>
+      <Article
+        link="https://connectivity.fb.com/"
+        title="Facebook Connectivity"
+        tag="Website"
+      />
+      <Article
+        link="https://www.bluelagoon.com/"
+        title="Blue Lagoon"
+        tag="Website"
+      />
+      <Article
+        link="https://www.nova.is/dansgolfid/appid"
+        title="Nova"
+        tag="App"
+      />
+      <Article
+        link="https://ileditor.dev/"
+        title="ILEditor 2"
+        tag="Website + Desktop App"
+      />
+      <Article
+        link="https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app"
+        title="Dry January"
+        tag="App"
+      />
+      <Article
+        link="https://www.yay.is/"
+        title="YAY"
+        tag="App"
+      />
+      <Article
+        link="https://hopp.bike/"
+        title="Hopp"
+        tag="App + Website"
+      />
+      <Article
+        link="https://www.hrosarinn.is/"
+        title="Hrósarinn"
+        tag="Website"
+      />
     </>
   )
 }

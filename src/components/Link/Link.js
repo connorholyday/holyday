@@ -17,13 +17,13 @@ const entryTransition = {
 export function TransitionLink({ children, style, ...props }) {
   return (
     <Transition
-        className={style === undefined && styles.link}
-        style={style}
-        exit={exitTransition}
-        entry={entryTransition}
-        {...props}
+      className={style === undefined && styles.link}
+      style={style}
+      exit={exitTransition}
+      entry={entryTransition}
+      {...props}
     >
-        {children}
+      {children}
     </Transition>
   )
 }
@@ -31,11 +31,11 @@ export function TransitionLink({ children, style, ...props }) {
 export function InternalLink({ children, style, ...props }) {
   return (
     <BaseLink
-        className={style === undefined && styles.link}
-        style={style}
-        {...props}
+      className={style === undefined && styles.link}
+      style={style}
+      {...props}
     >
-        {children}
+      {children}
     </BaseLink>
   )
 }
@@ -43,12 +43,12 @@ export function InternalLink({ children, style, ...props }) {
 export function ExternalLink({ children, style, to, href, ...props }) {
   return (
     <a
-        className={style === undefined && styles.link}
-        style={style}
-        href={to === undefined ? href : to}
-        {...props}
+      className={style === undefined && styles.link}
+      style={style}
+      href={to === undefined ? href : to}
+      {...props}
     >
-        {children}
+      {children}
     </a>
   )
 }
