@@ -4,6 +4,52 @@ import { useTrail, animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
 import { TRANSITION_DELAY_IN_MS } from '../Link'
+import Raise from '../Raise'
+
+const Post = ({ y, node, ...props }) => {
+  const [toggle, set] = React.useState(false)
+  const title = node.frontmatter.title || node.fields.slug
+  const chars = title.split('')
+  return (
+    <animated.div
+      key={node.fields.slug}
+      style={{
+        ...props,
+        transform: y.interpolate(y => `translate3d(0,${y}px,0)`),
+        marginBottom: rhythm(1 / 4),
+      }}
+    >
+      <h2
+        style={{
+          marginBottom: rhythm(1 / 4),
+        }}
+        aria-label={title}
+      >
+        <Link
+          style={{ boxShadow: `none` }}
+          to={node.fields.slug}
+          onMouseEnter={() => set(true)}
+          onMouseLeave={() => set(false)}
+        >
+          {chars.map((c, i) => (
+            <Raise key={i} length={chars.length} index={i} toggle={toggle}>
+              {c}
+            </Raise>
+          ))}
+        </Link>
+      </h2>
+      <small
+        style={{
+          display: 'block',
+          marginBottom: rhythm(1 / 4),
+        }}
+      >
+        {node.frontmatter.date}
+      </small>
+      <p>{node.excerpt}</p>
+    </animated.div>
+  )
+}
 
 const Blog = ({ transition, posts }) => {
   const [toggle, set] = React.useState(true)
@@ -13,7 +59,7 @@ const Blog = ({ transition, posts }) => {
     },
     opacity: toggle ? 1 : 0,
     y: toggle ? 0 : -20,
-    from: { opacity: 0, y: 20, },
+    from: { opacity: 0, y: 20 },
   })
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -22,67 +68,11 @@ const Blog = ({ transition, posts }) => {
   }, [transition])
   return (
     <div style={{ gridColumn: '2/6' }}>
-      {trail.map(({ y, ...rest }, index) => {
-        const { node } = posts[index]
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <animated.div
-            key={node.fields.slug}
-            style={{
-              ...rest,
-              transform: y.interpolate(y => `translate3d(0,${y}px,0)`),
-              marginBottom: rhythm(1 / 4),
-            }}
-          >
-            <h2
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h2>
-            <small
-              style={{
-                display: 'block',
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              {node.frontmatter.date}
-            </small>
-            <p>{node.excerpt}</p>
-          </animated.div>
-        )
-      })}
+      {trail.map(({ y, ...rest }, index) => (
+        <Post key={index} y={y} node={posts[index].node} {...rest} />
+      ))}
     </div>
   )
 }
-
-//   {posts.map(({ node }) => {
-//     const title = node.frontmatter.title || node.fields.slug
-//     return (
-//       <div key={node.fields.slug}>
-//         <h2
-//           style={{
-//             marginBottom: rhythm(1 / 4),
-//           }}
-//         >
-//           <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-//             {title}
-//           </Link>
-//         </h2>
-//         <small
-//           style={{
-//             display: 'block',
-//             marginBottom: rhythm(1 / 4),
-//           }}
-//         >
-//           {node.frontmatter.date}
-//         </small>
-//         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-//       </div>
-//     )
-//   })}
 
 export default Blog

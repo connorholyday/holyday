@@ -32,7 +32,7 @@ export default BlogPage
 export const pageQuery = graphql`
   query {
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/content/work/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

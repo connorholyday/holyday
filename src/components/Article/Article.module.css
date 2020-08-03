@@ -1,0 +1,72 @@
+.caseStudy {
+    grid-column-end: span 10;
+}
+.caseStudy:nth-of-type(4n+1) {
+    grid-column-start: 2;
+}
+.caseStudy:nth-of-type(4n+2) {
+    grid-column-start: 2;
+}
+.caseStudy:nth-of-type(4n+3) {
+    grid-column-start: 2;
+}
+.caseStudy:nth-of-type(4n+4) {
+    grid-column-start: 2;
+}
+.caseStudy__title {
+    line-height: 1.5;
+    margin: 0;
+}
+.caseStudy__link {
+    display: block;
+    color: inherit;
+    box-shadow: none;
+}
+.caseStudy__media {
+    position: relative;
+}
+.caseStudy__tag {
+    position: absolute;
+    top: 0;
+    right: calc(100% + 1.5em);
+    transform: rotate(-0.25turn);
+    transform-origin: top right;
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .caseStudy {
+        grid-column-end: span 4;
+    }
+    .caseStudy:nth-of-type(4n+1) {
+        grid-column-start: 2;
+    }
+    .caseStudy:nth-of-type(4n+2) {
+        grid-column-start: 7;
+    }
+    .caseStudy:nth-of-type(4n+3) {
+        grid-column-start: 2;
+    }
+    .caseStudy:nth-of-type(4n+4) {
+        grid-column-start: 7;
+    }
+}
+
+@media (min-width: 1024px) {
+    .caseStudy {
+        grid-column-end: span 3;
+    }
+    .caseStudy:nth-of-type(4n+1) {
+        grid-column-start: 2;
+    }
+    .caseStudy:nth-of-type(4n+2) {
+        grid-column-start: 6;
+    }
+    .caseStudy:nth-of-type(4n+3) {
+        grid-column-start: 5;
+    }
+    .caseStudy:nth-of-type(4n+4) {
+        grid-column-start: 9;
+    }
+}
