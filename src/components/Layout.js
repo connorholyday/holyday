@@ -2,9 +2,9 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import { rhythm, scale } from '../utils/typography'
-import { TransitionLink as NavLink } from './Link';
+import { TransitionLink as NavLink } from './Link'
 
-function Layout({ location, children }) {
+function Layout({ location, inverse, children }) {
   return (
     <StaticQuery
       query={layoutQuery}
@@ -15,8 +15,10 @@ function Layout({ location, children }) {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+              gridTemplateRows: 'auto 1fr auto',
               gridGap: rhythm(1),
               overflowX: 'hidden',
+              minHeight: '100vh',
             }}
           >
             <header
@@ -27,6 +29,7 @@ function Layout({ location, children }) {
                 marginBottom: rhythm(1.5),
                 padding: `${rhythm(1.5)} 0`,
                 gridColumn: '2/12',
+                zIndex: 2,
               }}
             >
               <h1
@@ -40,7 +43,7 @@ function Layout({ location, children }) {
                   style={{
                     boxShadow: `none`,
                     textDecoration: `none`,
-                    color: `inherit`,
+                    color: inverse ? 'white' : `inherit`,
                   }}
                   to={`/`}
                 >
@@ -59,31 +62,28 @@ function Layout({ location, children }) {
                     style={{
                       listStyleType: 'none',
                       margin: `0 ${rhythm(0.5)}`,
+                      color: inverse ? 'white' : `inherit`,
                     }}
                   >
-                    <NavLink to={`/work`}>
-                      Work
-                    </NavLink>
+                    <NavLink to={`/work`}>Work</NavLink>
                   </li>
                   <li
                     style={{
                       listStyleType: 'none',
                       margin: `0 ${rhythm(0.5)}`,
+                      color: inverse ? 'white' : `inherit`,
                     }}
                   >
-                    <NavLink to={`/blog`}>
-                      Blog
-                    </NavLink>
+                    <NavLink to={`/blog`}>Blog</NavLink>
                   </li>
                   <li
                     style={{
                       listStyleType: 'none',
                       margin: `0 0 0 ${rhythm(0.5)}`,
+                      color: inverse ? 'white' : `inherit`,
                     }}
                   >
-                    <NavLink to={`/lab`}>
-                      Lab
-                    </NavLink>
+                    <NavLink to={`/lab`}>Lab</NavLink>
                   </li>
                 </ul>
               </nav>
@@ -95,14 +95,39 @@ function Layout({ location, children }) {
                 marginTop: rhythm(1.5),
                 padding: `${rhythm(1.5)} 0`,
                 gridColumn: '2/12',
+                color: inverse ? 'white' : `inherit`,
+                zIndex: 2,
               }}
             >
               <p style={{ margin: 0, marginRight: 'auto' }}>
                 &copy; {new Date().getFullYear()}
               </p>
-              <a href={`https://twitter.com/${social.twitter}`}>twitter</a> ﹒{' '}
-              <a href={`https://github.com/${social.github}`}>github</a> ﹒{' '}
-              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+              <a
+                style={{
+                  color: inverse ? 'white' : `#286CCD`,
+                }}
+                href={`https://twitter.com/${social.twitter}`}
+              >
+                twitter
+              </a>{' '}
+              ﹒{' '}
+              <a
+                style={{
+                  color: inverse ? 'white' : `#286CCD`,
+                }}
+                href={`https://github.com/${social.github}`}
+              >
+                github
+              </a>{' '}
+              ﹒{' '}
+              <a
+                style={{
+                  color: inverse ? 'white' : `#286CCD`,
+                }}
+                href="/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 rss
               </a>
             </footer>

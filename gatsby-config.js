@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Connor Holyday`,
     author: `Connor Holyday`,
-    description: `Personal blog by Connor Holyday. Attempting to spark joy on the internet.`,
+    description: `Personal portfolio site by Connor Holyday. Attempting to spark joy on the internet.`,
     siteUrl: `https://holyday.me`,
     social: {
       twitter: `connorholyday`,
@@ -15,6 +15,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/work`,
+        name: `work`,
       },
     },
     {
@@ -56,12 +63,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
