@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { useTrail, animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
-import { TRANSITION_DELAY_IN_MS } from '../Link'
+import { TransitionLink, TRANSITION_DELAY_IN_MS } from '../Link'
 import Raise from '../Raise'
 
 const Post = ({ y, node, ...props }) => {
@@ -25,7 +24,7 @@ const Post = ({ y, node, ...props }) => {
         }}
         aria-label={title}
       >
-        <Link
+        <TransitionLink
           style={{ boxShadow: `none` }}
           to={node.fields.slug}
           onMouseEnter={() => set(true)}
@@ -36,7 +35,7 @@ const Post = ({ y, node, ...props }) => {
               {c}
             </Raise>
           ))}
-        </Link>
+        </TransitionLink>
       </h2>
       <small
         style={{

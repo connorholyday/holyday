@@ -31,7 +31,10 @@ function Article({ link, title, tag, image, style }) {
             style={{
               background: '#eee',
               width: '100%',
-              paddingBottom: '100%',
+              paddingBottom: '66%',
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
             }}
           ></div>
         </div>

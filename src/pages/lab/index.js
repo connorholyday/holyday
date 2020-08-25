@@ -10,6 +10,7 @@ const posts = [
   {
     link: '/lab/noise-waves',
     title: 'Noise Waves',
+    image: require('./noise-waves/thumbnail.png'),
   }
 ]
 
