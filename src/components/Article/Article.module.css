@@ -37,6 +37,24 @@
 
 @media (min-width: 768px) {
     .caseStudy {
+        grid-column-end: span 8;
+    }
+    .caseStudy:nth-of-type(4n+1) {
+        grid-column-start: 2;
+    }
+    .caseStudy:nth-of-type(4n+2) {
+        grid-column-start: 4;
+    }
+    .caseStudy:nth-of-type(4n+3) {
+        grid-column-start: 2;
+    }
+    .caseStudy:nth-of-type(4n+4) {
+        grid-column-start: 4;
+    }
+}
+
+@media (min-width: 1024px) {
+    .caseStudy {
         grid-column-end: span 4;
     }
     .caseStudy:nth-of-type(4n+1) {
@@ -46,27 +64,9 @@
         grid-column-start: 7;
     }
     .caseStudy:nth-of-type(4n+3) {
-        grid-column-start: 2;
+        grid-column-start: 3;
     }
     .caseStudy:nth-of-type(4n+4) {
-        grid-column-start: 7;
-    }
-}
-
-@media (min-width: 1024px) {
-    .caseStudy {
-        grid-column-end: span 3;
-    }
-    .caseStudy:nth-of-type(4n+1) {
-        grid-column-start: 2;
-    }
-    .caseStudy:nth-of-type(4n+2) {
-        grid-column-start: 6;
-    }
-    .caseStudy:nth-of-type(4n+3) {
-        grid-column-start: 5;
-    }
-    .caseStudy:nth-of-type(4n+4) {
-        grid-column-start: 9;
+        grid-column-start: 8;
     }
 }

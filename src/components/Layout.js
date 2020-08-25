@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import TransitionLink from 'gatsby-plugin-transition-link'
 import { rhythm, scale } from '../utils/typography'
 import { TransitionLink as NavLink } from './Link'
 
