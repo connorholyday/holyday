@@ -80,6 +80,7 @@ const About = ({ transition, social = {} }) => {
             width: '100%',
             paddingBottom: '100%',
             backgroundImage: `url(${profile})`,
+            backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
