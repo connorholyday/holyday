@@ -8,28 +8,53 @@ import Lab from '../../components/Lab'
 
 const posts = [
   {
+    slug: 'noise-waves',
     link: '/lab/noise-waves',
     title: 'Noise Waves',
-    image: require('./noise-waves/thumbnail.png'),
   }
 ]
 
-class LabPage extends React.Component {
-  render() {
-    return (
-      <Layout location={this.props.location}>
-        <SEO
-          title="Connor's Lab"
-          keywords={[`webgl`, `threejs`, `javascript`, `react`]}
-        />
-        <TransitionState>
-          {({ transitionStatus }) => (
-            <Lab posts={posts} transition={transitionStatus} />
-          )}
-        </TransitionState>
-      </Layout>
-    )
-  }
+const LabPage = ({ location, data }) => {
+  const images = new Map();
+
+  data.images.edges.forEach(item => {
+    images.set(item.node.name, item.node.childImageSharp.fluid);
+  });
+  
+  return (
+    <Layout location={location}>
+      <SEO
+        title="Connor's Lab"
+        keywords={[`webgl`, `threejs`, `javascript`, `react`]}
+      />
+      <TransitionState>
+        {({ transitionStatus }) => (
+          <Lab posts={posts} images={images} transition={transitionStatus} />
+        )}
+      </TransitionState>
+    </Layout>
+  )
 }
 
 export default LabPage
+
+export const pageQuery = graphql`
+  query {
+    images: allFile(filter:{
+      relativeDirectory:{
+        regex: "/lab/"
+      }
+    }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`

@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
 const AboutPage = ({ location, data }) => {
-  const { title, social } = data.site.siteMetadata
+  const { title } = data.site.siteMetadata
 
   return (
     <Layout location={location}>
@@ -17,7 +17,7 @@ const AboutPage = ({ location, data }) => {
       />
       <TransitionState>
         {({ transitionStatus }) => (
-          <About social={social} transition={transitionStatus} />
+          <About transition={transitionStatus} profile={data.profile.childImageSharp.fluid} />
         )}
       </TransitionState>
     </Layout>
@@ -31,9 +31,12 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        social {
-          twitter
-          github
+      }
+    }
+    profile: file(relativePath: { regex: "/profile/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

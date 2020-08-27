@@ -64,7 +64,7 @@ function Layout({ location, inverse, children }) {
                       color: inverse ? 'white' : `inherit`,
                     }}
                   >
-                    <NavLink to={`/work`}>Work</NavLink>
+                    <NavLink to={`/about`}>About</NavLink>
                   </li>
                   <li
                     style={{

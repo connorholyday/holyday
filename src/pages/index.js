@@ -8,6 +8,11 @@ import SEO from '../components/seo'
 
 const HomePage = ({ location, data }) => {
   const { title, social } = data.site.siteMetadata
+  const images = new Map();
+
+  data.images.edges.forEach(item => {
+    images.set(item.node.name, item.node.childImageSharp.fluid);
+  });
 
   return (
     <Layout location={location}>
@@ -17,7 +22,7 @@ const HomePage = ({ location, data }) => {
       />
       <TransitionState>
         {({ transitionStatus }) => (
-          <Home social={social} transition={transitionStatus} />
+          <Home social={social} images={images} transition={transitionStatus} />
         )}
       </TransitionState>
     </Layout>
@@ -34,6 +39,22 @@ export const pageQuery = graphql`
         social {
           twitter
           github
+        }
+      }
+    }
+    images: allFile(filter:{
+      relativeDirectory:{
+        regex: "/work/"
+      }
+    }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

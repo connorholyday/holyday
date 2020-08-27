@@ -10,13 +10,6 @@ import Raise from '../Raise'
 import styles from './Home.module.css'
 import { TRANSITION_DELAY_IN_MS, ExternalLink } from '../Link'
 import Sketch from '../feature/sketch'
-import blueLagoon from './images/blue-lagoon.jpg'
-import facebookConnectivity from './images/facebook-connectivity.jpg'
-import novaApp from './images/nova.jpg'
-import ileditor2 from './images/ileditor2.jpg'
-import yayApp from './images/yay.jpg'
-import dryJanuary from './images/dry-january.png'
-import hoppApp from './images/hopp-app.png'
 
 // window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
@@ -100,7 +93,52 @@ export function Animate({ children, toggle, delay }) {
   )
 }
 
-const Home = ({ transition, social = {} }) => {
+const data = [
+  {
+      slug: "facebook-connectivity",
+      link: "https://connectivity.fb.com/",
+      title: "Facebook Connectivity",
+      tag: "Website",
+  },
+  {
+      slug: "blue-lagoon",
+      link: "https://www.bluelagoon.com/",
+      title: "Blue Lagoon",
+      tag: "Website",
+  },
+  {
+      slug: "nova",
+      link: "https://www.nova.is/dansgolfid/appid",
+      title: "Nova",
+      tag: "App",
+  },
+  {
+      slug: "ileditor2",
+      link: "https://ileditor.dev/",
+      title: "ILEditor 2",
+      tag: "Website + Desktop App",
+  },
+  {
+      slug: "dry-january",
+      link: "https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app",
+      title: "Dry January",
+      tag: "App",
+  },
+  {
+      slug: "yay" ,
+      link: "https://www.yay.is/",
+      title: "YAY",
+      tag: "App",
+  },
+  {
+      slug: "hopp-app" ,
+      link: "https://hopp.bike/",
+      title: "Hopp",
+      tag: "App + Website",
+  },
+]
+
+const Home = ({ transition, images, social = {} }) => {
   const { twitter = '', github = '' } = social
   const [toggle, set] = React.useState(true)
   React.useEffect(() => {
@@ -169,38 +207,15 @@ const Home = ({ transition, social = {} }) => {
           <Sketch />
         </div>
       </animated.div>
-      <Article
-        link="https://connectivity.fb.com/"
-        title="Facebook Connectivity"
-        tag="Website"
-        image={facebookConnectivity}
-      />
-      <Article
-        link="https://www.bluelagoon.com/"
-        title="Blue Lagoon"
-        tag="Website"
-        image={blueLagoon}
+      {data.map(item => (
+        <Article
+          key={item.slug}
+          link={item.link}
+          title={item.title}
+          tag={item.tag}
+          image={images.get(item.slug)}
         />
-      <Article
-        link="https://www.nova.is/dansgolfid/appid"
-        title="Nova"
-        tag="App"
-        image={novaApp}
-      />
-      <Article
-        link="https://ileditor.dev/"
-        title="ILEditor 2"
-        tag="Website + Desktop App"
-        image={ileditor2}
-      />
-      <Article
-        link="https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app"
-        title="Dry January"
-        tag="App"
-        image={dryJanuary}
-      />
-      <Article link="https://www.yay.is/" title="YAY" tag="App" image={yayApp} />
-      <Article link="https://hopp.bike/" title="Hopp" tag="App + Website" image={hoppApp} />
+      ))}
     </>
   )
 }
