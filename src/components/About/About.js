@@ -58,9 +58,9 @@ const About = ({ transition, profile }) => {
             little details.
           </p>
           <p>
-            Outside of work you're likely to find me travelling with my camera, in
-            fact you'll <i>most</i> likely find me in search of food. You're
-            always welcome to join me.
+            Outside of work you're likely to find me travelling with my camera, <i>in
+            fact</i> you'll most likely find me in search of food. You're
+            always welcome to come along.
           </p>
         </animated.div>
       </div>
