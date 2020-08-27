@@ -17,7 +17,7 @@ const entryTransition = {
 export function TransitionLink({ children, style, ...props }) {
   return (
     <Transition
-      className={style === undefined && styles.link}
+      className={style === undefined ? styles.link : undefined}
       style={style}
       exit={exitTransition}
       entry={entryTransition}
@@ -31,7 +31,7 @@ export function TransitionLink({ children, style, ...props }) {
 export function InternalLink({ children, style, ...props }) {
   return (
     <BaseLink
-      className={style === undefined && styles.link}
+      className={style === undefined ? styles.link : undefined}
       style={style}
       {...props}
     >
@@ -43,7 +43,7 @@ export function InternalLink({ children, style, ...props }) {
 export function ExternalLink({ children, style, to, href, ...props }) {
   return (
     <a
-      className={style === undefined && styles.link}
+      className={style === undefined ? styles.link : undefined}
       style={style}
       href={to === undefined ? href : to}
       {...props}

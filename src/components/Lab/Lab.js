@@ -7,7 +7,7 @@ import { TRANSITION_DELAY_IN_MS } from '../Link'
 import Raise from '../Raise'
 import Article from '../Article'
 
-const Lab = ({ transition, posts }) => {
+const Lab = ({ transition, posts, images }) => {
   const [toggle, set] = React.useState(true)
   const trail = useTrail(posts.length, {
     config: {
@@ -33,7 +33,9 @@ const Lab = ({ transition, posts }) => {
           opacity,
           ...rest
         }}
-        {...posts[index]}
+        link={posts[index].link}
+        title={posts[index].title}
+        image={images.get(posts[index].slug)}
       />
     ))
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
@@ -27,16 +28,7 @@ function Article({ link, title, tag, image, style }) {
         </h2>
         <div className={styles.caseStudy__media}>
           {tag ? <p className={styles.caseStudy__tag}>{tag}</p> : null}
-          <div
-            style={{
-              background: '#eee',
-              width: '100%',
-              paddingBottom: '66%',
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          ></div>
+          <Img fluid={image} alt="" />
         </div>
       </Link>
     </animated.article>
