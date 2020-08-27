@@ -2,9 +2,7 @@ import React from 'react'
 import { Link as BaseLink } from 'gatsby'
 import Transition from 'gatsby-plugin-transition-link'
 import * as styles from './Link.module.css'
-
-const TRANSITION_DELAY = 0.4
-export const TRANSITION_DELAY_IN_MS = TRANSITION_DELAY * 1000
+import { TRANSITION_DELAY, TRANSITION_DELAY_IN_MS } from '../constants'
 
 const exitTransition = {
   length: TRANSITION_DELAY + 0.3,

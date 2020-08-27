@@ -2,8 +2,9 @@ import React from 'react'
 import { useTrail, animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
-import { TransitionLink, TRANSITION_DELAY_IN_MS } from '../Link'
+import { TransitionLink } from '../Link'
 import Raise from '../Raise'
+import { TRANSITION_DELAY_IN_MS } from '../constants'
 
 const Post = ({ y, node, ...props }) => {
   const [toggle, set] = React.useState(false)

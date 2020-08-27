@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'drei'
 import { fragmentShader, vertexShader } from './shaders'
 import Layout from '../../../components/Layout'
-import { TRANSITION_DELAY_IN_MS } from '../../../components/Link'
+import { TRANSITION_DELAY_IN_MS } from '../../../components/constants'
 
 function Wave() {
   const ref = useRef()
