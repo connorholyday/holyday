@@ -7,7 +7,6 @@ import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import { TransitionState } from 'gatsby-plugin-transition-link'
 import { useSpring, animated } from 'react-spring'
-import { TRANSITION_DELAY_IN_MS } from '../components/Link'
 
 function TransitionContent({ transition, style, children }) {
   const [toggle, set] = React.useState(true)
@@ -15,7 +14,7 @@ function TransitionContent({ transition, style, children }) {
     opacity: toggle ? 1 : 0,
     from: { opacity: 0 },
   })
-  console.log({transition})
+
   React.useEffect(() => {
     if (transition === 'exiting') {
       set(false)

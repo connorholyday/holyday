@@ -5,48 +5,9 @@ import { useSpring, animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
 import styles from './About.module.css'
-import { TRANSITION_DELAY_IN_MS, ExternalLink } from '../Link'
-
-const Trail = ({ children, delay = 0, length, index, toggle }) => {
-  const { y } = useSpring({
-    delay: (TRANSITION_DELAY_IN_MS / (length + delay)) * (index + delay),
-    y: toggle ? 0 : -100,
-    from: { y: 100 },
-  })
-  return (
-    <animated.span
-      key={index}
-      style={{
-        display: 'inline-block',
-        whiteSpace: 'pre',
-        transform: y.interpolate(y => `translate3d(0,${y}%,0)`),
-      }}
-      aria-hidden="true"
-    >
-      {children}
-    </animated.span>
-  )
-}
-
-export function Animate({ children, toggle, delay }) {
-  const chars = children.split('')
-
-  return (
-    <div aria-label={children} style={{ overflow: 'hidden' }}>
-      {chars.map((char, index) => (
-        <Trail
-          key={index}
-          length={chars.length}
-          index={index}
-          toggle={toggle}
-          delay={delay}
-        >
-          {char}
-        </Trail>
-      ))}
-    </div>
-  )
-}
+import { ExternalLink } from '../Link'
+import Animate from '../animate'
+import { TRANSITION_DELAY_IN_MS } from '../constants'
 
 const About = ({ transition, profile }) => {
   const [toggle, set] = React.useState(true)

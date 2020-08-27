@@ -8,8 +8,10 @@ import Arc from '../Arc'
 import Article from '../Article'
 import Raise from '../Raise'
 import styles from './Home.module.css'
-import { TRANSITION_DELAY_IN_MS, ExternalLink } from '../Link'
+import { ExternalLink } from '../Link'
 import Sketch from '../feature/sketch'
+import Animate from '../animate'
+import { TRANSITION_DELAY_IN_MS } from '../constants'
 
 // window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
@@ -49,47 +51,6 @@ function FromTheLab() {
     >
       <Arc radius={arcHeight}>From the lab</Arc>
     </animated.div>
-  )
-}
-
-const Trail = ({ children, delay = 0, length, index, toggle }) => {
-  const { y } = useSpring({
-    delay: (TRANSITION_DELAY_IN_MS / (length + delay)) * (index + delay),
-    y: toggle ? 0 : -100,
-    from: { y: 100 },
-  })
-  return (
-    <animated.span
-      key={index}
-      style={{
-        display: 'inline-block',
-        whiteSpace: 'pre',
-        transform: y.interpolate(y => `translate3d(0,${y}%,0)`),
-      }}
-      aria-hidden="true"
-    >
-      {children}
-    </animated.span>
-  )
-}
-
-export function Animate({ children, toggle, delay }) {
-  const chars = children.split('')
-
-  return (
-    <div aria-label={children} style={{ overflow: 'hidden' }}>
-      {chars.map((char, index) => (
-        <Trail
-          key={index}
-          length={chars.length}
-          index={index}
-          toggle={toggle}
-          delay={delay}
-        >
-          {char}
-        </Trail>
-      ))}
-    </div>
   )
 }
 
