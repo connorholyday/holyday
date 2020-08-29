@@ -8,8 +8,10 @@ import Article from '../Article'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
 import Animate from '../animate'
 import styles from './Lab.module.css'
+import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 const Lab = ({ transition, posts, images }) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -21,6 +23,7 @@ const Lab = ({ transition, posts, images }) => {
     y: toggle ? 0 : -5,
     opacity: toggle ? 1 : 0,
     from: { y: 5, opacity: 0 },
+    immediate: prefersReducedMotion,
   })
   const trail = useTrail(posts.length, {
     config: {
@@ -29,6 +32,7 @@ const Lab = ({ transition, posts, images }) => {
     yr: toggle ? [0, 0] : [-5, -2],
     opacity: toggle ? 1 : 0,
     from: { yr: [5, 2], opacity: 0 },
+    immediate: prefersReducedMotion,
   })
 
   return (

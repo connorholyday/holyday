@@ -12,6 +12,7 @@ import { ExternalLink } from '../Link'
 import Sketch from '../feature/sketch'
 import Animate from '../animate'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
+import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 // window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
@@ -31,7 +32,8 @@ function clamp(number, lower, upper) {
 }
 
 function FromTheLab() {
-  const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }))
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const [{ xy }, set] = useSpring(() => ({ xy: [0, 0], immediate: prefersReducedMotion, }))
   const bind = useGesture(({ down, delta, velocity }) => {
     velocity = clamp(velocity, 1, 8)
     set({
@@ -101,6 +103,7 @@ const data = [
 
 const Home = ({ transition, images, social = {} }) => {
   const { twitter = '', github = '' } = social
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -112,6 +115,7 @@ const Home = ({ transition, images, social = {} }) => {
     yr: toggle ? [0, 0] : [-5, -2],
     opacity: toggle ? 1 : 0,
     from: { yr: [5, 2], opacity: 0 },
+    immediate: prefersReducedMotion,
   })
   return (
     <>
@@ -163,6 +167,7 @@ const Home = ({ transition, images, social = {} }) => {
             background: '#eee',
             width: '100%',
             paddingBottom: '100%',
+            cursor: 'move',
           }}
         >
           <Sketch />

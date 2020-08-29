@@ -7,12 +7,15 @@ import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import { TransitionState } from 'gatsby-plugin-transition-link'
 import { useSpring, animated } from 'react-spring'
+import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion'
 
 function TransitionContent({ transition, style, children }) {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
   const { opacity } = useSpring({
     opacity: toggle ? 1 : 0,
     from: { opacity: 0 },
+    immediate: prefersReducedMotion,
   })
 
   React.useEffect(() => {

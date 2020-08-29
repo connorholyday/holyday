@@ -5,6 +5,7 @@ import { rhythm } from '../../utils/typography'
 import { TransitionLink } from '../Link'
 import Raise from '../Raise'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
+import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 const Post = ({ y, node, ...props }) => {
   const [toggle, set] = React.useState(false)
@@ -52,6 +53,7 @@ const Post = ({ y, node, ...props }) => {
 }
 
 const Blog = ({ transition, posts }) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
   const trail = useTrail(posts.length, {
     config: {
@@ -60,6 +62,7 @@ const Blog = ({ transition, posts }) => {
     opacity: toggle ? 1 : 0,
     y: toggle ? 0 : -20,
     from: { opacity: 0, y: 20 },
+    immediate: prefersReducedMotion,
   })
   React.useEffect(() => {
     if (transition === 'exiting') {

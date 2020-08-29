@@ -2,12 +2,15 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { ExternalLink } from './Link'
 import { TRANSITION_DELAY_IN_MS } from './constants'
+import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion'
 
 const Trail = ({ children, delay = 0, length, index, toggle }) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const { y } = useSpring({
     delay: (TRANSITION_DELAY_IN_MS / (length + delay)) * (index + delay),
     y: toggle ? 0 : -100,
     from: { y: 100 },
+    immediate: prefersReducedMotion,
   })
   return (
     <animated.span
