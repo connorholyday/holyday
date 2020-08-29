@@ -4,9 +4,10 @@ import { animated, useSpring } from 'react-spring'
 import { Canvas, useFrame, useRender } from 'react-three-fiber'
 import * as THREE from 'three'
 import { OrbitControls } from 'drei'
-import { fragmentShader, vertexShader } from './shaders'
-import Layout from '../../../components/Layout'
-import { TRANSITION_DELAY_IN_MS } from '../../../components/constants'
+import { fragmentShader, vertexShader } from '../../shaders/noise-waves'
+import Layout from '../../components/Layout'
+import { TRANSITION_DELAY_IN_MS } from '../../components/constants'
+import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 function Wave() {
   const ref = useRef()
@@ -61,11 +62,13 @@ function Sketch() {
 }
 
 function Main({ transition }) {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
   const { opacity } = useSpring({
     delay: TRANSITION_DELAY_IN_MS + 0.3,
     opacity: toggle ? 1 : 0,
     from: { opacity: 0 },
+    immediate: prefersReducedMotion,
   })
   React.useEffect(() => {
     if (transition === 'exiting') {

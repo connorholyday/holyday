@@ -8,8 +8,10 @@ import styles from './About.module.css'
 import { ExternalLink } from '../Link'
 import Animate from '../animate'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
+import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 const About = ({ transition, profile }) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -21,6 +23,7 @@ const About = ({ transition, profile }) => {
     yr: toggle ? [0, 0] : [-5, -2],
     opacity: toggle ? 1 : 0,
     from: { yr: [5, 2], opacity: 0 },
+    immediate: prefersReducedMotion,
   })
   return (
     <>
