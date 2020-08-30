@@ -11,7 +11,6 @@ import { EffectComposer, SSAO, Bloom } from 'react-postprocessing'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 import Layout from '../Layout'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
-import Macaron from './Macaron'
 
 function Borders() {
   const { aspect, viewport } = useThree()
@@ -37,26 +36,10 @@ function Borders() {
   }, [])
   const [_, api] = useCompoundBody(() => ({
     shapes: [
-      {
-        type: 'Plane',
-        position: [0, -viewport.height / 2 + 4, 0],
-        rotation: [-Math.PI / 2, 0, 0],
-      },
-      {
-        type: 'Plane',
-        position: [0, viewport.height / 2, 0],
-        rotation: [Math.PI / 2, 0, 0],
-      },
-      {
-        type: 'Plane',
-        position: [-viewport.height / 2, 0, 0],
-        rotation: [0, Math.PI / 2, 0],
-      },
-      {
-        type: 'Plane',
-        position: [viewport.height / 2, 0, 0],
-        rotation: [0, -Math.PI / 2, 0],
-      },
+      { type: 'Plane', position: [0, -viewport.height / 2 + 4, 0], rotation: [-Math.PI / 2, 0, 0] },
+      { type: 'Plane', position: [0, viewport.height / 2, 0], rotation: [Math.PI / 2, 0, 0] },
+      { type: 'Plane', position: [-viewport.height / 2, 0, 0], rotation: [0, Math.PI / 2, 0] },
+      { type: 'Plane', position: [viewport.height / 2, 0, 0], rotation: [0, -Math.PI / 2, 0] },
       { type: 'Plane', position: [0, 0, 0], rotation: [0, 0, 0] },
       { type: 'Plane', position: [0, 0, 12], rotation: [0, -Math.PI, 0] },
     ],
@@ -91,7 +74,7 @@ function Borders() {
   return null
 }
 
-function InstancedObjects({ count = 200 }) {
+function Macaron() {
   const { nodes, materials } = useLoader(GLTFLoader, '/scene.gltf')
   const { viewport } = useThree()
   const [ref] = useBox(index => ({
@@ -99,17 +82,70 @@ function InstancedObjects({ count = 200 }) {
     position: [0, 0, 0, 0],
     args: [2, 2, 1.5],
   }))
-  return (
-    <mesh ref={ref} castShadow receiveShadow>
-      <group scale={[0.03, 0.03, 0.03]} dispose={null}>
-        <mesh args={[nodes.mesh_0.geometry, materials.Rose]} />
-        <mesh args={[nodes.mesh_1.geometry, materials.Rose]} />
-        <mesh args={[nodes.mesh_2.geometry, materials.Liquid_rose]} />
-        <mesh args={[nodes.mesh_3.geometry, materials.Rose]} />
-        <mesh args={[nodes.mesh_4.geometry, materials.Rose]} />
-      </group>
-    </mesh>
-  )
+  const colour = Math.random() >= 0.66 ? 0 : Math.floor(Math.random() * (5 - 0) + 0)
+  switch (colour) {
+    case 0:
+    default:
+      return (
+        <mesh ref={ref} castShadow receiveShadow>
+          <group scale={[0.03, 0.03, 0.03]} dispose={null}>
+            <mesh args={[nodes.mesh_0.geometry, materials.Rose]} />
+            <mesh args={[nodes.mesh_1.geometry, materials.Rose]} />
+            <mesh args={[nodes.mesh_2.geometry, materials.Liquid_rose]} />
+            <mesh args={[nodes.mesh_3.geometry, materials.Rose]} />
+            <mesh args={[nodes.mesh_4.geometry, materials.Rose]} />
+          </group>
+        </mesh>
+      )
+    case 1:
+      return (
+        <mesh ref={ref} castShadow receiveShadow>
+          <group scale={[0.03, 0.03, 0.03]} dispose={null}>
+            <mesh args={[nodes.mesh_5.geometry, materials.Orange]} />
+            <mesh args={[nodes.mesh_6.geometry, materials.Liquid_orange]} />
+            <mesh args={[nodes.mesh_7.geometry, materials.Juice_Grapefruit]} />
+            <mesh args={[nodes.mesh_8.geometry, materials.Liquid_orange]} />
+            <mesh args={[nodes.mesh_9.geometry, materials.Orange]} />
+          </group>
+        </mesh>
+      )
+    case 2:
+      return (
+        <mesh ref={ref} castShadow receiveShadow>
+          <group scale={[0.03, 0.03, 0.03]} dispose={null}>
+            <mesh args={[nodes.mesh_10.geometry, materials.Blue]} />
+            <mesh args={[nodes.mesh_11.geometry, materials.Blue]} />
+            <mesh args={[nodes.mesh_12.geometry, materials.BlueCherry]} />
+            <mesh args={[nodes.mesh_13.geometry, materials.Blue]} />
+            <mesh args={[nodes.mesh_14.geometry, materials.Blue]} />
+          </group>
+        </mesh>
+      )
+    case 3:
+      return (
+        <mesh ref={ref} castShadow receiveShadow>
+          <group scale={[0.03, 0.03, 0.03]} dispose={null}>
+            <mesh args={[nodes.mesh_15.geometry, materials.coffee]} />
+            <mesh args={[nodes.mesh_16.geometry, materials.Liquid_coffee]} />
+            <mesh args={[nodes.mesh_17.geometry, materials.coffee2]} />
+            <mesh args={[nodes.mesh_18.geometry, materials.Liquid_coffee]} />
+            <mesh args={[nodes.mesh_19.geometry, materials.coffee]} />
+          </group>
+        </mesh>
+      )
+    case 4:
+      return (
+        <mesh ref={ref} castShadow receiveShadow>
+          <group scale={[0.03, 0.03, 0.03]} dispose={null}>
+            <mesh args={[nodes.mesh_25.geometry, materials.Liquid_Chocolate]} />
+            <mesh args={[nodes.mesh_26.geometry, materials['Chocolate-2']]} />
+            <mesh args={[nodes.mesh_27.geometry, materials['Corona_14_-_Defa']]} />
+            <mesh args={[nodes.mesh_28.geometry, materials['Chocolate-2']]} />
+            <mesh args={[nodes.mesh_29.geometry, materials.Liquid_Chocolate]} />
+          </group>
+        </mesh>
+      )
+  }
 }
 
 function Effects() {
@@ -171,7 +207,7 @@ function Sketch() {
         shadow-camera-top={10}
         shadow-camera-bottom={-10}
       />
-      <directionalLight position={[-10, -10, -5]} intensity={10} color="blue" />
+      <directionalLight position={[-10, -10, -5]} intensity={1} />
       <Physics
         gravity={[0, -50, 0]}
         defaultContactMaterial={{ restitution: 0.5 }}
@@ -179,8 +215,8 @@ function Sketch() {
         <group position={[0, 0, 0]}>
           <Borders />
           <React.Suspense fallback={null}>
-            {[...new Array(100)].map(x => (
-              <InstancedObjects key={x} />
+            {[...new Array(100)].map((_, i) => (
+              <Macaron key={i} />
             ))}
           </React.Suspense>
         </group>
