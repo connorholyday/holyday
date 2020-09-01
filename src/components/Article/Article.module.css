@@ -1,5 +1,6 @@
 .caseStudy {
     grid-column-end: span 10;
+    margin-top: 2rem;
 }
 .caseStudy:nth-of-type(4n+1) {
     grid-column-start: 2;
@@ -38,6 +39,7 @@
 @media (min-width: 768px) {
     .caseStudy {
         grid-column-end: span 8;
+        margin-top: 6rem;
     }
     .caseStudy:nth-of-type(4n+1) {
         grid-column-start: 2;

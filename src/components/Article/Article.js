@@ -2,7 +2,6 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { animated } from 'react-spring'
 
-import { rhythm } from '../../utils/typography'
 import Raise from '../Raise'
 import styles from './Article.module.css'
 import { ExternalLink, InternalLink } from '../Link'
@@ -12,7 +11,7 @@ function Article({ link, title, tag, image, style }) {
   const Link = link.startsWith('/') ? InternalLink : ExternalLink
   const chars = title.split('')
   return (
-    <animated.article className={styles.caseStudy} style={{ marginTop: rhythm(4), ...style }}>
+    <animated.article className={styles.caseStudy} style={{ ...style }}>
       <Link
         onMouseEnter={() => set(true)}
         onMouseLeave={() => set(false)}
