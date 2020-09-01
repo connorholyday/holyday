@@ -1,22 +1,28 @@
 ---
-title: WebGL Glossary
+title: WebGL Shader Glossary
 date: '2020-06-05'
 ---
 
-FragColor
-The colour of the pixel being computed
+A personal reference for WebGL shader terms. Feel free to get in touch if anything isn't clear or if there's something you would like to add.
 
-FragCoord
-The x and y value of the pixel being computed
+## Terms
 
-Normalizing
-Converting a value to be between 0.0 and 1.0
-You can normalize the FragCoord by dividing it with by the canvas resolution
+<dl>
+    <dt>Normalizing</dt>
+    <dd>Converting a value to be between 0.0 and 1.0. You can normalize the FragCoord by dividing it with by the canvas resolution</dd>    
+</dl>
 
 ## Variables
 
-Uniform
-The same between pixels
+_Note: when I say "between pixels" it's because a shader will perform its calculations on every individual pixel._
 
-Varying
-Can be different between pixels
+<dl>
+    <dt>Uniform</dt>
+    <dd>The same between pixels</dd>
+    <dt>Varying</dt>
+    <dd>Can be different between pixels</dd>
+    <dt>FragColor</dt>
+    <dd>The colour of the pixel being computed</dd>
+    <dt>FragCoord</dt>
+    <dd>The x and y value of the pixel being computed</dd>
+</dl>
