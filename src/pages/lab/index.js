@@ -11,7 +11,12 @@ const posts = [
     slug: 'noise-waves',
     link: '/lab/noise-waves',
     title: 'Noise Waves',
-  }
+  },
+  {
+    slug: 'macarons',
+    link: '/lab/macarons',
+    title: 'Macarons',
+  },
 ]
 
 const LabPage = ({ location, data }) => {
