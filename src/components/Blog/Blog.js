@@ -6,6 +6,7 @@ import { TransitionLink } from '../Link'
 import Raise from '../Raise'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
+import styles from './Blog.module.css'
 
 const Post = ({ y, node, ...props }) => {
   const [toggle, set] = React.useState(false)
@@ -14,6 +15,7 @@ const Post = ({ y, node, ...props }) => {
   return (
     <animated.div
       key={node.fields.slug}
+      className={styles.post}
       style={{
         ...props,
         transform: y.interpolate(y => `translate3d(0,${y}px,0)`),
@@ -22,6 +24,7 @@ const Post = ({ y, node, ...props }) => {
     >
       <h2
         style={{
+          marginTop: 0,
           marginBottom: rhythm(1 / 4),
         }}
         aria-label={title}
@@ -70,7 +73,7 @@ const Blog = ({ transition, posts }) => {
     }
   }, [transition])
   return (
-    <div style={{ gridColumn: '2/6' }}>
+    <div className={styles.content}>
       {trail.map(({ y, ...rest }, index) => (
         <Post key={index} y={y} node={posts[index].node} {...rest} />
       ))}

@@ -1,0 +1,11 @@
+.post:not(:first-of-type) {
+    margin-top: 4rem;
+}
+.content {
+    grid-column: 2/12;
+}
+@media (min-width: 768px) {
+    .content {
+        grid-column: 2/6;
+    }
+}

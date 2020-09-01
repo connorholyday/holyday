@@ -48,6 +48,7 @@ class BlogPostTemplate extends React.Component {
             <TransitionContent transition={transitionStatus} style={{
               marginLeft: `auto`,
               marginRight: `auto`,
+              width: '100%',
               maxWidth: rhythm(26),
               gridColumn: '1/13',
               padding: `0 ${rhythm(3 / 4)}`,
