@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogs = await graphql(`
     query {
         blog: allMdx(
-          filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+          filter: { fileAbsolutePath: { regex: "/src/content/blog/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const works = await graphql(`
     query {
         work: allMdx(
-          filter: { fileAbsolutePath: { regex: "/content/work/" } }
+          filter: { fileAbsolutePath: { regex: "/src/content/work/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -80,20 +80,20 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   // Create work posts pages.
-  works.work.edges.forEach((post, index) => {
-    const previous = index === works.work.edges.length - 1 ? null : works.work.edges[index + 1].node
-    const next = index === 0 ? null : works.work.edges[index - 1].node
+  // works.work.edges.forEach((post, index) => {
+  //   const previous = index === works.work.edges.length - 1 ? null : works.work.edges[index + 1].node
+  //   const next = index === 0 ? null : works.work.edges[index - 1].node
 
-    createPage({
-      path: post.node.fields.slug,
-      component: path.resolve(`./src/templates/work-post.js`),
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
-    })
-  })
+  //   createPage({
+  //     path: post.node.fields.slug,
+  //     component: path.resolve(`./src/templates/work-post.js`),
+  //     context: {
+  //       slug: post.node.fields.slug,
+  //       previous,
+  //       next,
+  //     },
+  //   })
+  // })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
