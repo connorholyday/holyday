@@ -11,6 +11,9 @@ import { EffectComposer, SSAO, Bloom } from 'react-postprocessing'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 import Layout from '../Layout'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
+import { WEBGL } from 'three/examples/jsm/WebGL'
+
+const permission = React.createRef(false);
 
 function Borders() {
   const { aspect, viewport } = useThree()
@@ -30,10 +33,12 @@ function Borders() {
   )
   const rotation = useRef()
   React.useEffect(() => {
-    rotation.current = new DeviceOrientationControls(
-      new THREE.PerspectiveCamera()
-    )
-  }, [])
+    if (permission) {
+      rotation.current = new DeviceOrientationControls(
+        new THREE.PerspectiveCamera()
+      )
+    }
+  }, [permission])
   const [_, api] = useCompoundBody(() => ({
     shapes: [
       { type: 'Plane', position: [0, -viewport.height / 2 + 4, 0], rotation: [-Math.PI / 2, 0, 0] },
@@ -172,6 +177,7 @@ function Effects() {
 }
 
 function Sketch() {
+  const amount = window.outerWidth > 700 ? 100 : 10;
   return (
     <Canvas
       shadowMap
@@ -191,6 +197,7 @@ function Sketch() {
         alpha: false,
         antialias: false,
       }}
+      gl2={false}
       camera={{ position: [0, 0, 20], fov: 50 }}
     >
       <color attach="background" args={['lightpink']} />
@@ -215,7 +222,7 @@ function Sketch() {
         <group position={[0, 0, 0]}>
           <Borders />
           <React.Suspense fallback={null}>
-            {[...new Array(100)].map((_, i) => (
+            {[...new Array(amount)].map((_, i) => (
               <Macaron key={i} />
             ))}
           </React.Suspense>
@@ -235,19 +242,82 @@ function Main({ transition }) {
     from: { opacity: 0 },
     immediate: prefersReducedMotion,
   })
+  const [start, go] = React.useState(false);
   React.useEffect(() => {
     if (transition === 'exiting') {
       set(false)
     }
   }, [transition])
-  return (
+  const handleClick = () => {
+    if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+      DeviceOrientationEvent.requestPermission()
+        .then(permissionState => {
+          if (permissionState === 'granted') {
+            permission = true;
+          }
+        })
+        .catch(console.error)
+        .finally(() => void go(true));
+    } else {
+      go(true);
+    }
+  }
+  return WEBGL.isWebGL2Available() === false ? (
     <animated.div
       style={{
         gridColumn: '1/13',
         opacity,
       }}
     >
-      <Sketch />
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        background: 'lightpink',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <h1 style={{ textAlign: 'center', color: 'white' }}>
+          Oh no! This won't work for you right now, sorry 😞
+        </h1>
+      </div>
+    </animated.div>
+  ) : (
+    <animated.div
+      style={{
+        gridColumn: '1/13',
+        opacity,
+      }}
+    >
+      {start ? <Sketch /> : (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          background: 'lightpink',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+          <button
+            style={{
+              background: 'white',
+              borderRadius: 4,
+              border: 0,
+              letterSpacing: 3,
+              padding: '8px 12px',
+              fontWeight: 'bold',
+              textTransform: 'uppercase',
+            }}
+            onClick={handleClick}
+          >Start</button>
+        </div>
+      )}
     </animated.div>
   )
 }
