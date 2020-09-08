@@ -104,12 +104,18 @@ const data = [
 const Home = ({ transition, images, social = {} }) => {
   const { twitter = '', github = '' } = social
   const prefersReducedMotion = usePrefersReducedMotion();
+  const [loaded, setLoaded] = React.useState(false)
   const [toggle, set] = React.useState(true)
   React.useEffect(() => {
     if (transition === 'exiting') {
       set(false)
     }
   }, [transition])
+  React.useEffect(() => {
+    window.setTimeout(() => {
+      setLoaded(true);
+    }, 1000)
+  }, [])
   const { yr, opacity } = useSpring({
     delay: TRANSITION_DELAY_IN_MS + 0.3,
     yr: toggle ? [0, 0] : [-5, -2],
@@ -170,7 +176,7 @@ const Home = ({ transition, images, social = {} }) => {
             cursor: 'move',
           }}
         >
-          <Sketch />
+          <Sketch render={loaded} />
         </div>
       </animated.div>
       {data.map(item => (

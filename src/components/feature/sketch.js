@@ -1,4 +1,5 @@
 import React, { useRef, useMemo } from 'react'
+import { useSpring, a } from 'react-spring'
 import { Canvas, useFrame, useRender } from 'react-three-fiber'
 import * as THREE from 'three'
 import { OrbitControls } from 'drei'
@@ -30,15 +31,14 @@ function Wave() {
   )
 }
 
-function Sketch() {
+function Sketch({ render = false }) {
+  const { opacity } = useSpring({
+    config: { duration: 600 },
+    opacity: render ? 1 : 0,
+    from: { opacity: 0 },
+  })
   return (
-    <Canvas
-      camera={{
-        position: [0, 0.7, 2],
-        fov: 40,
-        near: 0.001,
-        far: 1000,
-      }}
+    <a.div
       style={{
         position: 'absolute',
         top: 0,
@@ -48,11 +48,25 @@ function Sketch() {
         zIndex: 1,
         transform: 'translateZ(0)',
         backgroundColor: '#2100e6',
+        opacity,
       }}
     >
-      <OrbitControls />
-      <Wave />
-    </Canvas>
+      <Canvas
+        camera={{
+          position: [0, 0.7, 2],
+          fov: 40,
+          near: 0.001,
+          far: 1000,
+        }}
+      >
+        {render && (
+          <>
+            <OrbitControls />
+            <Wave />
+          </>
+        )}
+      </Canvas>
+    </a.div>
   )
 }
 
