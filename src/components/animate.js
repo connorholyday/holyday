@@ -28,21 +28,34 @@ const Trail = ({ children, delay = 0, length, index, toggle }) => {
 }
 
 function Animate({ children, toggle, delay }) {
-  const chars = children.split('')
+  const count = React.useRef(0);
+  const words = children.split(' ')
+  const characters = children.split('').filter(char => char !== ' ');
 
+  React.useEffect(() => {
+    count.current = 0; 
+  })
+  
   return (
     <span aria-label={children} style={{ display: 'block', overflow: 'hidden' }}>
-      {chars.map((char, index) => (
-        <Trail
-          key={index}
-          length={chars.length}
-          index={index}
-          toggle={toggle}
-          delay={delay}
-        >
-          {char}
-        </Trail>
-      ))}
+      {words.map((word, wordIndex) => {
+        const chars = word.split('')
+        return (
+          <span key={wordIndex} style={{ display: 'inline-block', overflow: 'hidden', marginRight: '0.24em' }}>
+            {chars.map((char, index) => (
+              <Trail
+                key={`${wordIndex}${index}${count.current}`}
+                length={characters.length}
+                index={count.current++}
+                toggle={toggle}
+                delay={delay}
+              >
+                {char}
+              </Trail>
+            ))}
+          </span>
+        )
+      })}
     </span>
   )
 }
