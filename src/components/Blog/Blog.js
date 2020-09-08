@@ -1,9 +1,10 @@
 import React from 'react'
-import { useTrail, animated } from 'react-spring'
+import { useSpring, useTrail, animated } from 'react-spring'
 
 import { rhythm } from '../../utils/typography'
 import { TransitionLink } from '../Link'
 import Raise from '../Raise'
+import Animate from '../animate'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 import styles from './Blog.module.css'
@@ -58,6 +59,13 @@ const Post = ({ y, node, ...props }) => {
 const Blog = ({ transition, posts }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
+  const { y, opacity } = useSpring({
+    delay: TRANSITION_DELAY_IN_MS + 0.3,
+    y: toggle ? 0 : -5,
+    opacity: toggle ? 1 : 0,
+    from: { y: 5, opacity: 0 },
+    immediate: prefersReducedMotion,
+  })
   const trail = useTrail(posts.length, {
     config: {
       duration: TRANSITION_DELAY_IN_MS,
@@ -74,6 +82,14 @@ const Blog = ({ transition, posts }) => {
   }, [transition])
   return (
     <div className={styles.content}>
+      <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
+        <Animate toggle={toggle}>Welcome to the Blog</Animate>
+      </h1>
+      <animated.p style={{
+          transform: y.interpolate(y => `translate3d(0,${y}%,0)`),
+          opacity,
+          marginBottom: '4rem'
+      }}>Mostly ramblings on WebGL with maybe some React, TypeScript, and CSS thrown in for good measure.</animated.p>
       {trail.map(({ y, ...rest }, index) => (
         <Post key={index} y={y} node={posts[index].node} {...rest} />
       ))}
