@@ -18,7 +18,7 @@ function Wave() {
     <points ref={ref} rotation={[Math.PI / 2, 0, 0]}>
       <planeGeometry
         attach="geometry"
-        args={[1, 1, 100, 100]}
+        args={[1, 1, window.outerWidth / 17, window.outerWidth / 17]}
       />
       <shaderMaterial
         attach="material"
