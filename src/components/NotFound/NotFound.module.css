@@ -1,0 +1,18 @@
+.content {
+    grid-column: 2 / 12;
+}
+
+.centered {
+    position: absolute;
+    top: 50vh;
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+    margin: 0;
+}
+
+@media (min-width: 1024px) {
+    .centered {
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
