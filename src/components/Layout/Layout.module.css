@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 2.25rem 0;
+    grid-column: 2 / 12;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 1.41421rem;
+    line-height: 2.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navItem {
+    list-style-type: none;
+    margin: 0 1rem 0 0;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        margin-bottom: 2.25rem;
+        padding: 2.25rem 0;
+    }
+
+    .logo {
+        margin-bottom: -1.5rem;
+    }
+
+    .navItem {
+        margin: 0 0.75rem;
+    }
+}

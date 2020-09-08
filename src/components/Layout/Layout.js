@@ -1,7 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { rhythm, scale } from '../utils/typography'
-import { TransitionLink as NavLink } from './Link'
+import { rhythm, scale } from '../../utils/typography'
+import { TransitionLink as NavLink } from '../Link'
+import styles from './Layout.module.css'
 
 function Layout({ location, inverse, children }) {
   return (
@@ -20,24 +21,8 @@ function Layout({ location, inverse, children }) {
               minHeight: '100vh',
             }}
           >
-            <header
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'baseline',
-                marginBottom: rhythm(1.5),
-                padding: `${rhythm(1.5)} 0`,
-                gridColumn: '2/12',
-                zIndex: 2,
-              }}
-            >
-              <h1
-                style={{
-                  ...scale(0.5),
-                  marginTop: 0,
-                  marginBottom: rhythm(-1),
-                }}
-              >
+            <header className={styles.header}>
+              <h2 className={styles.logo}>
                 <NavLink
                   style={{
                     boxShadow: `none`,
@@ -48,37 +33,28 @@ function Layout({ location, inverse, children }) {
                 >
                   {title}
                 </NavLink>
-              </h1>
+              </h2>
               <nav>
-                <ul
-                  style={{
-                    margin: 0,
-                    padding: 0,
-                    display: 'flex',
-                  }}
-                >
+                <ul className={styles.nav}>
                   <li
+                    className={styles.navItem}
                     style={{
-                      listStyleType: 'none',
-                      margin: `0 ${rhythm(0.5)}`,
                       color: inverse ? 'white' : `inherit`,
                     }}
                   >
                     <NavLink to={`/about`}>About</NavLink>
                   </li>
                   <li
+                    className={styles.navItem}
                     style={{
-                      listStyleType: 'none',
-                      margin: `0 ${rhythm(0.5)}`,
                       color: inverse ? 'white' : `inherit`,
                     }}
                   >
                     <NavLink to={`/blog`}>Blog</NavLink>
                   </li>
                   <li
+                    className={styles.navItem}
                     style={{
-                      listStyleType: 'none',
-                      margin: `0 0 0 ${rhythm(0.5)}`,
                       color: inverse ? 'white' : `inherit`,
                     }}
                   >
