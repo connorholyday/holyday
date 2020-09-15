@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Link } from 'gatsby'
-import { useSpring, animated } from 'react-spring'
+import { useSpring, useTransition, animated } from 'react-spring'
 import { useGesture } from 'react-with-gesture'
 
 import { rhythm } from '../../utils/typography'
@@ -14,7 +14,6 @@ import Animate from '../animate'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
-// window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
 const arcHeight = 50
 
@@ -104,18 +103,27 @@ const data = [
 const Home = ({ transition, images, social = {} }) => {
   const { twitter = '', github = '' } = social
   const prefersReducedMotion = usePrefersReducedMotion();
-  const [loaded, setLoaded] = React.useState(false)
   const [toggle, set] = React.useState(true)
+  const [loaded, setLoaded] = React.useState(false);
+  const [loadedSketch, setLoadSketch] = React.useState(false);
+
   React.useEffect(() => {
     if (transition === 'exiting') {
       set(false)
     }
   }, [transition])
   React.useEffect(() => {
-    window.setTimeout(() => {
-      setLoaded(true);
-    }, 1000)
-  }, [])
+    setLoaded(true);
+    setTimeout(() => {
+      setLoadSketch(true);
+    }, 1000);
+  }, []);
+
+  const transitions = useTransition(loadedSketch, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+  })
+
   const { yr, opacity } = useSpring({
     delay: TRANSITION_DELAY_IN_MS + 0.3,
     yr: toggle ? [0, 0] : [-5, -2],
@@ -123,38 +131,43 @@ const Home = ({ transition, images, social = {} }) => {
     from: { yr: [5, 2], opacity: 0 },
     immediate: prefersReducedMotion,
   })
+
   return (
     <>
       <div className={styles.content}>
         <div className={styles.centered}>
-          <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
-            <Animate toggle={toggle}>Hi I'm Connor</Animate>
-          </h1>
-          <p style={{ margin: 0 }}>
-            <Animate toggle={toggle} delay={10}>
-              Creative Developer
-            </Animate>
-          </p>
-          <p>
-            <Animate toggle={toggle} delay={20}>
-              Attempting to spark joy on the internet
-            </Animate>
-          </p>
-          <div
-            style={{
-              display: 'flex',
-            }}
-          >
-            <a href={`https://twitter.com/${twitter}`}>
-              <Animate toggle={toggle}>twitter</Animate>
-            </a>{' '}
-            ﹒{' '}
-            <a href={`https://github.com/${github}`}>
-              <Animate toggle={toggle} delay={7}>
-                github
+          {loaded ? (
+            <>
+            <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
+              <Animate toggle={toggle}>Hi I'm Connor</Animate>
+            </h1>
+            <p style={{ margin: 0 }}>
+              <Animate toggle={toggle} delay={10}>
+                Creative Developer
               </Animate>
-            </a>
-          </div>
+            </p>
+            <p>
+              <Animate toggle={toggle} delay={20}>
+                Attempting to spark joy on the internet
+              </Animate>
+            </p>
+            <div
+              style={{
+                display: 'flex',
+              }}
+            >
+              <a href={`https://twitter.com/${twitter}`}>
+                <Animate toggle={toggle}>twitter</Animate>
+              </a>{' '}
+              ﹒{' '}
+              <a href={`https://github.com/${github}`}>
+                <Animate toggle={toggle} delay={7}>
+                  github
+                </Animate>
+              </a>
+            </div>
+            </>
+          ) : null}
         </div>
       </div>
       <animated.div
@@ -176,7 +189,9 @@ const Home = ({ transition, images, social = {} }) => {
             cursor: 'move',
           }}
         >
-          <Sketch render={loaded} />
+          {transitions.map(({ item, key, props }) =>
+            item && <animated.div key={key} style={props}><Sketch /></animated.div>
+          )}
         </div>
       </animated.div>
       {data.map(item => (
