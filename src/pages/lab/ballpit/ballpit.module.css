@@ -1,0 +1,30 @@
+.ballpitMain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: powderblue;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
+      39 39,
+    auto;
+}
+
+.ballpitCopy {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate3d(0, -50%, 0);
+  text-align: center;
+  color: #374962;
+}
+
+.ballpitTitle {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0 0 15px;
+}

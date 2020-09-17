@@ -8,6 +8,11 @@ import Lab from '../../components/Lab'
 
 const posts = [
   {
+    slug: 'ballpit',
+    link: '/lab/ballpit',
+    title: 'Ballpit',
+  },
+  {
     slug: 'noise-waves',
     link: '/lab/noise-waves',
     title: 'Noise Waves',
