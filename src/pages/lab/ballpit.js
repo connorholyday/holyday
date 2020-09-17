@@ -1,36 +1,36 @@
-import React from "react";
+import React from 'react'
 import { TransitionState } from 'gatsby-plugin-transition-link'
-import { Canvas, useFrame, useThree } from "react-three-fiber";
-import { Physics, usePlane, useSphere } from "use-cannon";
-import { EffectComposer, SSAO, Bloom } from "react-postprocessing";
+import { Canvas, useFrame, useThree } from 'react-three-fiber'
+import { Physics, usePlane, useSphere } from 'use-cannon'
+import { EffectComposer, SSAO, Bloom } from 'react-postprocessing'
 import { animated, useSpring } from 'react-spring'
-import Layout from '../../../components/Layout'
-import { TRANSITION_DELAY_IN_MS } from '../../../components/constants'
-import { usePrefersReducedMotion } from '../../../utils/usePrefersReducedMotion'
-import styles from './ballpit.module.css';
+import Layout from '../../components/Layout'
+import { TRANSITION_DELAY_IN_MS } from '../../components/constants'
+import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
+import cursor from './assets/cursor.png';
 
 // A physical sphere tied to mouse coordinates without visual representation
 function Mouse() {
-  const { viewport } = useThree();
-  const [, api] = useSphere(() => ({ type: "Kinematic", args: 6 }));
-  return useFrame((state) =>
+  const { viewport } = useThree()
+  const [, api] = useSphere(() => ({ type: 'Kinematic', args: 6 }))
+  return useFrame(state =>
     api.position.set(
       (state.mouse.x * viewport.width) / 2,
       (state.mouse.y * viewport.height) / 2,
       7
     )
-  );
+  )
 }
 
 // A physical plane without visual representation
 function Plane({ color, ...props }) {
-  usePlane(() => ({ ...props }));
-  return null;
+  usePlane(() => ({ ...props }))
+  return null
 }
 
 // Creates a crate that catches the objects
 function Borders() {
-  const { viewport } = useThree();
+  const { viewport } = useThree()
   return (
     <>
       <Plane
@@ -48,17 +48,17 @@ function Borders() {
       <Plane position={[0, 0, 0]} rotation={[0, 0, 0]} />
       <Plane position={[0, 0, 12]} rotation={[0, -Math.PI, 0]} />
     </>
-  );
+  )
 }
 
 // Things falling down ...
 function InstancedObjects({ count = 200 }) {
-  const { viewport } = useThree();
-  const [ref] = useSphere((index) => ({
+  const { viewport } = useThree()
+  const [ref] = useSphere(index => ({
     mass: 100,
     position: [4 - Math.random() * 8, viewport.height, 0, 0],
-    args: 1
-  }));
+    args: 1,
+  }))
   return (
     <instancedMesh
       ref={ref}
@@ -69,11 +69,11 @@ function InstancedObjects({ count = 200 }) {
       <sphereBufferGeometry args={[1, 16, 16]} />
       <meshPhongMaterial color="#ff8800" shininess={150} />
     </instancedMesh>
-  );
+  )
 }
 
 function Effects() {
-  const AO = { samples: 3, luminanceInfluence: 0.6, radius: 2, intensity: 5 };
+  const AO = { samples: 3, luminanceInfluence: 0.6, radius: 2, intensity: 5 }
   return (
     <EffectComposer>
       <SSAO
@@ -86,24 +86,34 @@ function Effects() {
       />
       <SSAO {...AO} />
     </EffectComposer>
-  );
+  )
 }
 
 function Sketch() {
   return (
-    <div className={styles.ballpitMain}>
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      overflow: 'hidden',
+      background: 'powderblue',
+      fontFamily: '-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif',
+      cursor: `url('${cursor}') 39 39, auto`,
+    }}>
       <Canvas
         shadowMap
         gl={{
-          powerPreference: "high-performance",
+          powerPreference: 'high-performance',
           stencil: false,
           depth: false,
           alpha: false,
-          antialias: false
+          antialias: false,
         }}
         camera={{ position: [0, 0, 20], fov: 50, near: 17, far: 40 }}
       >
-        <color attach="background" args={["powderblue"]} />
+        <color attach="background" args={['powderblue']} />
         <ambientLight intensity={1.85} />
         <directionalLight
           position={[10, 10, 0]}
@@ -134,49 +144,61 @@ function Sketch() {
         </Physics>
         <Effects />
       </Canvas>
-      <div className={styles.ballpitCopy}>
-        <h2 className={styles.ballpitTitle}>Wheeee!</h2>
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        width: '100%',
+        transform: 'translate3d(0, -50%, 0)',
+        textAlign: 'center',
+        color: '#374962',
+      }}>
+        <h2 style={{
+          fontSize: '42px',
+          fontWeight: 'bold',
+          lineHeight: '1.5',
+          margin: '0 0 15px',
+        }}>Wheeee!</h2>
       </div>
     </div>
-  );
+  )
 }
 
 function Main({ transition }) {
-    const prefersReducedMotion = usePrefersReducedMotion();
-    const [toggle, set] = React.useState(true)
-    const { opacity } = useSpring({
-      delay: TRANSITION_DELAY_IN_MS + 0.3,
-      opacity: toggle ? 1 : 0,
-      from: { opacity: 0 },
-      immediate: prefersReducedMotion,
-    })
-    React.useEffect(() => {
-      if (transition === 'exiting') {
-        set(false)
-      }
-    }, [transition])
-    return (
-      <animated.div style={{
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const [toggle, set] = React.useState(true)
+  const { opacity } = useSpring({
+    delay: TRANSITION_DELAY_IN_MS + 0.3,
+    opacity: toggle ? 1 : 0,
+    from: { opacity: 0 },
+    immediate: prefersReducedMotion,
+  })
+  React.useEffect(() => {
+    if (transition === 'exiting') {
+      set(false)
+    }
+  }, [transition])
+  return (
+    <animated.div
+      style={{
         gridColumn: '1/13',
         opacity,
-      }}>
-        <Sketch />
-      </animated.div>
-    )
-  }
+      }}
+    >
+      <Sketch />
+    </animated.div>
+  )
+}
 
 class BallpitPage extends React.Component {
-    render() {
-      return (
-        <Layout location={this.props.location}>
-          <TransitionState>
-            {({ transitionStatus }) => (
-              <Main transition={transitionStatus} />
-            )}
-          </TransitionState>
-        </Layout>
-      )
-    }
+  render() {
+    return (
+      <Layout location={this.props.location}>
+        <TransitionState>
+          {({ transitionStatus }) => <Main transition={transitionStatus} />}
+        </TransitionState>
+      </Layout>
+    )
   }
-  
-  export default BallpitPage
+}
+
+export default BallpitPage
