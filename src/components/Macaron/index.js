@@ -155,8 +155,9 @@ function Macaron() {
 
 function Effects() {
   const AO = { samples: 3, luminanceInfluence: 0.6, radius: 2, intensity: 5 }
+  const multisampling = WEBGL.isWebGL2Available() === false ? 0 : 8
   return (
-    <EffectComposer>
+    <EffectComposer multisampling={multisampling}>
       <SSAO
         {...AO}
         samples={21}
@@ -262,30 +263,7 @@ function Main({ transition }) {
       go(true);
     }
   }
-  return WEBGL.isWebGL2Available() === false ? (
-    <animated.div
-      style={{
-        gridColumn: '1/13',
-        opacity,
-      }}
-    >
-      <div style={{
-        position: 'fixed',
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        background: 'lightpink',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-        <h1 style={{ textAlign: 'center', color: 'white' }}>
-          Oh no! This won't work for you right now, sorry 😞
-        </h1>
-      </div>
-    </animated.div>
-  ) : (
+  return (
     <animated.div
       style={{
         gridColumn: '1/13',

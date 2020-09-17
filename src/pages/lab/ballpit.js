@@ -1,8 +1,9 @@
 import React from 'react'
 import { TransitionState } from 'gatsby-plugin-transition-link'
 import { Canvas, useFrame, useThree } from 'react-three-fiber'
+import { WEBGL } from 'three/examples/jsm/WebGL'
 import { Physics, usePlane, useSphere } from 'use-cannon'
-import { EffectComposer, SSAO, Bloom } from 'react-postprocessing'
+import { EffectComposer, SSAO } from 'react-postprocessing'
 import { animated, useSpring } from 'react-spring'
 import Layout from '../../components/Layout'
 import { TRANSITION_DELAY_IN_MS } from '../../components/constants'
@@ -74,8 +75,9 @@ function InstancedObjects({ count = 200 }) {
 
 function Effects() {
   const AO = { samples: 3, luminanceInfluence: 0.6, radius: 2, intensity: 5 }
+  const multisampling = WEBGL.isWebGL2Available() === false ? 0 : 8
   return (
-    <EffectComposer>
+    <EffectComposer multisampling={multisampling}>
       <SSAO
         {...AO}
         samples={21}
