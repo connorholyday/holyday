@@ -42,27 +42,26 @@ const About = ({ transition, profile }) => {
         <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
           <Animate toggle={toggle}>Hi I'm Connor</Animate>
         </h1>
-        <animated.div style={{
-          transform: yr.interpolate(
-            (y) => `translate3d(0,${y}%,0)`
-          ),
-          opacity
-        }}>
+        <animated.div
+          style={{
+            transform: yr.interpolate(y => `translate3d(0,${y}%,0)`),
+            opacity,
+          }}
+        >
           <p>I'm a creative developer living in the south of the UK.</p>
           <p>
             When I'm behind a screen you'll usually find me tinkering with
-            something. So far I've had the fortune to work across a wide spectrum
-            of projects, covering not only websites but also a broader spectrum of
-            apps for mobile, web, and desktop platforms.
+            something. So far I've had the fortune to work across a wide
+            spectrum of projects, covering not only websites but also a broader
+            range of apps for mobile, web, and desktop platforms.
           </p>
           <p>
-            My current goal is to improve on bringing a sense of natural
-            interaction to my work, and to delightfully surprise people with the
-            little details.
+            My current goal is to bring to life things that people enjoy using,
+            ideally something that makes people smile and want to show their friends.
           </p>
           <p>
-            Outside of work you're likely to find me travelling with my camera, <i>in
-            fact</i> you'll most likely find me in search of food. You're
+            Outside of work you're likely to find me travelling with my camera,{' '}
+            <i>in fact</i> you'll most likely find me in search of food. You're
             always welcome to come along.
           </p>
         </animated.div>
