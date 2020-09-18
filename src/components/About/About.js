@@ -11,7 +11,7 @@ import { TRANSITION_DELAY_IN_MS } from '../constants'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 const About = ({ transition, profile }) => {
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion()
   const [toggle, set] = React.useState(true)
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -57,7 +57,8 @@ const About = ({ transition, profile }) => {
           </p>
           <p>
             My current goal is to bring to life things that people enjoy using,
-            ideally something that makes people smile and want to show their friends.
+            ideally something that makes people smile and want to show their
+            friends.
           </p>
           <p>
             Outside of work you're likely to find me travelling with my camera,{' '}
