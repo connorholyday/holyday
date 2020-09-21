@@ -56,9 +56,8 @@ const About = ({ transition, profile }) => {
             range of apps for mobile, web, and desktop platforms.
           </p>
           <p>
-            My current goal is to bring to life things that people enjoy using,
-            ideally something that makes people smile and want to show their
-            friends.
+            My all time favourite thing about what I do is bringing things to
+            life that make people smile.
           </p>
           <p>
             Outside of work you're likely to find me travelling with my camera,{' '}
