@@ -53,13 +53,14 @@ function Borders() {
 }
 
 // Things falling down ...
-function InstancedObjects({ count = 200 }) {
+function InstancedObjects() {
   const { viewport } = useThree()
   const [ref] = useSphere(index => ({
     mass: 100,
-    position: [4 - Math.random() * 8, viewport.height, 0, 0],
+    position: [4 - Math.random() * 8, 0, 0, 0],
     args: 1,
   }))
+  const count = Math.floor(window.innerWidth / 5)
   return (
     <instancedMesh
       ref={ref}
