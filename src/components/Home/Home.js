@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Link } from 'gatsby'
 import { useSpring, useTransition, animated } from 'react-spring'
 import { useGesture } from 'react-with-gesture'
@@ -13,7 +13,6 @@ import Sketch from '../feature/sketch'
 import Animate from '../animate'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
-
 
 const arcHeight = 50
 
@@ -31,8 +30,11 @@ function clamp(number, lower, upper) {
 }
 
 function FromTheLab() {
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const [{ xy }, set] = useSpring(() => ({ xy: [0, 0], immediate: prefersReducedMotion, }))
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const [{ xy }, set] = useSpring(() => ({
+    xy: [0, 0],
+    immediate: prefersReducedMotion,
+  }))
   const bind = useGesture(({ down, delta, velocity }) => {
     velocity = clamp(velocity, 1, 8)
     set({
@@ -57,55 +59,56 @@ function FromTheLab() {
 
 const data = [
   {
-      slug: "facebook-connectivity",
-      link: "https://connectivity.fb.com/",
-      title: "Facebook Connectivity",
-      tag: "Website",
+    slug: 'facebook-connectivity',
+    link: 'https://connectivity.fb.com/',
+    title: 'Facebook Connectivity',
+    tag: 'Website',
   },
   {
-      slug: "blue-lagoon",
-      link: "https://www.bluelagoon.com/",
-      title: "Blue Lagoon",
-      tag: "Website",
+    slug: 'blue-lagoon',
+    link: 'https://www.bluelagoon.com/',
+    title: 'Blue Lagoon',
+    tag: 'Website',
   },
   {
-      slug: "nova",
-      link: "https://www.nova.is/dansgolfid/appid",
-      title: "Nova",
-      tag: "App",
+    slug: 'nova',
+    link: 'https://www.nova.is/dansgolfid/appid',
+    title: 'Nova',
+    tag: 'App',
   },
   {
-      slug: "ileditor2",
-      link: "https://ileditor.dev/",
-      title: "ILEditor 2",
-      tag: "Website + Desktop App",
+    slug: 'ileditor2',
+    link: 'https://ileditor.dev/',
+    title: 'ILEditor 2',
+    tag: 'Website + Desktop App',
   },
   {
-      slug: "dry-january",
-      link: "https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app",
-      title: "Dry January",
-      tag: "App",
+    slug: 'dry-january',
+    link:
+      'https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app',
+    title: 'Dry January',
+    tag: 'App',
   },
   {
-      slug: "yay" ,
-      link: "https://www.yay.is/",
-      title: "YAY",
-      tag: "App",
+    slug: 'yay',
+    link: 'https://www.yay.is/',
+    title: 'YAY',
+    tag: 'App',
   },
   {
-      slug: "hopp-app" ,
-      link: "https://hopp.bike/",
-      title: "Hopp",
-      tag: "App + Website",
+    slug: 'hopp-app',
+    link: 'https://hopp.bike/',
+    title: 'Hopp',
+    tag: 'App + Website',
   },
 ]
 
 const Home = ({ transition, images, social = {} }) => {
   const { twitter = '', github = '' } = social
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion()
   const [toggle, set] = React.useState(true)
-  const [loaded, setLoaded] = React.useState(false);
-  const [loadedSketch, setLoadSketch] = React.useState(false);
+  const [loaded, setLoaded] = React.useState(false)
+  const [loadedSketch, setLoadSketch] = React.useState(false)
 
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -113,11 +116,11 @@ const Home = ({ transition, images, social = {} }) => {
     }
   }, [transition])
   React.useEffect(() => {
-    setLoaded(true);
-    setTimeout(() => {
-      setLoadSketch(true);
-    }, 1000);
-  }, []);
+    setLoaded(true)
+    window.setTimeout(() => {
+      setLoadSketch(true)
+    }, 1000)
+  }, [])
 
   const transitions = useTransition(loadedSketch, null, {
     from: { opacity: 0 },
@@ -138,34 +141,41 @@ const Home = ({ transition, images, social = {} }) => {
         <div className={styles.centered}>
           {loaded ? (
             <>
-            <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
-              <Animate toggle={toggle}>Hi I'm Connor</Animate>
-            </h1>
-            <p style={{ margin: 0 }}>
-              <Animate toggle={toggle} delay={10}>
-                Creative Developer
-              </Animate>
-            </p>
-            <p>
-              <Animate toggle={toggle} delay={20}>
-                Attempting to spark joy on the internet
-              </Animate>
-            </p>
-            <div
-              style={{
-                display: 'flex',
-              }}
-            >
-              <a href={`https://twitter.com/${twitter}`}>
-                <Animate toggle={toggle}>twitter</Animate>
-              </a>{' '}
-              ﹒{' '}
-              <a href={`https://github.com/${github}`}>
-                <Animate toggle={toggle} delay={7}>
-                  github
-                </Animate>
-              </a>
-            </div>
+              <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
+                <Animate toggle={toggle}>Hi I'm Connor</Animate>
+              </h1>
+              <animated.div
+                style={{
+                  transform: yr.interpolate(y => `translate3d(0,${y}%,0)`),
+                  opacity,
+                }}
+              >
+                <p
+                  style={{
+                    transform: yr.interpolate(y => `translate3d(0,${y}%,0)`),
+                    opacity,
+                    margin: 0,
+                  }}
+                >
+                  Creative Developer
+                </p>
+                <p
+                  style={{
+                    transform: yr.interpolate(y => `translate3d(0,${y}%,0)`),
+                    opacity,
+                  }}
+                >
+                  Attempting to spark joy on the internet
+                </p>
+                <div
+                  style={{
+                    display: 'flex',
+                  }}
+                >
+                  <a href={`https://twitter.com/${twitter}`}>twitter</a> ﹒{' '}
+                  <a href={`https://github.com/${github}`}>github</a>
+                </div>
+              </animated.div>
             </>
           ) : null}
         </div>
@@ -189,8 +199,13 @@ const Home = ({ transition, images, social = {} }) => {
             cursor: 'move',
           }}
         >
-          {transitions.map(({ item, key, props }) =>
-            item && <animated.div key={key} style={props}><Sketch /></animated.div>
+          {transitions.map(
+            ({ item, key, props }) =>
+              item && (
+                <animated.div key={key} style={props}>
+                  <Sketch />
+                </animated.div>
+              )
           )}
         </div>
       </animated.div>
