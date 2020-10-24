@@ -178,7 +178,7 @@ function Effects() {
 }
 
 function Sketch() {
-  const amount = window.outerWidth > 700 ? 100 : 10;
+  const count = Math.min(Math.floor(window.innerWidth / 10), 100);
   return (
     <Canvas
       shadowMap
@@ -223,7 +223,7 @@ function Sketch() {
         <group position={[0, 0, 0]}>
           <Borders />
           <React.Suspense fallback={null}>
-            {[...new Array(amount)].map((_, i) => (
+            {[...new Array(count)].map((_, i) => (
               <Macaron key={i} />
             ))}
           </React.Suspense>
