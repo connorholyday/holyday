@@ -187,6 +187,7 @@ const Home = ({ transition, images, social = {} }) => {
             (y, r) => `translate3d(0,${y}%,0) rotate(${r}deg)`
           ),
           opacity,
+          marginBottom: '3rem'
         }}
       >
         <FromTheLab />

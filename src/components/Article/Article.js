@@ -18,15 +18,17 @@ function Article({ link, title, tag, image, style }) {
         className={styles.caseStudy__link}
         to={link}
       >
-        <h2 className={styles.caseStudy__title} aria-label={title}>
-          {chars.map((c, i) => (
-            <Raise key={i} length={chars.length} index={i} toggle={toggle}>
-              {c}
-            </Raise>
-          ))}
-        </h2>
+        <div style={{ display: 'flex', alignItems: 'baseline' }}>
+          <h2 className={styles.caseStudy__title} aria-label={title}>
+            {chars.map((c, i) => (
+              <Raise key={i} length={chars.length} index={i} toggle={toggle}>
+                {c}
+              </Raise>
+            ))}
+          </h2>
+          {tag ? <p className={styles.caseStudy__tag}>- {tag}</p> : null}
+        </div>
         <div className={styles.caseStudy__media}>
-          {tag ? <p className={styles.caseStudy__tag}>{tag}</p> : null}
           <Img fluid={image} alt="" />
         </div>
       </Link>

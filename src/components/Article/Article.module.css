@@ -1,18 +1,6 @@
 .caseStudy {
+    grid-column-start: 2;
     grid-column-end: span 10;
-    margin-top: 2rem;
-}
-.caseStudy:nth-of-type(4n+1) {
-    grid-column-start: 2;
-}
-.caseStudy:nth-of-type(4n+2) {
-    grid-column-start: 2;
-}
-.caseStudy:nth-of-type(4n+3) {
-    grid-column-start: 2;
-}
-.caseStudy:nth-of-type(4n+4) {
-    grid-column-start: 2;
 }
 .caseStudy__title {
     line-height: 1.5;
@@ -27,48 +15,15 @@
     position: relative;
 }
 .caseStudy__tag {
-    position: absolute;
-    top: 0;
-    right: calc(100% + 1.5em);
-    transform: rotate(-0.25turn);
-    transform-origin: top right;
-    margin: 0;
-    white-space: nowrap;
-}
-
-@media (min-width: 768px) {
-    .caseStudy {
-        grid-column-end: span 8;
-        margin-top: 6rem;
-    }
-    .caseStudy:nth-of-type(4n+1) {
-        grid-column-start: 2;
-    }
-    .caseStudy:nth-of-type(4n+2) {
-        grid-column-start: 4;
-    }
-    .caseStudy:nth-of-type(4n+3) {
-        grid-column-start: 2;
-    }
-    .caseStudy:nth-of-type(4n+4) {
-        grid-column-start: 4;
-    }
+    margin-left: .5em;
+    margin-bottom: .5em;
 }
 
 @media (min-width: 1024px) {
     .caseStudy {
-        grid-column-end: span 4;
+        grid-column-end: span 5;
     }
-    .caseStudy:nth-of-type(4n+1) {
-        grid-column-start: 2;
-    }
-    .caseStudy:nth-of-type(4n+2) {
+    .caseStudy:nth-of-type(even) {
         grid-column-start: 7;
-    }
-    .caseStudy:nth-of-type(4n+3) {
-        grid-column-start: 3;
-    }
-    .caseStudy:nth-of-type(4n+4) {
-        grid-column-start: 8;
     }
 }
