@@ -22,6 +22,11 @@ const posts = [
     link: '/lab/macarons',
     title: 'Macarons',
   },
+  {
+    slug: 'loops',
+    link: '/lab/loops',
+    title: 'Loops',
+  },
 ]
 
 const LabPage = ({ location, data }) => {
