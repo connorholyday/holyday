@@ -2,6 +2,10 @@
     grid-column-start: 2;
     grid-column-end: span 10;
 }
+.caseStudy {
+    grid-column-start: 2;
+    grid-column-end: span 10;
+}
 .caseStudy__title {
     line-height: 1.5;
     margin: 0;
@@ -13,6 +17,9 @@
 }
 .caseStudy__media {
     position: relative;
+}
+.caseStudy__video {
+    width: 100%;
 }
 .caseStudy__tag {
     margin-left: .5em;

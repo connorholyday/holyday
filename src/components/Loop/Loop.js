@@ -1,37 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useSpring, useTrail, animated } from 'react-spring'
-import { useInView } from 'react-intersection-observer';
 
 import { rhythm } from '../../utils/typography'
 import Raise from '../Raise'
 import { TRANSITION_DELAY_IN_MS } from '../constants'
 import Animate from '../animate'
+import Article from '../Article'
 import styles from './Loop.module.css'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
-const Item = ({ style, media }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '200px 0px',
-  });
-  return (
-    <animated.article
-      ref={ref}
-      className={styles.item}
-      style={style}
-    >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        {inView && (<source src={media} type="video/webm"></source>)}
-      </video>
-    </animated.article>
-  )
-}
+const links = [
+  'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
+  'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
+  'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
+  'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
+  'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
+  'https://codesandbox.io/s/webgl-image-splash-5x002?file=/src/Image.js'
+]
 
 const Loop = ({ transition, images }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -71,7 +57,7 @@ const Loop = ({ transition, images }) => {
         }}>A collection made with react-three-fiber and good old GLSL shaders.<br />In search of the perfect loop.</animated.p>
       </div>
       {trail.map(({ yr, opacity, ...rest }, index) => (
-        <Item
+        <Article
           key={index}
           style={{
             transform: yr.interpolate(
@@ -80,7 +66,8 @@ const Loop = ({ transition, images }) => {
             opacity,
             ...rest,
           }}
-          media={images.get(`loop-${images.size - index}`)}
+          link={links[index]}
+          video={images.get(`loop-${images.size - index}`)}
         />
       ))}
     </>
