@@ -7,19 +7,16 @@ import Raise from '../Raise'
 import styles from './Article.module.css'
 import { ExternalLink, InternalLink } from '../Link'
 
-const Title = ({ title, toggle, tag }) => {
+const Title = ({ title, toggle }) => {
   const chars = title.split('')
   return (
-    <div style={{ display: 'flex', alignItems: 'baseline' }}>
-      <h2 className={styles.caseStudy__title} aria-label={title}>
-        {chars.map((c, i) => (
-          <Raise key={i} length={chars.length} index={i} toggle={toggle}>
-            {c}
-          </Raise>
-        ))}
-      </h2>
-      {tag ? <p className={styles.caseStudy__tag}>- {tag}</p> : null}
-    </div>
+    <h2 className={styles.caseStudy__title} aria-label={title}>
+      {chars.map((c, i) => (
+        <Raise key={i} length={chars.length} index={i} toggle={toggle}>
+          {c}
+        </Raise>
+      ))}
+    </h2>
   )
 }
 

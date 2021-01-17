@@ -62,44 +62,37 @@ const data = [
     slug: 'facebook-connectivity',
     link: 'https://connectivity.fb.com/',
     title: 'Facebook Connectivity',
-    tag: 'Website',
   },
   {
     slug: 'blue-lagoon',
     link: 'https://www.bluelagoon.com/',
     title: 'Blue Lagoon',
-    tag: 'Website',
   },
   {
     slug: 'nova',
     link: 'https://www.nova.is/dansgolfid/appid',
     title: 'Nova',
-    tag: 'App',
   },
   {
     slug: 'ileditor2',
     link: 'https://ileditor.dev/',
     title: 'ILEditor 2',
-    tag: 'Website + Desktop App',
   },
   {
     slug: 'dry-january',
     link:
       'https://alcoholchange.org.uk/get-involved/campaigns/dry-january/get-involved/the-dry-january-app',
     title: 'Dry January',
-    tag: 'App',
   },
   {
     slug: 'yay',
     link: 'https://www.yay.is/',
     title: 'YAY',
-    tag: 'App',
   },
   {
     slug: 'hopp-app',
     link: 'https://hopp.bike/',
     title: 'Hopp',
-    tag: 'App + Website',
   },
 ]
 
@@ -215,7 +208,6 @@ const Home = ({ transition, images, social = {} }) => {
           key={item.slug}
           link={item.link}
           title={item.title}
-          tag={item.tag}
           image={images.get(item.slug)}
         />
       ))}
