@@ -7,10 +7,10 @@ import SEO from '../../components/seo'
 import Loop from '../../components/Loop'
 
 const LoopPage = ({ location, data }) => {
-  const images = new Map();
+  const videos = new Map();
 
-  data.images.edges.forEach(item => {
-    images.set(item.node.name, item.node.publicURL);
+  data.videos.edges.forEach(item => {
+    videos.set(item.node.name, item.node.publicURL);
   });
   
   return (
@@ -22,9 +22,9 @@ const LoopPage = ({ location, data }) => {
       <TransitionState>
         {({ transitionStatus }) => (
           <Loop
-            images={images}
+            videos={videos}
             transition={transitionStatus}
-            loading={data.loading.publicUrl}
+            loading={data.loading.publicURL}
           />
         )}
       </TransitionState>
@@ -36,9 +36,12 @@ export default LoopPage
 
 export const pageQuery = graphql`
   query {
-    images: allFile(filter:{
+    videos: allFile(filter:{
       relativeDirectory:{
         regex: "/loop/"
+      }
+      relativePath:{
+        regex: "/mp4/"
       }
     }) {
       edges {

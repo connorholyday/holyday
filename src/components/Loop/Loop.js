@@ -19,7 +19,7 @@ const links = [
   'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
 ]
 
-const Loop = ({ transition, images, loading }) => {
+const Loop = ({ transition, videos, loading }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
 
@@ -35,7 +35,7 @@ const Loop = ({ transition, images, loading }) => {
     from: { y: 5, opacity: 0 },
     immediate: prefersReducedMotion,
   })
-  const trail = useTrail(images.size, {
+  const trail = useTrail(videos.size, {
     config: {
       duration: TRANSITION_DELAY_IN_MS,
     },
@@ -67,7 +67,7 @@ const Loop = ({ transition, images, loading }) => {
             ...rest,
           }}
           link={links[index]}
-          video={images.get(`loop-${images.size - index}`)}
+          video={videos.get(`${videos.size - index}`)}
           loading={loading}
         />
       ))}
