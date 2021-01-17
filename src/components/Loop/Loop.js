@@ -11,12 +11,12 @@ import styles from './Loop.module.css'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
 const links = [
+  'https://codesandbox.io/s/webgl-image-splash-5x002?file=/src/Image.js',
   'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
   'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
   'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
   'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
   'https://codesandbox.io/s/long-pond-2fjms?file=/src/App.js',
-  'https://codesandbox.io/s/webgl-image-splash-5x002?file=/src/Image.js'
 ]
 
 const Loop = ({ transition, images, loading }) => {
