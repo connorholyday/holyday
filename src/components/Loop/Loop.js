@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useSpring, useTrail, animated } from 'react-spring'
+import { useInView } from 'react-intersection-observer';
 
 import { rhythm } from '../../utils/typography'
 import Raise from '../Raise'
@@ -9,9 +10,33 @@ import Animate from '../animate'
 import styles from './Loop.module.css'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
 
+const Item = ({ style, media }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '200px 0px',
+  });
+  return (
+    <animated.article
+      ref={ref}
+      className={styles.item}
+      style={style}
+    >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        {inView && (<source src={media} type="video/webm"></source>)}
+      </video>
+    </animated.article>
+  )
+}
+
 const Loop = ({ transition, images }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
+  const [onScreen, setOnScreen] = React.useState([...Array(images.length)].map(() => false))
 
   React.useEffect(() => {
     if (transition === 'exiting') {
@@ -39,17 +64,16 @@ const Loop = ({ transition, images }) => {
     <>
       <div className={styles.content}>
         <h1 style={{ margin: `0 0 ${rhythm(1)}` }}>
-          <Animate toggle={toggle}>Dots</Animate>
+          <Animate toggle={toggle}>Loops</Animate>
         </h1>
         <animated.p style={{
           transform: y.interpolate(y => `translate3d(0,${y}%,0)`),
           opacity,
-        }}>In search of the perfect loop</animated.p>
+        }}>A collection made with react-three-fiber and good old GLSL shaders.<br />In search of the perfect loop.</animated.p>
       </div>
       {trail.map(({ yr, opacity, ...rest }, index) => (
-        <animated.article
+        <Item
           key={index}
-          className={styles.item}
           style={{
             transform: yr.interpolate(
               (y, r) => `translate3d(0,${y}%,0) rotate(${r}deg)`
@@ -57,15 +81,8 @@ const Loop = ({ transition, images }) => {
             opacity,
             ...rest,
           }}
-        >
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            src={images.get(`dots-${index + 1}`)}
-          ></video>
-        </animated.article>
+          media={images.get(`loop-${images.size - index}`)}
+        />
       ))}
     </>
   )
