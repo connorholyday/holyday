@@ -4,7 +4,9 @@
 .item {
     grid-column-start: 2;
     grid-column-end: span 10;
-    margin-top: 2rem;
+}
+.item video {
+    width: 100%;
 }
 
 @media (min-width: 1024px) {

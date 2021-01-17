@@ -58,10 +58,13 @@ const Loop = ({ transition, images }) => {
             ...rest,
           }}
         >
-          <img
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             src={images.get(`dots-${index + 1}`)}
-            alt=""
-          />
+          ></video>
         </animated.article>
       ))}
     </>
