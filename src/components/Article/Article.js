@@ -46,9 +46,10 @@ function Article({ link, title, tag, image, video, loading, style }) {
               loop
               muted
               playsInline
+              crossOrigin="anonymous"
               poster={loading}
             >
-              {inView && (<source src={video} type="video/webm"></source>)}
+              {inView && (<source src={video} type="video/mp4"></source>)}
             </video>
           ) : (
             <Img fluid={image} alt="" />
