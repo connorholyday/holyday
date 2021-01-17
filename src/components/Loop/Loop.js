@@ -19,7 +19,7 @@ const links = [
   'https://codesandbox.io/s/webgl-image-splash-5x002?file=/src/Image.js'
 ]
 
-const Loop = ({ transition, images }) => {
+const Loop = ({ transition, images, loading }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
 
@@ -68,6 +68,7 @@ const Loop = ({ transition, images }) => {
           }}
           link={links[index]}
           video={images.get(`loop-${images.size - index}`)}
+          loading={loading}
         />
       ))}
     </>

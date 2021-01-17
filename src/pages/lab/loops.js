@@ -21,7 +21,11 @@ const LoopPage = ({ location, data }) => {
       />
       <TransitionState>
         {({ transitionStatus }) => (
-          <Loop images={images} transition={transitionStatus} />
+          <Loop
+            images={images}
+            transition={transitionStatus}
+            loading={data.loading.publicUrl}
+          />
         )}
       </TransitionState>
     </Layout>
@@ -43,6 +47,9 @@ export const pageQuery = graphql`
           publicURL
         }
       }
+    }
+    loading: file(relativePath: { regex: "/loading/" }) {
+      publicURL
     }
   }
 `

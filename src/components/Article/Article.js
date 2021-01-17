@@ -20,7 +20,7 @@ const Title = ({ title, toggle }) => {
   )
 }
 
-function Article({ link, title, tag, image, video, style }) {
+function Article({ link, title, tag, image, video, loading, style }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     rootMargin: '200px 0px',
@@ -46,6 +46,7 @@ function Article({ link, title, tag, image, video, style }) {
               loop
               muted
               playsInline
+              poster={loading}
             >
               {inView && (<source src={video} type="video/webm"></source>)}
             </video>
