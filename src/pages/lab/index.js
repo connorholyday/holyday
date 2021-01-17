@@ -13,6 +13,11 @@ const posts = [
     title: 'Ballpit',
   },
   {
+    slug: 'loops',
+    link: '/lab/loops',
+    title: 'Loops',
+  },
+  {
     slug: 'noise-waves',
     link: '/lab/noise-waves',
     title: 'Noise Waves',
@@ -21,11 +26,6 @@ const posts = [
     slug: 'macarons',
     link: '/lab/macarons',
     title: 'Macarons',
-  },
-  {
-    slug: 'loops',
-    link: '/lab/loops',
-    title: 'Loops',
   },
 ]
 
