@@ -36,7 +36,6 @@ const Item = ({ style, media }) => {
 const Loop = ({ transition, images }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [toggle, set] = React.useState(true)
-  const [onScreen, setOnScreen] = React.useState([...Array(images.length)].map(() => false))
 
   React.useEffect(() => {
     if (transition === 'exiting') {
