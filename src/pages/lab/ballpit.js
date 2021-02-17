@@ -52,15 +52,19 @@ function Borders() {
   )
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 // Things falling down ...
 function InstancedObjects() {
-  const { viewport } = useThree()
+  const { viewport, size } = useThree()
   const [ref] = useSphere(index => ({
     mass: 100,
-    position: [4 - Math.random() * 8, 0, 0, 0],
+    position: [getRandomInt(40) - (40 / 2), 40 + getRandomInt(20), 0, 0],
     args: 1,
   }))
-  const count = Math.floor(window.innerWidth / 5)
+  const count = Math.floor(size.width / 5)
   return (
     <instancedMesh
       ref={ref}
