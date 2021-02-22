@@ -18,6 +18,11 @@ const posts = [
     title: 'Loops',
   },
   {
+    slug: 'swirls',
+    link: '/lab/swirls',
+    title: 'Swirls',
+  },
+  {
     slug: 'noise-waves',
     link: '/lab/noise-waves',
     title: 'Noise Waves',
