@@ -1,0 +1,116 @@
+---
+import { Font } from "astro:assets";
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Holyday" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<meta property="og:url" content="https://holyday.me" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Connor Holyday" />
+		<meta property="og:description" content="Hi, I'm Connor Holyday. A full stack developer trying to spark joy on the internet." />
+		<meta property="og:image" content="https://holyday.me/share.jpg" />
+
+		<meta name="generator" content={Astro.generator} />
+
+		<title>Connor Holyday</title>
+		<meta name="description" content="Hi, I'm Connor Holyday. A full stack developer trying to spark joy on the internet." />
+
+		<Font cssVariable="--font-circular" />
+		<Font cssVariable="--font-open-sans" />
+	</head>
+	<body
+		style={{
+			display: 'grid',
+			gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+			gridTemplateRows: 'auto 1fr auto',
+			gridGap: '27px',
+			overflowX: 'hidden',
+			minHeight: '100vh',
+		}}
+	>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		font-family: var(--font-circular), var(--font-open-sans), sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1.5;
+		color: #333333;
+		/* color: #fff; */
+	}
+
+	a {
+		box-shadow: none;
+		text-decoration: none;
+		position: relative;
+		cursor: pointer;
+		box-shadow: 0 1px 0 0 currentColor;
+		color: #286CCD;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.Link {
+		color: inherit;
+		box-shadow: none;
+	}
+	.Link.Tag::before {
+		transform-origin: center bottom;
+		transform: translate3d(0, -50%, 0) scaleX(1);
+		background: #72eaff;
+	}
+	.Link.Tag--alt::before {
+		transform-origin: center bottom;
+		transform: translate3d(0, -50%, 0) scaleX(1);
+		background: #FBE798;
+	}
+	.Link.Tag:hover::before,
+	.Link.Tag:active::before,
+	.Link.Tag:focus::before {
+		transform: translate3d(0, -50%, 0) scaleX(1.1) scaleY(2.2);
+	}
+	
+	.Link::before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 75%;
+		left: -.1em;
+		right: -.1em;
+		transform: translate3d(0, -50%, 0) scaleX(0);
+		height: 0.5em;
+		/* background: lightskyblue; */
+		background: #72eaff;
+		z-index: -1;
+		transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+		transform-origin: center left;
+	}
+
+	.Link:hover::before,
+	.Link:active::before,
+	.Link:focus::before {
+		transform: translate3d(0, -50%, 0) scaleX(1);
+	}
+</style>

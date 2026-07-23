@@ -1,0 +1,29 @@
+.content {
+    grid-column: 2/12;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+}
+.centered {
+    margin-bottom: 60%;
+}
+.title {
+    font-size: 40px;
+    line-height: 1;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .centered {
+        margin-bottom: 10%;
+    }
+    .title {
+        font-size: 56px;
+    }
+}
+
+/* @media (min-width: 1024px) {
+} */
