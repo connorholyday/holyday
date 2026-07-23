@@ -7,6 +7,14 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://holyday.me',
   integrations: [react()],
+  vite: {
+    resolve: {
+      alias: [{
+        find: "@react-three/cannon",
+        replacement: "@react-three/cannon/dist",
+      }]
+    },
+  },
   fonts: [
     {
       provider: fontProviders.google(),
