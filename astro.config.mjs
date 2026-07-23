@@ -18,11 +18,6 @@ export default defineConfig({
   },
   fonts: [
     {
-      provider: fontProviders.google(),
-      name: "Open Sans",
-      cssVariable: "--font-open-sans",
-    },
-    {
     provider: fontProviders.local(),
     name: "Circular",
     cssVariable: "--font-circular",

@@ -4,8 +4,8 @@ import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.5,
-  headerFontFamily: ['Circular', 'Open Sans', 'sans-serif'],
-  bodyFontFamily: ['Circular', 'Open Sans', 'sans-serif'],
+  headerFontFamily: ['Circular', 'sans-serif'],
+  bodyFontFamily: ['Circular', 'sans-serif'],
   bodyColor: '#333333',
   headerWeight: 800,
   bodyWeight: 300,
@@ -60,7 +60,7 @@ const typography = new Typography({
       boxShadow: '0 1px 0 0 currentColor',
       color: '#286CCD',
       textDecoration: 'none',
-      fontFamily: `Circular, "Open Sans", sans-serif`,
+      fontFamily: `Circular, sans-serif`,
       fontWeight: 'bold',
     },
     'a:hover,a:active': {
