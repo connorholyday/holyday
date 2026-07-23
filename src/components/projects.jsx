@@ -2,18 +2,18 @@ import styles from './Projects.module.css'
 // import mcdo from '../assets/projects/mcdo.avif';
 import apechain from '../assets/projects/apechain.jpg';
 import understood from '../assets/projects/understood.jpg';
-import prosperity from '../assets/projects/prosperity.png';
-import hopp from '../assets/projects/hopp.jpg';
-import nova from '../assets/projects/nova.jpg';
-import dry from '../assets/projects/dry.png';
-import lagoon from '../assets/projects/lagoon.jpg';
-import ileditor from '../assets/projects/ileditor2.jpg';
+import prosperity from '../assets/projects/prosperity.avif';
+import hopp from '../assets/projects/hopp.avif';
+import nova from '../assets/projects/nova.avif';
+import dry from '../assets/projects/dry.avif';
+import lagoon from '../assets/projects/lagoon.avif';
+import ileditor from '../assets/projects/ileditor2.avif';
 import hk from '../assets/projects/hk.jpg';
 import kerrygold from '../assets/projects/kerrygold.jpg';
 import spotify from '../assets/projects/spotify.avif';
 import xox from '../assets/projects/xox.jpeg';
 import mmplay from '../assets/projects/mmplay.jpeg';
-import netflix from '../assets/projects/netflix.jpg';
+import netflix from '../assets/projects/netflix.avif';
 
 const data = [
   {
