@@ -1,10 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './Home.module.css'
 import Animate from './animate.jsx'
 
 import Ballpit from './ballpit.jsx'
 import About from './about.jsx'
 import Projects from './projects.jsx'
+
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false)
@@ -17,10 +23,31 @@ const Home = () => {
     }, 900)
   }, [])
 
+  const container = useRef();
+
+  useGSAP(() => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: container.value,
+        start: 'top top',
+        end: 'bottom top',
+        // markers: true,
+        onEnterBack: () => {
+          setLoadSketch(true);
+          // console.log('ENTER BACK')
+        },
+        onLeave: () => {
+          setLoadSketch(false);
+          // console.log('LEAVE')
+        }
+      }
+    })
+  }, { scope: container });
+
   return (
     <>
       {loadedSketch ? <Ballpit /> : null}
-      <div className={styles.content}>
+      <div ref={container} className={styles.content}>
         <div className={styles.centered}>
           {loaded ? (
             <>
