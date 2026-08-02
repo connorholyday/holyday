@@ -212,10 +212,13 @@ function Sketch() {
       // cursor: `url('${cursor.src}') 39 39, auto`,
     }}>
       <Canvas
-        shadows
+        shadows={{ type: THREE.PCFShadowMap, enabled: true }}
         camera={{ position: [0, 3.5, 20], fov: 50, near: 17, far: 40 }}
         dpr={[1, 1.5]}
-        onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
+        onCreated={(state) => {
+          state.gl.toneMappingExposure = 1.5
+          state.gl.shadowMap.type = THREE.PCFShadowMap
+        }}
       >
         {/* <BG /> */}
         <Lights />
